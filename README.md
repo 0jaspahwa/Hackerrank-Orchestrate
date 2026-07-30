@@ -2,11 +2,13 @@
 
 Starter repository for the **HackerRank Orchestrate** 24-hour hackathon.
 
-## Priority Inbox
+## Message Routing Agent
 
-Build an AI routing agent that decides which platform messages deserve immediate attention, which should wait, which should be muted, and which are unsafe.
+Build an AI routing agent for WhatsApp that decides which messages deserve immediate attention, which should wait, which should be muted, and which are unsafe.
 
-Modern messaging platforms are noisy. A user's inbox can mix urgent updates, casual chatter, business messages, media, and scams in the same place. Treating every message the same creates two bad outcomes: important messages get missed, and risky messages look normal.
+The agent must reason over multimodal messages, including text messages, image posters/screenshots, and voice notes.
+
+WhatsApp is noisy. A user can receive family chats, society notices, school updates, co-worker messages, business account promotions, image posters, voice notes, and scams in the same message stream. Treating every message the same creates two bad outcomes: important messages get missed, and risky messages look normal.
 
 Read [`problem_statement.md`](./problem_statement.md) for the full task spec, input/output schema, allowed values, and submission format.
 
