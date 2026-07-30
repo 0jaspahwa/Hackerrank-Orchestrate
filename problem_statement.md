@@ -32,7 +32,7 @@ You will receive exactly one prediction input file:
 3. `dataset/users.csv` - Basic user notification behavior, such as quiet hours and recent opens, replies, dismissals, and reports.
 4. `dataset/groups.csv` - Basic information about each group chat, such as group type, size, admins, and recent activity.
 5. `dataset/group_members.csv` - How each user relates to each group: role, activity, read/reply behavior, dismissals, and mute state.
-6. `dataset/business_accounts.csv` - Information about business senders, including brand identity, verification, sender domain, account age, and reports.
+6. `dataset/business_accounts.csv` - Information about business senders, including brand identity, verification, domain used by the sender, account age, and reports.
 7. `dataset/user_business_history.csv` - Whether a user has a recent relationship with a business, such as orders, bookings, payments, opt-ins, or opt-outs.
 8. `dataset/messages.csv` - Past messages received by users. These help identify repeated patterns, ignored messages, useful updates, and risky content.
 9. `dataset/message_events.csv` - How users reacted to those past messages: opened, replied, dismissed, muted, or reported.
