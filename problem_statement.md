@@ -1,14 +1,14 @@
 # Message Notification Router
 
-Build an AI-powered system for WhatsApp that decides which messages deserve immediate attention, which should wait, which should be muted, and which are unsafe.
+Build an AI-powered system for WhatsApp that decides which messages deserve immediate attention, which should wait, and which should be muted.
 
 The system must reason over **multimodal messages**, including text messages, image posters/screenshots, and voice notes.
 
-WhatsApp is noisy. A user can receive family chats, society notices, school updates, co-worker messages, business account promotions, image posters, voice notes, and scams in the same message stream. Treating every message the same creates two bad outcomes: important messages get missed, and risky messages look normal.
+WhatsApp is noisy. A user can receive family chats, society notices, school updates, co-worker messages, business account promotions, image posters, voice notes, and scams in the same message stream. Treating every message the same creates two bad outcomes: important messages get missed, and unwanted or risky messages interrupt the user.
 
-Your task is to build a **message notification router** for this platform. For every incoming WhatsApp message, the system must decide whether the user should be interrupted now, whether the message can be batched into a digest, whether it is repetitive enough to mute, or whether it should trigger a safety warning.
+Your task is to build a **message notification router** for this platform. For every incoming WhatsApp message, the system must decide whether the user should be interrupted now, whether the message can be batched into a digest, or whether it should be muted.
 
-The routing decision must be personalized to the receiving user. A sale poster may be useful for one user and unwanted noise for another. A payment reminder may be legitimate from a trusted admin but risky from a new sender. A muted family group can still contain an urgent direct mention. At the same time, clear scam or safety risk should be warned regardless of the user's usual engagement.
+The routing decision must be personalized to the receiving user. A sale poster may be useful for one user and unwanted noise for another. A payment reminder may be legitimate from a trusted admin but risky from a new sender. A muted family group can still contain an urgent direct mention. At the same time, clear scam or safety risk should be muted regardless of the user's usual engagement.
 
 ## What You Need to Build
 
@@ -16,8 +16,7 @@ Build a system that reviews each incoming message and decides how it should be h
 
 - `notify`: important enough to interrupt now
 - `digest`: useful, but can be shown later
-- `mute`: low-value or repetitive
-- `warn`: potentially risky, suspicious, or unsafe
+- `mute`: low-value, repetitive, unwanted, suspicious, or unsafe
 
 Your system should use the provided message, user, group, business, media, and historical interaction data to make personalized routing decisions.
 
@@ -94,8 +93,7 @@ Required columns, in order:
 
 - `notify`: interrupt the user now
 - `digest`: safe but low priority; show later
-- `mute`: repetitive, unwanted, or low-value for this user
-- `warn`: suspicious, unsafe, scam-like, or impersonation risk
+- `mute`: repetitive, unwanted, low-value, suspicious, scam-like, or unsafe for this user
 
 `message_type`:
 
@@ -117,7 +115,7 @@ Required columns, in order:
 
 Your system should make personalized decisions using the full context provided. Similar-looking messages may need different actions depending on the user, sender, conversation, business relationship, and media content.
 
-The final decision should balance usefulness, urgency, repetition, and risk.
+The final decision should balance usefulness, urgency, repetition, and risk. Risky messages should use `mute` with an appropriate `message_type` such as `scam` or `spam`.
 
 ## Evaluation
 

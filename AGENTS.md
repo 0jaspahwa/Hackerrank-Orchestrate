@@ -31,8 +31,7 @@ Participants must build an AI-powered system for WhatsApp. For every incoming mu
 
 - `notify`: interrupt the user now
 - `digest`: wait for later
-- `mute`: be suppressed as low-value or repetitive
-- `warn`: trigger a safety warning
+- `mute`: be suppressed as low-value, repetitive, unwanted, suspicious, or unsafe
 
 The system should use the provided user, group, business, historical message, image, voice-note, and interaction data to make personalized routing decisions across text, image posters/screenshots, and voice notes.
 

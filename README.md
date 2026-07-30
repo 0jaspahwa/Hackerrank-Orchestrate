@@ -4,11 +4,11 @@ Starter repository for the **HackerRank Orchestrate** 24-hour hackathon.
 
 ## Message Notification Router
 
-Build an AI-powered system for WhatsApp that decides which messages deserve immediate attention, which should wait, which should be muted, and which are unsafe.
+Build an AI-powered system for WhatsApp that decides which messages deserve immediate attention, which should wait, and which should be muted.
 
 The system must reason over multimodal messages, including text messages, image posters/screenshots, and voice notes.
 
-WhatsApp is noisy. A user can receive family chats, society notices, school updates, co-worker messages, business account promotions, image posters, voice notes, and scams in the same message stream. Treating every message the same creates two bad outcomes: important messages get missed, and risky messages look normal.
+WhatsApp is noisy. A user can receive family chats, society notices, school updates, co-worker messages, business account promotions, image posters, voice notes, and scams in the same message stream. Treating every message the same creates two bad outcomes: important messages get missed, and unwanted or risky messages interrupt the user.
 
 Read [`problem_statement.md`](./problem_statement.md) for the full task spec, input/output schema, allowed values, and submission format.
 
@@ -50,7 +50,7 @@ For every row in `dataset/input.csv`, produce one row in `output.csv` with:
 | Column | Meaning |
 |---|---|
 | `message_id` | Incoming message ID |
-| `action` | One of `notify`, `digest`, `mute`, or `warn` |
+| `action` | One of `notify`, `digest`, or `mute` |
 | `message_type` | Best-fit message category |
 | `reason` | Short human-readable explanation |
 | `confidence` | Number from `0` to `1` |
