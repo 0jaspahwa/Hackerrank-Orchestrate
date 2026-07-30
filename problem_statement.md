@@ -131,8 +131,6 @@ The scoring will consider:
 - whether `evidence_message_ids` point to relevant historical messages
 - reasonable confidence calibration
 
-The highest-scoring systems will combine retrieval, structured metadata, behavioral history, safety checks, OCR/ASR handling, and contextual reasoning.
-
 ## Submission
 
 Submit:
