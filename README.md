@@ -2,11 +2,11 @@
 
 Starter repository for the **HackerRank Orchestrate** 24-hour hackathon.
 
-## Message Routing Agent
+## Message Notification Router
 
-Build an AI routing agent for WhatsApp that decides which messages deserve immediate attention, which should wait, which should be muted, and which are unsafe.
+Build an AI-powered system for WhatsApp that decides which messages deserve immediate attention, which should wait, which should be muted, and which are unsafe.
 
-The agent must reason over multimodal messages, including text messages, image posters/screenshots, and voice notes.
+The system must reason over multimodal messages, including text messages, image posters/screenshots, and voice notes.
 
 WhatsApp is noisy. A user can receive family chats, society notices, school updates, co-worker messages, business account promotions, image posters, voice notes, and scams in the same message stream. Treating every message the same creates two bad outcomes: important messages get missed, and risky messages look normal.
 

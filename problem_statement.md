@@ -1,25 +1,25 @@
-# **Message Notification Routing**
+# Message Notification Router
 
-Build an AI routing agent for WhatsApp that decides which messages deserve immediate attention, which should wait, which should be muted, and which are unsafe.
+Build an AI-powered system for WhatsApp that decides which messages deserve immediate attention, which should wait, which should be muted, and which are unsafe.
 
-The agent must reason over **multimodal messages**, including text messages, image posters/screenshots, and voice notes.
+The system must reason over **multimodal messages**, including text messages, image posters/screenshots, and voice notes.
 
 WhatsApp is noisy. A user can receive family chats, society notices, school updates, co-worker messages, business account promotions, image posters, voice notes, and scams in the same message stream. Treating every message the same creates two bad outcomes: important messages get missed, and risky messages look normal.
 
-Your task is to build a **message routing agent** for this platform. For every incoming WhatsApp message, the agent must decide whether the user should be interrupted now, whether the message can be batched into a digest, whether it is repetitive enough to mute, or whether it should trigger a safety warning.
+Your task is to build a **message notification router** for this platform. For every incoming WhatsApp message, the system must decide whether the user should be interrupted now, whether the message can be batched into a digest, whether it is repetitive enough to mute, or whether it should trigger a safety warning.
 
 The routing decision must be personalized to the receiving user. A sale poster may be useful for one user and unwanted noise for another. A payment reminder may be legitimate from a trusted admin but risky from a new sender. A muted family group can still contain an urgent direct mention. At the same time, clear scam or safety risk should be warned regardless of the user's usual engagement.
 
 ## What You Need to Build
 
-Build an agent that reviews each incoming message and decides how it should be handled for that user:
+Build a system that reviews each incoming message and decides how it should be handled for that user:
 
 - `notify`: important enough to interrupt now
 - `digest`: useful, but can be shown later
 - `mute`: low-value or repetitive
 - `warn`: potentially risky, suspicious, or unsafe
 
-Your agent should use the provided message, user, group, business, media, and historical interaction data to make personalized routing decisions.
+Your system should use the provided message, user, group, business, media, and historical interaction data to make personalized routing decisions.
 
 ## Files provided
 

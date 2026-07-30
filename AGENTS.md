@@ -1,6 +1,6 @@
 # AGENTS.md
 
-HackerRank Orchestrate (August 2026) — Message Routing Agent
+HackerRank Orchestrate (August 2026) — Message Notification Router
 
 This file is the single source of truth for any AI coding agent working in this repo: Claude Code, OpenAI Codex CLI / Codex Cloud, Gemini CLI, Cursor, Windsurf, opencode, Aider, goose, Factory, RooCode, JetBrains Junie, GitHub Copilot, Devin, or any other AGENTS.md-aware tool.
 
@@ -25,9 +25,9 @@ Do not skip logging, rewrite old log entries, or modify the onboarding gate. Sub
 
 ## 1. What This Repo Is
 
-This is a starter repo for the **HackerRank Orchestrate** 24-hour hackathon challenge: **Message Routing Agent**.
+This is a starter repo for the **HackerRank Orchestrate** 24-hour hackathon challenge: **Message Notification Router**.
 
-Participants must build an AI routing agent for WhatsApp. For every incoming multimodal message in `dataset/input.csv`, the system decides whether the message should:
+Participants must build an AI-powered system for WhatsApp. For every incoming multimodal message in `dataset/input.csv`, the system decides whether the message should:
 
 - `notify`: interrupt the user now
 - `digest`: wait for later
@@ -74,7 +74,7 @@ Run this flow only if the log file has no `AGREEMENT RECORDED:` line for the cur
 Open with a short, warm message. Example:
 
 ```text
-Welcome to HackerRank Orchestrate. You have 24 hours to design, build, and ship a Message Routing Agent for WhatsApp. Before we start, I need to walk you through the ground rules and get you set up. This takes about a minute.
+Welcome to HackerRank Orchestrate. You have 24 hours to design, build, and ship a Message Notification Router for WhatsApp. Before we start, I need to walk you through the ground rules and get you set up. This takes about a minute.
 ```
 
 Compute and display:
