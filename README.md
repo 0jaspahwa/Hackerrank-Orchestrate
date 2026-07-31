@@ -20,10 +20,9 @@ Read [`problem_statement.md`](./problem_statement.md) for the full task spec, in
 .
 ├── AGENTS.md                         # Rules for AI coding tools + transcript logging
 ├── problem_statement.md              # Full challenge statement
-├── dataset.md                        # Simple explanation of all dataset files
 ├── README.md                         # You are here
 └── dataset/
-    ├── input.csv                     # Messages to route
+    ├── messages.csv                  # Messages to route
     ├── output.csv                    # Blank submission template
     ├── sample_messages.csv           # Solved examples
     ├── users.csv                     # User notification behavior
@@ -31,7 +30,7 @@ Read [`problem_statement.md`](./problem_statement.md) for the full task spec, in
     ├── group_members.csv             # User-group relationships
     ├── business_accounts.csv         # Business sender metadata
     ├── user_business_history.csv     # User-business history
-    ├── messages.csv                  # Historical messages
+    ├── message_history.csv           # Historical messages
     ├── message_events.csv            # User reactions to historical messages
     ├── images.csv                    # Image IDs and media file paths
     ├── voice_notes.csv               # Voice note IDs and media file paths
@@ -45,7 +44,7 @@ Read [`problem_statement.md`](./problem_statement.md) for the full task spec, in
 
 ## What You Need to Build
 
-For every row in `dataset/input.csv`, produce one row in `output.csv` with:
+For every row in `dataset/messages.csv`, produce one row in `output.csv` with:
 
 | Column | Meaning |
 |---|---|
@@ -54,7 +53,7 @@ For every row in `dataset/input.csv`, produce one row in `output.csv` with:
 | `message_type` | Best-fit message category |
 | `reason` | Short human-readable explanation |
 | `confidence` | Number from `0` to `1` |
-| `evidence_message_ids` | Historical message IDs used as evidence, or `none` |
+| `evidence_message_ids` | Historical message IDs used as evidence; write `none` if there is no useful evidence |
 
 Your system should make personalized decisions using the provided message, user, group, business, media, and historical interaction data.
 
@@ -63,7 +62,7 @@ Your system should make personalized decisions using the provided message, user,
 ## Suggested Workflow
 
 1. Inspect `dataset/sample_messages.csv` to understand the expected output format.
-2. Load `dataset/input.csv` and all relevant context files.
+2. Load `dataset/messages.csv` and all relevant context files.
 3. Build your routing system using any approach: LLMs, retrieval, rules, classifiers, agents, or hybrids.
 4. Write predictions to `output.csv`.
 5. Evaluate your approach on the solved sample rows before submitting.
@@ -79,7 +78,7 @@ Your solution must:
 - be runnable from the terminal
 - read the provided files from `dataset/`
 - produce a valid `output.csv`
-- include one prediction for every `message_id` in `dataset/input.csv`
+- include one prediction for every `message_id` in `dataset/messages.csv`
 - not use organizer-only files or hardcoded labels
 
 If you use API keys or secrets, read them from environment variables. Never hardcode secrets in the repo.
@@ -120,11 +119,11 @@ Upload this log as your chat transcript at submission time. Do not paste secrets
 Submit the following files as instructed by HackerRank:
 
 1. **Code zip**: full runnable solution, prompts/configs, README, and any evaluation files.
-2. **Predictions CSV**: final `output.csv` for all rows in `dataset/input.csv`.
+2. **Predictions CSV**: final `output.csv` for all rows in `dataset/messages.csv`.
 3. **Chat transcript**: the `log.txt` described above.
 
 Before submitting, confirm:
 
-- `output.csv` has one row per row in `dataset/input.csv`.
+- `output.csv` has one row per row in `dataset/messages.csv`.
 - `output.csv` has the exact required columns in the exact required order.
 - Your runnable code and setup instructions are included in `code.zip`.

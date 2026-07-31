@@ -27,7 +27,7 @@ Do not skip logging, rewrite old log entries, or modify the onboarding gate. Sub
 
 This is a starter repo for the **HackerRank Orchestrate** 24-hour hackathon challenge: **Message Notification Router**.
 
-Participants must build an AI-powered system for WhatsApp. For every incoming multimodal message in `dataset/input.csv`, the system decides whether the message should:
+Participants must build an AI-powered system for WhatsApp. For every incoming multimodal message in `dataset/messages.csv`, the system decides whether the message should:
 
 - `notify`: interrupt the user now
 - `digest`: wait for later
@@ -188,7 +188,7 @@ Participant-facing files are inside `dataset/`.
 
 ```text
 dataset/
-├── input.csv
+├── messages.csv
 ├── output.csv
 ├── sample_messages.csv
 ├── users.csv
@@ -196,7 +196,7 @@ dataset/
 ├── group_members.csv
 ├── business_accounts.csv
 ├── user_business_history.csv
-├── messages.csv
+├── message_history.csv
 ├── message_events.csv
 ├── images.csv
 ├── voice_notes.csv
@@ -216,7 +216,8 @@ The solution must write `output.csv` with the exact columns below:
 message_id,action,message_type,reason,confidence,evidence_message_ids
 ```
 
-There must be exactly one prediction row for every `message_id` in `dataset/input.csv`.
+There must be exactly one prediction row for every `message_id` in `dataset/messages.csv`.
+Use `none` in `evidence_message_ids` when no useful historical evidence exists.
 
 ### 6.3 Constraints That Make The Submission Evaluable
 

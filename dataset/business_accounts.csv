@@ -2,7 +2,7 @@ business_id,display_name,brand_name,category,verified,official_domain,domain_use
 business_001,Amazon India,Amazon India,ecommerce_delivery,1,amazon.in,amazon.in,937,1243,3,729
 business_051,Bank of America,Bank of America,bank,1,bankofamerica.com,bankofamerica.com,2787,3393,8,2179
 business_011,Myntra,Myntra,fashion,1,myntra.com,myntra.com,1307,1673,4,1019
-business_061,Grab,Grab,rides_delivery,1,grab.com,grab.com,3157,3823,9,2469
+business_061,Grab,Grab,ride_booking,1,grab.com,grab.com,3157,3823,9,2469
 business_021,Airtel,Airtel,telecom,1,airtel.in,airtel.in,1677,2103,5,1309
 business_071,UPS,UPS,logistics,1,ups.com,ups.com,3527,4253,10,2759
 business_031,Spotify,Spotify,streaming,1,spotify.com,spotify.com,2047,2533,6,1599
@@ -50,7 +50,7 @@ business_065,du SIM Verification,du,telecom,0,du.ae,du-simverify.com,27,1195,64,
 business_025,IndiGo,IndiGo,airline,1,goindigo.in,goindigo.in,1825,2275,9,1425
 business_075,Citi,Citi,bank,1,citi.com,citi.com,3675,4425,5,2875
 business_035,ICICI Security Team,ICICI Bank,bank,0,icicibank.com,icici-secure.net,22,685,44,19
-business_085,Careem,Careem,rides_delivery,1,careem.com,careem.com,4045,4855,6,3165
+business_085,Careem,Careem,ride_booking,1,careem.com,careem.com,4045,4855,6,3165
 business_045,Zomato Gold Rewards,Zomato,food_delivery,0,zomato.com,zomato-gold.in,32,855,74,11
 business_095,Polaris School of Technology,Polaris School of Technology,education,1,polaris.school,weurl.co,4415,5285,7,3455
 business_105,Zillow,Zillow,real_estate,1,zillow.com,zillow.com,4785,5715,8,3745

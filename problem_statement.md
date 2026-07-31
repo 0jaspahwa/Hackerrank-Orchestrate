@@ -26,14 +26,14 @@ All participant-facing files are inside `dataset/`.
 
 You will receive exactly one prediction input file:
 
-1. `dataset/input.csv` - Incoming messages that your system must route.
+1. `dataset/messages.csv` - Incoming messages that your system must route.
 2. `dataset/sample_messages.csv` - Example messages with the expected `action`, `message_type`, `reason`, `confidence`, and `evidence_message_ids` columns filled in. Use this only to understand the expected output format and style.
 3. `dataset/users.csv` - Basic user notification behavior, such as quiet hours and recent opens, replies, dismissals, and reports.
 4. `dataset/groups.csv` - Basic information about each group chat, such as group type, size, admins, and recent activity.
 5. `dataset/group_members.csv` - How each user relates to each group: role, activity, read/reply behavior, dismissals, and mute state.
 6. `dataset/business_accounts.csv` - Information about business senders, including brand identity, verification, domain used by the sender, account age, and reports.
 7. `dataset/user_business_history.csv` - Whether a user has a recent relationship with a business, such as orders, bookings, payments, opt-ins, or opt-outs.
-8. `dataset/messages.csv` - Past messages received by users. These help identify repeated patterns, ignored messages, useful updates, and risky content.
+8. `dataset/message_history.csv` - Past messages received by users. These help identify repeated patterns, ignored messages, useful updates, and risky content.
 9. `dataset/message_events.csv` - How users reacted to those past messages: opened, replied, dismissed, muted, or reported.
 10. `dataset/images.csv` - Image IDs and file paths for image messages.
 11. `dataset/voice_notes.csv` - Voice note IDs and file paths for audio messages.
@@ -44,7 +44,7 @@ Media files referenced by `images.csv` and `voice_notes.csv` are available under
 
 ## Input schema
 
-Each row in `dataset/input.csv` represents one incoming message.
+Each row in `dataset/messages.csv` represents one incoming message.
 
 Input fields:
 
@@ -64,7 +64,7 @@ Input fields:
 
 ## Required output
 
-For every row in `dataset/input.csv`, generate one row in `output.csv`.
+For every row in `dataset/messages.csv`, generate one row in `output.csv`.
 
 Required columns, in order:
 
@@ -83,7 +83,7 @@ Required columns, in order:
 - `message_type`: best-fit message category
 - `reason`: short human-readable explanation for the decision
 - `confidence`: number from `0` to `1`
-- `evidence_message_ids`: semicolon-separated historical message IDs used as evidence; use `none` if no useful historical message exists
+- `evidence_message_ids`: semicolon-separated historical message IDs used as evidence; write `none` if no useful historical message exists
 
 
 
@@ -137,7 +137,7 @@ Submit:
 | File              | Description                                                          |
 | ----------------- | -------------------------------------------------------------------- |
 | `code.zip`        | Full runnable solution, prompts/configs, and README                  |
-| `output.csv`      | Predictions for all rows in `dataset/input.csv`                      |
+| `output.csv`      | Predictions for all rows in `dataset/messages.csv`                   |
 | `chat_transcript` | Conversation transcript showing how you developed or used the system |
 
 
