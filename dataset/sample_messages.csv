@@ -49,8 +49,8 @@ sample_msg_020,u_005,group,group_005,,u_050,2026-08-25 08:04,Support alert: prof
 sample_msg_041,u_024,group,group_008,,u_041,2026-08-25 11:09,,voice,vn_001,0,digest,personal,"The sender is trusted, but the message has no urgent action or safety relevance.",0.82,message_0046
 sample_msg_042,u_028,group,group_008,,u_041,2026-08-25 14:16,,voice,vn_002,0,notify,urgent,A close contact sent a short urgent request that should interrupt the user.,0.87,message_0047
 sample_msg_043,u_040,business,,business_098,,2026-08-25 17:22,,voice,vn_003,0,mute,spam,The user has opted out of or repeatedly dismissed similar marketing messages.,0.81,message_0048
-sample_msg_044,u_032,group,group_005,,u_048,2026-08-25 08:28,Photos for the kurta set are attached. Pickup is near Gate 2 this weekend.,image,img_008,0,digest,marketplace,The message matches the user's known interests but is still low priority.,0.84,message_0049
-sample_msg_045,u_033,group,group_005,,u_048,2026-08-25 11:35,Photos for the kurta set are attached. Pickup is near Gate 2 this weekend.,image,img_008,0,mute,marketplace,"Similar historical messages were ignored, dismissed, or muted by this user.",0.85,message_0050
+sample_msg_044,u_032,group,group_005,,u_048,2026-08-25 08:28,Photos for the kurta set are attached. Pickup is near Gate 2 this weekend.,image,img_008,0,digest,promotion,The message matches the user's known interests but is still low priority.,0.84,message_0049
+sample_msg_045,u_033,group,group_005,,u_048,2026-08-25 11:35,Photos for the kurta set are attached. Pickup is near Gate 2 this weekend.,image,img_008,0,mute,promotion,"Similar historical messages were ignored, dismissed, or muted by this user.",0.85,message_0050
 sample_msg_046,u_006,group,group_003,,u_045,2026-08-25 14:41,School circular attached. Please check the timing and consent note.,image,img_011,0,notify,event,A school admin sent a same-day operational update that the user is likely to need immediately.,0.87,message_0051
 sample_msg_047,u_007,business,,business_011,,2026-08-25 17:47,"Reminder: your account has a shopping offer available.
 
@@ -63,4 +63,4 @@ sample_msg_048,u_009,business,,business_091,,2026-08-25 08:53,"Dear Customer,
 
 Safety advisory image attached. The brand says they never ask for OTP or payment details on calls.
 
-Tap below to view details.",image,img_026,0,digest,security,The verified business message is legitimate but does not require immediate attention.,0.84,message_0053
+Tap below to view details.",image,img_026,0,digest,business_update,The verified business message is legitimate but does not require immediate attention.,0.84,message_0053

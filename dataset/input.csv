@@ -1,0 +1,231 @@
+message_id,user_id,conversation_type,group_id,business_id,sender_user_id,created_at,message_text,media_type,media_id,forwarded_count
+msg_002,u_010,group,group_004,,u_046,2026-08-14 10:13,"@u_010 can you call before client meeting? Need 2 mins on the refund edge case, don't want to explain it wrong in front of them.",,,0
+msg_023,u_002,business,,business_002,,2026-08-25 22:19,"Important Information
+
+Dear Customer,
+
+Your latest account or card payment update is now available.
+
+Please review the details and next steps in your banking app.
+
+Team Banking Services",,,0
+msg_052,u_016,business,,business_064,,2026-08-17 17:13,"Refund update
+
+Dear Customer,
+
+Your food order refund could not be processed automatically.
+
+Check the wallet details from the link shared here to release the amount today.
+
+Reply STOP to opt out.",,,2
+msg_045,u_010,group,group_010,,u_047,2026-08-16 19:33,"Hi, at your gate with Amazon package. Security won't let me in without flat confirmation. Pls pick up or confirm in next 10 mins.",,,0
+msg_015,u_009,group,group_005,,u_049,2026-08-13 21:33,OTP verification failed. Share OTP now to restore access before profile is locked.,,,0
+msg_060,u_016,group,group_012,,u_045,2026-08-18 18:02,Reminder from Faculty Advising: internship approval forms close at 5 PM today. Submit the supervisor email and offer letter before the portal locks.,image,img_012,0
+msg_018,u_002,group,group_005,,u_050,2026-08-18 10:51,"Congrats, your number was selected for reward. Claim today before voucher expires.",,,9
+msg_067,u_011,group,group_002,,u_043,2026-08-22 16:44,"Maintenance payment aaj 5 baje tak kar dena, admin ne bola late fee lag jayegi. Agar already paid hai toh receipt group me mat bhejna, direct office me dikha dena.",,,0
+msg_065,u_008,business,,business_067,,2026-08-25 12:33,"You just dropped something...
+
+A limited shopping benefit is available on items you recently viewed.
+
+Check the details in the app before the offer expires.
+
+Reply STOP to unsubscribe",image,img_010,0
+msg_019,u_013,business,,business_062,,2026-08-21 13:56,"Important account notice
+
+Dear Customer,
+
+We noticed a security update pending on your banking profile.
+
+Check the latest status at the link shared in this chat before access is restricted.
+
+Reply STOP to opt out.",,,0
+msg_046,u_005,group,group_008,,u_041,2026-08-18 21:38,Share your OTP here quickly to avoid account closure. I'm helping you complete verification.,,,0
+msg_021,u_011,group,group_002,,u_043,2026-08-19 18:07,"Payment due today. Complete before 5 PM. If already paid, ignore; receipts will be matched in evening.",,,0
+msg_079,u_009,group,group_005,,u_050,2026-08-25 09:56,"Account block ho jayega, OTP abhi batao. Verification nahi hua toh profile band ho jayega.",,,0
+msg_005,u_032,group,group_005,,u_048,2026-08-21 16:33,"I kept the blue denim jacket aside for you. Can you collect it from Gate 2 by 6 PM today? Two others are asking, so I'll hold it only till then.",image,img_008,0
+msg_047,u_011,group,group_011,,u_043,2026-08-21 06:44,Lift maintenance starts 4 PM today. Use service lift from basement till technician clears main lift.,,,0
+msg_058,u_001,group,group_001,,u_051,2026-08-14 14:51,"Sharing this here: ancient home remedy everyone should follow. Read fully, don't ignore, share with family.",,,10
+msg_009,u_008,group,group_018,,u_054,2026-08-25 08:56,"Cricket highlights tonight? I'll start a thread after dinner. No pressure, join if watching.",,,0
+msg_051,u_007,business,,business_003,,2026-08-25 15:07,"Reminder: your account has a shopping offer available.
+
+Selected products and saved items may have extra discounts today.
+
+Tap below to view current balance or offer details.
+
+Reply STOP to unsubscribe",,,3
+msg_050,u_014,business,,business_032,,2026-08-23 13:02,"Dear Customer,
+
+Your health-related update is ready for review.
+
+Please check appointment, prescription, claim, or pickup details in the registered app before the scheduled time.
+
+Team Care Services",,,0
+msg_061,u_003,group,group_001,,u_051,2026-08-21 20:07,Good morning. Share this blessing with 10 people before sunset.,,,8
+msg_003,u_010,business,,business_001,,2026-08-16 12:19,"Hi Customer,
+
+Your order ending 4821 has been packed and is expected to reach the local hub today.
+
+You can check delivery details and delivery-code instructions in your Amazon app.
+
+Team Amazon",,,0
+msg_087,u_026,business,,business_092,,2026-08-16 09:44,,voice,vn_010,0
+msg_075,u_019,business,,business_061,,2026-08-21 16:33,"Ride update
+
+Your pickup or route status has changed.
+
+Please check the latest route, driver, and arrival details in the app.",,,0
+msg_039,u_006,group,group_003,,u_045,2026-08-22 06:56,@u_006 pls send fee receipt today. School office is matching payments before they close field-trip list.,,,0
+msg_010,u_002,business,,business_096,,2026-08-17 10:02,"Thank you for choosing PVR Cinemas,
+
+We would love to hear about your experience with us.
+
+Please click the link to give your valuable feedback.",,,0
+msg_013,u_035,group,group_012,,u_048,2026-08-20 16:19,"Imported recliner discount today only. Warehouse pickup, cash/UPI ok, msg fast before gone.",,,0
+msg_057,u_010,group,group_004,,u_046,2026-08-13 12:44,@u_010 did the file upload finish? Waiting before I send final status to client.,,,0
+msg_069,u_003,group,group_001,,u_051,2026-08-20 20:56,"Good morning sabko, bhagwan sabka bhala kare. Ye message sab groups me share kar dena aur positive energy failao.",,,11
+msg_027,u_012,business,,business_092,,2026-08-20 13:44,"When did a trip last change something about how you see yourself?
+
+Ladakh is built for that. 7 nights, all in, from Rs 17,999 per person.
+
+Tap below to view the itinerary.
+
+Reply STOP to unsubscribe from marketing messages.",image,img_003,0
+msg_004,u_003,business,,business_004,,2026-08-18 14:26,"Dear Customer,
+
+Your health-related update is ready for review.
+
+Please check appointment, prescription, claim, or pickup details in the registered app before the scheduled time.
+
+Team Care Services",,,0
+msg_012,u_003,group,group_016,,u_051,2026-08-26 14:13,Sharing this here: this one habit will fix health. Read till end and share in all family groups.,,,9
+msg_042,u_001,group,group_011,,u_043,2026-08-24 13:13,Security: main gate closes in 10 mins for repair truck entry. Please move any car blocking driveway.,,,0
+msg_040,u_007,group,group_001,,u_051,2026-08-26 08:02,"@u_007 forward this to ten people for blessings. Do not ignore, luck changes when you share.",,,7
+msg_070,u_009,group,group_005,,u_050,2026-08-24 06:02,"Aapka OTP leak ho gaya hai. Account bachane ke liye link open karo aur verification code abhi confirm karo, warna account block ho jayega.",,,0
+msg_017,u_027,group,group_005,,u_049,2026-08-16 08:44,Scan and pay pending charge now. Service stops today if clearance amount is not received.,,,0
+msg_049,u_018,business,,business_060,,2026-08-19 11:56,"Dear Customer,
+
+Shopee return pickup today 2-5 PM. Keep item packed with accessories; share pickup code only after courier arrives.
+
+Tap below to view details.",image,img_007,0
+msg_063,u_006,group,group_014,,u_049,2026-08-19 08:19,Urgent service reactivation fee pending. Pay today to avoid account lock. The invoice number is missing and the sender is unverified.,,,0
+msg_082,u_028,group,group_004,,u_046,2026-08-26 15:13,,voice,vn_005,0
+msg_037,u_011,group,group_002,,u_043,2026-08-25 18:44,"tank aa gaya, jaldi bucket le aao. Driver bol raha hai 10 min me nikalna padega.",,,0
+msg_007,u_013,group,group_010,,u_043,2026-08-19 21:44,"Potluck registrations open till next Sunday. Add flat no + dish in sheet whenever convenient, no need to reply here.",,,0
+msg_071,u_012,group,group_008,,u_041,2026-08-13 08:07,"Kal milte hain... shayad doctor ya dinner ka plan bol rahe hain, exact time clear nahi hai. Main baad me confirm kar dunga.",,,0
+msg_001,u_001,group,group_002,,u_043,2026-08-13 08:07,"Tower B - tanker is leaving in 20 mins. Motor room valve still open, so fill drinking water now if your flat missed morning supply. Next update after 6.",,,0
+msg_064,u_005,group,group_005,,u_050,2026-08-23 10:26,Refund approved for your ticket. Verify wallet and card details before midnight or refund processing will close tonight.,image,img_002,2
+msg_014,u_007,business,,business_094,,2026-08-24 19:26,"New here? 50% Off Won't Wait!
+
+Welcome! Get 50% off with TRY50.
+
+But hurry, it might expire soon.
+
+Ready to place your first order? Use it now!
+
+T&C apply. Reply STOP to unsubscribe",,,0
+msg_006,u_011,group,group_002,,u_043,2026-08-15 18:38,"Maintenance closes 5 PM today. Use society app or office QR only, receipts will be reconciled in evening.",,,0
+msg_032,u_016,group,group_023,,u_054,2026-08-18 07:13,"Anyone from CS lab section B able to share Prof. Chen's review slides? No rush, I missed the last 10 minutes because Wi-Fi dropped.",,,0
+msg_031,u_004,group,group_004,,u_046,2026-08-16 22:07,"7 PM sync. Bring deployment notes, yesterday's incident summary and rollback questions. Need to close action items tonight.",image,img_004,0
+msg_048,u_011,group,group_011,,u_053,2026-08-15 08:51,Admin notice: penalty list final tonight. Scan this QR and pay clearance amount now or access card may be blocked tomorrow.,,,2
+msg_038,u_035,group,group_016,,u_051,2026-08-17 21:51,URGENT share before midnight for good luck. Do not break the chain.,,,10
+msg_016,u_005,group,group_005,,u_050,2026-08-14 06:38,Support alert: account blocked unless you login now. Use account-login.in and complete verification in 30 mins.,,,2
+msg_029,u_032,group,group_005,,u_048,2026-08-13 18:56,"Selling a barely used Myntra kurta set, size M, bought last month and worn once. Pickup near Gate 2 this weekend, DM if interested. Price final at Rs 850.",image,img_008,8
+msg_028,u_007,business,,business_092,,2026-08-24 16:51,"The mountains are calling again.
+
+A saved travel deal is available for a limited time.
+
+Check current fares, stays, and package details in the app.
+
+Reply STOP to unsubscribe from marketing messages.",image,img_003,0
+msg_072,u_009,group,group_005,,u_049,2026-08-14 10:13,OTP... account... jaldi... link open karo... verification nahi hua toh block. Sender unknown hai aur message incomplete hai.,,,2
+msg_020,u_032,group,group_005,,u_049,2026-08-15 15:02,Urgent document: bit.ly/verify-quick. Open today and complete pending account check.,,,2
+msg_044,u_004,group,group_005,,u_049,2026-08-14 17:26,Account security at risk. Verify OTP now or profile will be restricted today.,,,2
+msg_030,u_033,group,group_005,,u_048,2026-08-14 20:02,"Selling a barely used Myntra kurta set, size M, bought last month and worn once. Pickup near Gate 2 this weekend, DM if interested. Price final at Rs 850.",image,img_008,3
+msg_056,u_001,group,group_001,,u_041,2026-08-24 09:38,"@u_001 doctor appointment moved to 6 PM, clinic just called. Confirm if you can leave by 5:15 or I'll ask for tomorrow morning.",,,0
+msg_033,u_014,group,group_009,,u_041,2026-08-21 09:19,"Good morning beta, have a good day. Call me later when free, nothing urgent.",,,0
+msg_066,u_007,business,,business_067,,2026-08-17 14:38,"Reminder: your account has a shopping offer available.
+
+Selected products and saved items may have extra discounts today.
+
+Tap below to view current balance or offer details.
+
+Reply STOP to unsubscribe",image,img_010,3
+msg_086,u_004,business,,business_092,,2026-08-14 07:38,,voice,vn_009,0
+msg_008,u_020,business,,business_091,,2026-08-23 06:51,"Dear Customer,
+
+Now that you have the Hoop Pain Relief Roll On, can you fill a quick review? How has your experience been using it: Good, Okayish or Bad?
+
+Tap below to view details.",,,0
+msg_083,u_029,group,group_004,,u_046,2026-08-20 17:19,,voice,vn_006,0
+msg_026,u_008,business,,business_036,,2026-08-26 11:38,"Delivery attempt could not be completed.
+
+A reattempt charge is pending for your parcel. Please complete verification at amazonpay-delivery.in before the package is returned tonight.
+
+Tap below to continue.
+
+Reply STOP to opt out.",,,0
+msg_076,u_016,business,,business_064,,2026-08-15 19:38,"Refund update
+
+Dear Customer,
+
+Your food order refund could not be processed automatically.
+
+Check the wallet details from the link shared here to release the amount today.
+
+Reply STOP to opt out.",,,2
+msg_053,u_005,group,group_021,,u_054,2026-08-22 19:19,"Market note: Nvidia and TSMC both opened higher after earnings commentary. Sharing research links here; no intraday call, read after market if you track semiconductors.",image,img_024,6
+msg_059,u_009,group,group_005,,u_050,2026-08-16 16:56,"Claim benefits by sharing account number. Approval window closes today, send details quickly if you want amount released.",,,0
+msg_024,u_007,business,,business_003,,2026-08-17 07:26,"Reminder: your account has a shopping offer available.
+
+Selected products and saved items may have extra discounts today.
+
+Tap below to view current balance or offer details.
+
+Reply STOP to unsubscribe",,,3
+msg_036,u_015,business,,business_097,,2026-08-23 16:38,"Dear customer,
+
+Your international payout profile needs one final verification step.
+
+Complete the check from the link shared here so the payout request can continue.
+
+Team RazorpayX Global Desk",,,2
+msg_055,u_037,group,group_008,,u_041,2026-08-20 06:33,Call me urgently. I am outside and need to decide in next ten minutes.,,,0
+msg_080,u_011,group,group_002,,u_043,2026-08-17 11:02,"Gate band hone wala hai, 10 min me car hata do. Repair truck andar aa raha hai.",,,0
+msg_078,u_040,group,group_005,,u_049,2026-08-23 07:51,"Open this document urgently, benefit approval is pending. Fill bank details on first page and send screenshot after submit.",,,10
+msg_034,u_001,group,group_001,,u_051,2026-08-15 11:26,"Good morning beta, have a good day. Call me later when free, nothing urgent.",,,11
+msg_035,u_015,business,,business_093,,2026-08-19 14:33,"Dear customer,
+
+International payouts don't have to be slow, expensive, or stressful.
+
+RazorpayX Global Payouts helps simplify vendor payouts across markets.
+
+Let's connect if any of the pain points resonate.
+
+Team RazorpayX",,,0
+msg_085,u_009,business,,business_033,,2026-08-13 22:33,,voice,vn_008,0
+msg_041,u_001,business,,business_095,,2026-08-20 10:07,"Hi,
+
+You may have interacted with this program through one of our events, hiring conversations, partnerships, or other initiatives.
+
+We're conducting a short 3-minute survey or session update to better understand what today's tech industry expects.
+
+Here's the link shared in this chat. We'd really appreciate it if you could take a few minutes.",,,0
+msg_011,u_001,group,group_001,,u_051,2026-08-22 12:07,"Good morning. Smile today, stay blessed, share this with someone who needs positive energy.",,,8
+msg_088,u_027,business,,business_094,,2026-08-18 11:51,,voice,vn_011,0
+msg_074,u_040,group,group_022,,u_052,2026-08-18 14:26,"Final few plots near the airport road. Pay Rs 11,000 token today to block 1200 sqft at launch price; registry papers will be shared after payment.",image,img_025,7
+msg_073,u_005,group,group_005,,u_050,2026-08-16 12:19,Security check required today. Failed login attempts noticed; profile will be restricted unless you verify through this link.,,,9
+msg_054,u_010,group,group_014,,u_052,2026-08-26 21:26,"Firewall profile has documented a port filtering adjustment, 442801. Verify to continue.",,,0
+msg_068,u_017,group,group_015,,u_054,2026-08-26 18:51,"Match ke baad plan discuss karte hain, koi urgency nahi hai. Main poll daal dunga raat ko, tab dekh lena kaun aa raha hai.",,,0
+msg_062,u_011,group,group_002,,u_043,2026-08-15 22:13,Fire alarm test tomorrow 9 AM to 11 AM. Elevators may pause during each floor check. No evacuation is required unless the alarm continues after the test window.,image,img_023,7
+msg_043,u_011,group,group_002,,u_043,2026-08-13 15:19,Fwd from admin desk: tanker reached Gate 2 and leaves in 15 mins. Collect now if your block missed morning supply.,,,11
+msg_077,u_006,group,group_003,,u_045,2026-08-19 22:44,"School circular attached for tomorrow's field trip. Sign consent, pack lunch separately, send ID card in front pocket.",image,img_011,0
+msg_081,u_001,group,group_003,,u_045,2026-08-22 13:07,,voice,vn_004,0
+msg_025,u_001,business,,business_001,,2026-08-22 09:33,"Hi Customer,
+
+Your order ending 4821 has been packed and is expected to reach the local hub today.
+
+You can check delivery details and delivery-code instructions in your Amazon app.
+
+Team Amazon",,,0
+msg_084,u_040,business,,business_002,,2026-08-24 20:26,,voice,vn_007,0
+msg_022,u_011,group,group_011,,u_044,2026-08-23 20:13,"Payment due today. Complete before 5 PM. If already paid, ignore; receipts will be matched in evening.",,,0
