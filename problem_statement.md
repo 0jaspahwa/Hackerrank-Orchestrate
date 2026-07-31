@@ -55,8 +55,8 @@ Input fields:
 - `business_id`: business ID if the message is from a business account
 - `sender_user_id`: sender user ID if the message is from a user
 - `created_at`: message timestamp
-- `message_text`: text, caption, or placeholder text for media messages
-- `media_type`: `none`, `image`, `voice_note`, or `document`
+- `message_text`: text content for text messages; empty for voice-note messages
+- `media_type`: empty, `image`, or `voice`
 - `media_id`: linked image or voice-note ID, if present
 - `forwarded_count`: forwarding signal
 
