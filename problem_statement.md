@@ -35,8 +35,8 @@ You will receive exactly one prediction input file:
 7. `dataset/user_business_history.csv` - Whether a user has a recent relationship with a business, such as orders, bookings, payments, opt-ins, or opt-outs.
 8. `dataset/messages.csv` - Past messages received by users. These help identify repeated patterns, ignored messages, useful updates, and risky content.
 9. `dataset/message_events.csv` - How users reacted to those past messages: opened, replied, dismissed, muted, or reported.
-10. `dataset/images.csv` - Details for image messages.
-11. `dataset/voice_notes.csv` - Details for voice notes.
+10. `dataset/images.csv` - Image IDs and file paths for image messages.
+11. `dataset/voice_notes.csv` - Voice note IDs and file paths for audio messages.
 12. `dataset/daily_notification_summary.csv`  - Daily notification load for each user.
 13. `dataset/output.csv` - Blank submission template. Fill this file with your predictions.
 

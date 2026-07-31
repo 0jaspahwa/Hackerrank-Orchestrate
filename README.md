@@ -33,8 +33,8 @@ Read [`problem_statement.md`](./problem_statement.md) for the full task spec, in
     ├── user_business_history.csv     # User-business history
     ├── messages.csv                  # Historical messages
     ├── message_events.csv            # User reactions to historical messages
-    ├── images.csv                    # Image captions, OCR, and visual signals
-    ├── voice_notes.csv               # Voice transcripts and audio metadata
+    ├── images.csv                    # Image IDs and media file paths
+    ├── voice_notes.csv               # Voice note IDs and media file paths
     ├── daily_notification_summary.csv
     └── media/
         ├── images/
