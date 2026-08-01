@@ -24,7 +24,7 @@ Your system should use the provided message, user, group, business, media, and h
 
 All participant-facing files are inside `dataset/`.
 
-You will receive exactly one prediction input file:
+Only `dataset/messages.csv` needs predictions. The other files provide context:
 
 1. `dataset/messages.csv` - Incoming messages that your system must route.
 2. `dataset/sample_messages.csv` - Example messages with the expected `action`, `message_type`, `reason`, `confidence`, and `evidence_message_ids` columns filled in. Use this only to understand the expected output format and style.
