@@ -56,6 +56,7 @@ For every row in `dataset/messages.csv`, produce one row in `output.csv` with:
 | `evidence_message_ids` | Historical message IDs used as evidence; write `none` if there is no useful evidence |
 
 Your system should make personalized decisions using the provided message, user, group, business, media, and historical interaction data.
+For image and voice-note messages, `images.csv` and `voice_notes.csv` only provide file paths; your system should inspect the media files themselves.
 
 ---
 

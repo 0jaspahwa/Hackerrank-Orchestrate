@@ -1,4 +1,4 @@
-user_id,account_id,why_user_knows_account,last_activity_at,allows_promotions,promotions_opted_out_at,activity_count_180d,messages_opened_30d,messages_dismissed_30d,messages_replied_30d,last_reply_at
+user_id,business_id,why_user_knows_account,last_activity_at,allows_promotions,promotions_opted_out_at,activity_count_180d,messages_opened_30d,messages_dismissed_30d,messages_replied_30d,last_reply_at
 u_001,business_001,recent_grocery_delivery,2026-07-17 23:55,0,,3,5,1,0,
 u_001,business_003,old_sale_subscription,2026-05-11 12:40,0,2026-07-17 23:55,4,1,7,0,
 u_002,business_003,active_sale_subscription,2026-07-17 23:55,1,,8,7,0,1,2026-07-17 23:55
