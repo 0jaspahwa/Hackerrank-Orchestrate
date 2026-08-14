@@ -1,111 +1,111 @@
 message_id,action,message_type,reason,confidence,evidence_message_ids
-msg_023,,,,,
-msg_091,,,,,
-msg_090,,,,,
-msg_048,,,,,
-msg_040,,,,,
-msg_075,,,,,
-msg_005,,,,,
-msg_104,,,,,
-msg_069,,,,,
-msg_107,,,,,
-msg_070,,,,,
-msg_003,,,,,
-msg_099,,,,,
-msg_008,,,,,
-msg_092,,,,,
-msg_060,,,,,
-msg_004,,,,,
-msg_030,,,,,
-msg_045,,,,,
-msg_052,,,,,
-msg_009,,,,,
-msg_071,,,,,
-msg_016,,,,,
-msg_065,,,,,
-msg_038,,,,,
-msg_086,,,,,
-msg_014,,,,,
-msg_094,,,,,
-msg_029,,,,,
-msg_105,,,,,
-msg_002,,,,,
-msg_010,,,,,
-msg_078,,,,,
-msg_013,,,,,
-msg_018,,,,,
-msg_044,,,,,
-msg_032,,,,,
-msg_106,,,,,
-msg_006,,,,,
-msg_109,,,,,
-msg_108,,,,,
-msg_019,,,,,
-msg_088,,,,,
-msg_056,,,,,
-msg_027,,,,,
-msg_050,,,,,
-msg_083,,,,,
-msg_063,,,,,
-msg_033,,,,,
-msg_061,,,,,
-msg_020,,,,,
-msg_017,,,,,
-msg_058,,,,,
-msg_026,,,,,
-msg_047,,,,,
-msg_046,,,,,
-msg_042,,,,,
-msg_079,,,,,
-msg_098,,,,,
-msg_037,,,,,
-msg_007,,,,,
-msg_085,,,,,
-msg_001,,,,,
-msg_021,,,,,
-msg_028,,,,,
-msg_012,,,,,
-msg_064,,,,,
-msg_103,,,,,
-msg_031,,,,,
-msg_057,,,,,
-msg_087,,,,,
-msg_067,,,,,
-msg_039,,,,,
-msg_082,,,,,
-msg_066,,,,,
-msg_049,,,,,
-msg_015,,,,,
-msg_051,,,,,
-msg_097,,,,,
-msg_089,,,,,
-msg_053,,,,,
-msg_059,,,,,
-msg_024,,,,,
-msg_072,,,,,
-msg_036,,,,,
-msg_076,,,,,
-msg_055,,,,,
-msg_102,,,,,
-msg_080,,,,,
-msg_093,,,,,
-msg_034,,,,,
-msg_035,,,,,
-msg_101,,,,,
-msg_041,,,,,
-msg_011,,,,,
-msg_110,,,,,
-msg_095,,,,,
-msg_074,,,,,
-msg_073,,,,,
-msg_054,,,,,
-msg_068,,,,,
-msg_100,,,,,
-msg_062,,,,,
-msg_096,,,,,
-msg_043,,,,,
-msg_077,,,,,
-msg_081,,,,,
-msg_025,,,,,
-msg_084,,,,,
-msg_022,,,,,
+msg_023,digest,business_update,A verified business the user engages with sent a non-promotional update.,0.72,message_0243;message_0102
+msg_091,mute,scam,"An unreciprocated sender is asking for one-time codes or credentials, which is treated as phishing.",0.84,message_0381;message_0238
+msg_090,digest,unknown,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,none
+msg_048,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0152;message_0151
+msg_040,notify,personal,A group member mentioned the user directly and is asking for a personal reply.,0.78,message_0136;message_0135
+msg_075,digest,business_update,A verified business the user engages with sent a non-promotional update.,0.72,message_0206;message_0205
+msg_005,digest,promotion,A member is listing an item for sale in a group that exists for buying and selling.,0.72,message_0095;message_0390
+msg_104,digest,unknown,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0115;message_0232
+msg_069,mute,greeting,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0194;message_0193
+msg_107,digest,unknown,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0214;message_0173
+msg_070,digest,promotion,A member is listing an item for sale in a group that exists for buying and selling.,0.72,message_0214;message_0173
+msg_003,digest,business_update,A verified business the user engages with sent a non-promotional update.,0.72,message_0031;message_0267
+msg_099,digest,unknown,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0055;message_0249
+msg_008,digest,business_update,A verified business the user engages with sent a non-promotional update.,0.72,message_0072;message_0071
+msg_092,digest,unknown,"No branch matched with confidence, so the message is deferred rather than interrupted or suppressed.",0.50,none
+msg_060,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0176;message_0404
+msg_004,notify,business_update,A verified business is following up on an order or booking the user actually started.,0.83,message_0245;message_0064
+msg_030,mute,promotion,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0115;message_0232
+msg_045,notify,urgent,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0146;message_0145
+msg_052,mute,scam,"Sender uses an unverified lookalike domain registered recently, so the message is suppressed as impersonation.",0.87,message_0208;message_0207
+msg_009,mute,promotion,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0074;message_0073
+msg_071,digest,personal,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0197;message_0198
+msg_016,mute,scam,"An unreciprocated sender is asking for one-time codes or credentials, which is treated as phishing.",0.84,message_0087;message_0184
+msg_065,digest,business_update,Image content unavailable; routed on sender history and business relationship.,0.55,message_0186;message_0185
+msg_038,mute,forward,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0131;message_0132
+msg_086,digest,business_update,A verified business the user engages with sent a non-promotional update.,0.72,message_0222
+msg_014,mute,spam,The user has opted out of or repeatedly dismissed marketing from this business.,0.85,message_0017;message_0258
+msg_094,digest,unknown,"No branch matched with confidence, so the message is deferred rather than interrupted or suppressed.",0.50,none
+msg_029,mute,forward,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0095;message_0390
+msg_105,digest,unknown,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0233;message_0373
+msg_002,notify,urgent,A group admin directly mentioned the user with a time-bound request that should interrupt now.,0.86,message_0371;message_0230
+msg_010,digest,business_update,A verified business the user engages with sent a non-promotional update.,0.72,message_0011;message_0242
+msg_078,mute,forward,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0212;message_0211
+msg_013,digest,personal,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0082;message_0081
+msg_018,mute,forward,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0092;message_0091
+msg_044,digest,promotion,A member is listing an item for sale in a group that exists for buying and selling.,0.72,message_0036;message_0144
+msg_032,digest,personal,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0374;message_0285
+msg_106,digest,personal,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0234;message_0377
+msg_006,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0271;message_0410
+msg_109,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0152;message_0151
+msg_108,mute,scam,"Sender uses an unverified lookalike domain registered recently, so the message is suppressed as impersonation.",0.87,message_0094;message_0093
+msg_019,mute,scam,"Sender uses an unverified lookalike domain registered recently, so the message is suppressed as impersonation.",0.87,message_0094;message_0093
+msg_088,mute,promotion,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0115;message_0232
+msg_056,notify,personal,A group member mentioned the user directly and is asking for a personal reply.,0.78,message_0054;message_0226
+msg_027,digest,business_update,Image content unavailable; routed on sender history and business relationship.,0.55,message_0272;message_0109
+msg_050,digest,unknown,"No branch matched with confidence, so the message is deferred rather than interrupted or suppressed.",0.50,none
+msg_083,digest,event,A group admin sent an operational update that the user is likely to need.,0.76,message_0219
+msg_063,digest,promotion,A member is listing an item for sale in a group that exists for buying and selling.,0.72,message_0182;message_0181
+msg_033,digest,greeting,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0409;message_0280
+msg_061,mute,greeting,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0194;message_0193
+msg_020,digest,promotion,A member is listing an item for sale in a group that exists for buying and selling.,0.72,message_0095;message_0390
+msg_017,mute,promotion,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0090;message_0089
+msg_058,mute,forward,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0078;message_0077
+msg_026,mute,scam,"Sender uses an unverified lookalike domain registered recently, so the message is suppressed as impersonation.",0.87,message_0032;message_0108
+msg_047,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0152;message_0410
+msg_046,digest,personal,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0148;message_0147
+msg_042,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0057;message_0240
+msg_079,digest,promotion,A member is listing an item for sale in a group that exists for buying and selling.,0.72,message_0214;message_0173
+msg_098,digest,unknown,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0054;message_0226
+msg_037,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0271;message_0410
+msg_007,digest,event,A group admin sent an operational update that the user is likely to need.,0.76,message_0070;message_0069
+msg_085,mute,scam,"Sender uses an unverified lookalike domain registered recently, so the message is suppressed as impersonation.",0.87,message_0221
+msg_001,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0057;message_0240
+msg_021,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0271;message_0410
+msg_028,mute,promotion,Image content unavailable; user has explicitly opted out of marketing from this business.,0.60,message_0034;message_0112
+msg_012,mute,forward,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0194;message_0193
+msg_064,digest,promotion,A member is listing an item for sale in a group that exists for buying and selling.,0.72,message_0087;message_0184
+msg_103,digest,personal,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0390;message_0332
+msg_031,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0055;message_0249
+msg_057,digest,event,A group admin sent an operational update that the user is likely to need.,0.76,message_0371;message_0230
+msg_087,mute,promotion,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0391;message_0389
+msg_067,digest,event,A group admin sent an operational update that the user is likely to need.,0.76,message_0271;message_0410
+msg_039,notify,urgent,A group admin directly mentioned the user with a time-bound request that should interrupt now.,0.86,message_0255;message_0037
+msg_082,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0380;message_0218
+msg_066,mute,promotion,Image content unavailable; user has explicitly opted out of marketing from this business.,0.60,message_0188;message_0187
+msg_049,digest,business_update,Image content unavailable; routed on sender history and business relationship.,0.55,message_0153;message_0291
+msg_015,digest,promotion,A member is listing an item for sale in a group that exists for buying and selling.,0.72,message_0214;message_0173
+msg_051,mute,spam,The user has opted out of or repeatedly dismissed marketing from this business.,0.85,message_0402;message_0257
+msg_097,digest,unknown,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0054;message_0226
+msg_089,digest,unknown,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,none
+msg_053,mute,forward,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0411;message_0253
+msg_059,digest,promotion,A member is listing an item for sale in a group that exists for buying and selling.,0.72,message_0214;message_0173
+msg_024,mute,spam,The user has opted out of or repeatedly dismissed marketing from this business.,0.85,message_0402;message_0257
+msg_072,mute,scam,"An unreciprocated sender is asking for one-time codes or credentials, which is treated as phishing.",0.84,message_0086;message_0085
+msg_036,mute,scam,"Sender uses an unverified lookalike domain registered recently, so the message is suppressed as impersonation.",0.87,message_0128;message_0127
+msg_076,mute,scam,"Sender uses an unverified lookalike domain registered recently, so the message is suppressed as impersonation.",0.87,message_0208;message_0207
+msg_055,digest,personal,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0387;message_0166
+msg_102,notify,urgent,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0371;message_0230
+msg_080,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0271;message_0410
+msg_093,digest,unknown,"No branch matched with confidence, so the message is deferred rather than interrupted or suppressed.",0.50,none
+msg_034,mute,greeting,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0078;message_0077
+msg_035,digest,promotion,The message is promotional but comes from a business the user has opted into and previously opened.,0.81,message_0281
+msg_101,digest,unknown,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0370;message_0229
+msg_041,digest,unknown,"No branch matched with confidence, so the message is deferred rather than interrupted or suppressed.",0.50,none
+msg_011,mute,greeting,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0078;message_0077
+msg_110,mute,scam,"An unreciprocated sender is asking for one-time codes or credentials, which is treated as phishing.",0.84,message_0381;message_0238
+msg_095,mute,scam,The message tries to instruct the router; the decision is based on its actual content and risk.,0.88,message_0087;message_0184
+msg_074,mute,forward,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0391;message_0389
+msg_073,mute,forward,Low-value forwarded or repetitive content in a group the user has already turned away from.,0.75,message_0087;message_0184
+msg_054,digest,promotion,A member is listing an item for sale in a group that exists for buying and selling.,0.72,message_0391;message_0389
+msg_068,digest,personal,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0192;message_0191
+msg_100,notify,urgent,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0055;message_0249
+msg_062,digest,event,A group admin sent an operational update that the user is likely to need.,0.76,message_0271;message_0410
+msg_096,digest,unknown,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,none
+msg_043,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0271;message_0410
+msg_077,digest,event,A group admin sent an operational update that the user is likely to need.,0.76,message_0255;message_0037
+msg_081,notify,urgent,A group admin sent an operational update that the user is likely to need.,0.76,message_0217
+msg_025,notify,business_update,A verified business is following up on an order or booking the user actually started.,0.83,message_0106;message_0105
+msg_084,mute,spam,The user has opted out of or repeatedly dismissed marketing from this business.,0.85,message_0220
+msg_022,digest,personal,Ordinary conversation with no urgency or risk signals; shown later rather than interrupting.,0.60,message_0100;message_0099
