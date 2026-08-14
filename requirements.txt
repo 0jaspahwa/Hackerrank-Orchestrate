@@ -1,0 +1,7 @@
+# Runtime dependencies of code/. Pinned to the versions this was built against.
+# Only packages actually imported by code/*.py appear here.
+
+pydantic==2.10.6          # the output contract (schema.py)
+anthropic==0.120.2        # vision seam (media.py, main.py)
+faster-whisper==1.2.1     # local voice transcription (media.py)
+python-dotenv==1.0.1      # loads ANTHROPIC_API_KEY from .env (media.py)
