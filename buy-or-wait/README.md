@@ -4,6 +4,8 @@ My submission for HackerRank Orchestrate, September 2026.
 
 **Rank: 63 out of 3,062.**
 
+![HackerRank Orchestrate certificate, September 2026, final rank 63 of 3,062](docs/certificate.png)
+
 ## What it does
 
 A user wants to buy something. This program looks at their money and tells

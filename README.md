@@ -14,7 +14,13 @@ project has its own folder with its own code, data and README.
   image) and decides whether to notify the user now, save it for later, or
   hide it.
 
-## Certificate (August 2026)
+## Certificates
+
+**September 2026, Buy or Wait?** Rank 63 of 3,062
+
+![HackerRank Orchestrate certificate for Buy or Wait?, rank 63 of 3,062](buy-or-wait/docs/certificate.png)
+
+**August 2026, WhatsApp Notification Router** Rank 384 of 1,983
 
 ![HackerRank Orchestrate certificate for the WhatsApp Notification Router, rank 384 of 1,983](whatsapp-notification-router/docs/certificate.gif)
 
