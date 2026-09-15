@@ -1,0 +1,36 @@
+
+!.env.example
+# --- agent log (AGENTS.md S2: never commit) ---
+# --- os / editor ---
+# --- python ---
+# --- run artifacts ---
+# --- secrets: never commit ---
+*.egg-info/
+*.key
+*.pem
+*.py[cod]
+*.trace.jsonl
+*_key
+*_key.json
+.DS_Store
+.coverage
+.env
+.env.*
+.idea/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.vscode/
+/.cache/
+/artifacts/
+Thumbs.db
+__pycache__/
+credentials.json
+env/
+htmlcov/
+log.txt
+output.csv
+output*.csv
+secrets.json
+venv/

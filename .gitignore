@@ -1,9 +1,24 @@
-.env
-__pycache__/
-*.pyc
-.media_cache.json
+# Repo-wide safety net. Each project folder keeps its own .gitignore too.
 
-# Frozen submission backups - kept on disk, not committed.
-# dataset/output.csv is the submission file and stays tracked.
-dataset/output_h4_backup.csv
-dataset/output_final.csv
+# --- secrets: never commit ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# --- agent logs (AGENTS.md S2: never commit) ---
+log.txt
+
+# --- python / os / editor ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

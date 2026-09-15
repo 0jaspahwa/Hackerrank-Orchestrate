@@ -1,0 +1,82 @@
+{
+ "amount_exact": 3,
+ "amount_1pct": 6,
+ "amount_5pct": 11,
+ "median_rel": 0.07420851980772418,
+ "affordability_status": 16,
+ "recommended_payment_method": 18,
+ "payment_plan": 17,
+ "earliest_date_for_full_payment": 17,
+ "spending_changes_needed": 22,
+ "misses": {
+  "amount_safe_to_pay": [
+   "request_01",
+   "request_02",
+   "request_03",
+   "request_04",
+   "request_05",
+   "request_06",
+   "request_07",
+   "request_08",
+   "request_10",
+   "request_11",
+   "request_13",
+   "request_14",
+   "request_15",
+   "request_17",
+   "request_18",
+   "request_19",
+   "request_20",
+   "request_21",
+   "request_22",
+   "request_23",
+   "request_24",
+   "request_25"
+  ],
+  "affordability_status": [
+   "request_01",
+   "request_02",
+   "request_06",
+   "request_07",
+   "request_08",
+   "request_10",
+   "request_11",
+   "request_13",
+   "request_23"
+  ],
+  "recommended_payment_method": [
+   "request_01",
+   "request_02",
+   "request_06",
+   "request_07",
+   "request_08",
+   "request_13",
+   "request_23"
+  ],
+  "payment_plan": [
+   "request_01",
+   "request_02",
+   "request_06",
+   "request_07",
+   "request_08",
+   "request_13",
+   "request_19",
+   "request_23"
+  ],
+  "earliest_date_for_full_payment": [
+   "request_01",
+   "request_02",
+   "request_07",
+   "request_08",
+   "request_10",
+   "request_11",
+   "request_13",
+   "request_23"
+  ],
+  "spending_changes_needed": [
+   "request_06",
+   "request_11",
+   "request_21"
+  ]
+ }
+}

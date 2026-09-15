@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.media_cache.json
+
+# Frozen submission backups - kept on disk, not committed.
+# dataset/output.csv is the submission file and stays tracked.
+dataset/output_h4_backup.csv
+dataset/output_final.csv
