@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"+233247524312\"},\"why\":\"Find records with this phone number\"}", "input_tokens": 391, "output_tokens": 48, "latency_s": 0.637, "provider": "groq", "model": "openai/gpt-oss-120b"}

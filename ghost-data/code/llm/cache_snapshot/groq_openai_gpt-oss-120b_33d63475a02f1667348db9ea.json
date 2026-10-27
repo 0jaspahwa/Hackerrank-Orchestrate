@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"ana-varga@proton.me\"},\"why\":\"Check for email not linked\"}", "input_tokens": 456, "output_tokens": 48, "latency_s": 0.563, "provider": "groq", "model": "openai/gpt-oss-120b"}

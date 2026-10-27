@@ -1,0 +1,6 @@
+# core pipeline (deterministic rules)
+requests>=2.31
+pydantic>=2.0          # typed investigator actions
+pypdf>=4.0            # PDF text fallback when poppler's pdftotext is not on PATH
+# optional: OCR corroboration of screenshot extractions (vision layer)
+rapidocr-onnxruntime>=1.2

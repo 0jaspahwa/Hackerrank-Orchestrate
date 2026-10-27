@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"oliver-bennett@gmail.com\"},\"why\":\"Check for unlinked record with email\"}", "input_tokens": 414, "output_tokens": 59, "latency_s": 0.498, "provider": "groq", "model": "openai/gpt-oss-120b"}

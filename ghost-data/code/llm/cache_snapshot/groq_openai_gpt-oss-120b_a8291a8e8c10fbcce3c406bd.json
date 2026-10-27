@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"list_candidates\",\"args\":{\"slot\":\"policy\"},\"why\":\"find policies possibly containing requester identifiers\"}", "input_tokens": 498, "output_tokens": 76, "latency_s": 0.572, "provider": "groq", "model": "openai/gpt-oss-120b"}

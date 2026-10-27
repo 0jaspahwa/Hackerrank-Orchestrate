@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"list_candidates\",\"args\":{\"slot\":\"account\"},\"why\":\"find possible records for remaining identifiers\"}", "input_tokens": 508, "output_tokens": 109, "latency_s": 0.685, "provider": "groq", "model": "openai/gpt-oss-120b"}

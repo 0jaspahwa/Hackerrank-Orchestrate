@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"maja.eriksen86@gmail.com\"},\"why\":\"search for unlinked email identifier\"}", "input_tokens": 441, "output_tokens": 55, "latency_s": 0.794, "provider": "groq", "model": "openai/gpt-oss-120b"}

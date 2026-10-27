@@ -1,0 +1,51 @@
+
+case_34 [screenshot_pdf] auditor INCOMPLETE / pipeline INCOMPLETE   steps auditor 7 pipeline 6 shared 6
+   auditor only : ('VERIFICATION', 'VERIFY_RECORD_PRESENT', 'security_service', 'audit_record_3753') ev=- conf=medium :: evidence_01 L59 audit_record_3753 read with correlation_key user_11 (retain).
+   evidence diff: ('FINDING', 'REPORT_REMAINING_RECORD', 'support_platform', 'support_9538') auditor=evidence_01 pipeline=evidence_04
+
+case_50 [screenshot_pdf] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 3 pipeline 3 shared 3
+
+case_57 [timing_account] auditor COMPLETE / pipeline COMPLETE   steps auditor 6 pipeline 6 shared 6
+   evidence diff: ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_1298') auditor=evidence_05 pipeline=evidence_02
+
+case_61 [screenshot_pdf] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 3 pipeline 3 shared 3
+
+case_63 [screenshot_pdf] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 3 pipeline 3 shared 3
+
+case_93 [flow_or_backup] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 12 pipeline 12 shared 12
+
+case_175 [complete] auditor COMPLETE / pipeline COMPLETE   steps auditor 6 pipeline 6 shared 6
+   evidence diff: ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_246') auditor=evidence_84 pipeline=evidence_22
+
+case_241 [historical_email] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 8 pipeline 8 shared 8
+
+case_245 [timing_account] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 4 pipeline 4 shared 4
+
+case_265 [complete] auditor COMPLETE / pipeline COMPLETE EXACT  steps auditor 2 pipeline 2 shared 2
+
+case_299 [complete] auditor COMPLETE / pipeline COMPLETE   steps auditor 3 pipeline 3 shared 2
+   auditor only : ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_9993') ev=evidence_75 conf=low :: evidence_75 inventory (2026-05-24T06:39, before audit) has no customer_profiles rows. Batch 2026-04-28T07:00 has three SUCCESS deletes (7249, 1618, 99
+   pipeline only: ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_1618') ev=evidence_31
+
+case_301 [flow_or_backup] auditor INCOMPLETE / pipeline INCOMPLETE   steps auditor 7 pipeline 7 shared 6
+   auditor only : ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_7249') ev=- conf=low :: Same ambiguous batch as case_299 (accounts 7249/1618/9993 all SUCCESS); picked account_7249 by descending-case-id order.
+   pipeline only: ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_9993') ev=-
+
+case_308 [timing_account] auditor COMPLETE / pipeline COMPLETE   steps auditor 6 pipeline 6 shared 6
+   evidence diff: ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_8647') auditor=evidence_29 pipeline=evidence_31
+
+case_378 [historical_email] auditor COMPLETE / pipeline COMPLETE EXACT  steps auditor 3 pipeline 3 shared 3
+
+case_390 [legal_hold] auditor COMPLETE / pipeline COMPLETE EXACT  steps auditor 7 pipeline 7 shared 7
+
+case_422 [flow_or_backup] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 8 pipeline 8 shared 8
+
+case_427 [historical_email] auditor COMPLETE / pipeline COMPLETE EXACT  steps auditor 3 pipeline 3 shared 3
+
+case_482 [timing_account] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 8 pipeline 8 shared 8
+
+case_536 [not_applicable] auditor NOT_APPLICABLE / pipeline NOT_APPLICABLE EXACT  steps auditor 0 pipeline 0 shared 0
+
+case_539 [not_applicable] auditor NOT_APPLICABLE / pipeline NOT_APPLICABLE EXACT  steps auditor 0 pipeline 0 shared 0
+
+status agreement 20/20; exact rows 14/20; shared steps 96 (auditor 99, pipeline 98); evidence agreement on shared 92/96

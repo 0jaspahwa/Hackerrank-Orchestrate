@@ -1,0 +1,29 @@
+#################### case_227 arthur-fontaine83@proton.me req 2026-06-13T07:00:00Z rep COMPLETE 2026-06-14T07:00:00Z AUDIT 2026-06-28T07:00:00Z {'user_225'}
+RIDS ['audit_record_9043', 'search_8181', 'support_5830']
+evidence_80 2026-06-28T06:25:56Z {"exported_at": "2026-06-28T06:25:56Z"} {"customer_reference": null, "message_excerpt": "Customer contacted support about account access.", "observed_at": "2026-06-28T04:59:12Z", "requester_email": "arthur-fontaine83@proton.me", "requester_name": null, "requester_phone": null, "resource_id": "support_5830"}
+evidence_80 2026-06-28T06:25:56Z {"exported_at": "2026-06-28T06:25:56Z"} {"hits": {"documents": [{"customer_reference": null, "display_name": null, "email": "arthur-fontaine83@proton.me", "email_hash": null, "phone": null, "resource_id": "search_8181"}], "total": 1}, "observed_at": "2026-06-28T05:31:47Z", "query": "arthur-fontaine83@proton.me", "resource_id": "search_8181"}
+LATE evidence_22 2026-06-30T07:00:00Z {"exported_at": "2026-06-30T07:00:00Z", "captured_at": "2026-06-28T07:00:00Z", "data_store": "search_service", "collection": "customer_search_documents"} {"resource_id": "search_8181", "index_name": "customer_directory_v3", "document": {"display_name": "Arthur Fontaine", "email": "arthur-fontaine83@proton.me", "customer_reference": "user_225"}}
+LATE evidence_22 2026-06-30T07:00:00Z {"exported_at": "2026-06-30T07:00:00Z", "captured_at": "2026-06-28T07:00:00Z", "data_store": "security_service", "collection": "security_audit_events"} {"resource_id": "audit_record_9043", "subject_reference": "user_225", "event_name": "account_deletion_reviewed", "actor_type": "automated_privacy_workflow", "integrity_seal": "sha256:0000000000000000000000000000000000000000000000000000000000002353"}
+LATE evidence_22 2026-06-30T07:00:00Z {"exported_at": "2026-06-30T07:00:00Z", "captured_at": "2026-06-28T07:00:00Z", "data_store": "support_platform", "collection": "ticket_attachments"} {"resource_id": "support_5830", "ticket_id": "CS-4830", "file_name": "delivery_confirmation_10.pdf", "uploaded_by": "arthur-fontaine83@proton.me", "storage_class": "ticket_attachment"}
+--- activities
+activity_2360 2026-06-14T07:49:28Z DELETE_RECORD deletion_worker support_platform support_5830 FAILED Deletion worker received the final result for support_5830 from support_platform.
+activity_2364 2026-06-14T08:08:57Z DELETE_RECORD deletion_worker search_service search_8181 FAILED Deletion worker received the final result for search_8181 from search_service.
+=== WINDOW case_227 same reported_at: ['case_227', 'case_228', 'case_229']
+    -70m activity_2349 DELETE_RECORD account_service account_5549 SUCCESS | in: []
+    -62m activity_2350 DELETE_RECORD account_service account_4552 SUCCESS | in: []
+    -51m activity_2351 DELETE_RECORD account_service account_7146 SUCCESS | in: []
+    -20m activity_2352 CHECK_DATA_FLOW integration_service data_flow_4475 SUCCESS | in: ['evidence_22', 'evidence_79']
+    -12m activity_2353 DELETE_RECORD account_service account_6674 FAILED | in: ['evidence_21']
+     -2m activity_2354 DELETE_RECORD search_service search_2904 FAILED | in: ['evidence_22', 'evidence_79']
+     +8m activity_2355 DELETE_RECORD account_service account_4752 FAILED | in: ['evidence_21']
+    +31m activity_2356 ANONYMIZE_RECORD analytics_platform analytics_4460 SUCCESS | in: ['evidence_21', 'evidence_81']
+    +39m activity_2357 REDACT_RECORD support_platform support_1360 SUCCESS | in: ['evidence_21', 'evidence_81']
+    +45m activity_2359 DISABLE_DATA_FLOW integration_service data_flow_5279 SUCCESS | in: ['evidence_21', 'evidence_81']
+    +49m activity_2360 DELETE_RECORD support_platform support_5830 FAILED | in: ['evidence_22', 'evidence_80']
+    +53m activity_2361 BLOCK_RESTORE backup_service backup_5626 SUCCESS | in: ['evidence_21', 'evidence_81']
+    +56m activity_2362 DELETE_RECORD export_service export_3210 PARTIAL | in: ['evidence_22', 'evidence_80']
+    +59m activity_2363 DELETE_RECORD search_service search_3627 FAILED | in: ['evidence_22', 'evidence_80']
+    +69m activity_2364 DELETE_RECORD search_service search_8181 FAILED | in: ['evidence_22', 'evidence_80']
+    +76m activity_2365 DELETE_RECORD search_service search_7054 PARTIAL | in: ['evidence_22', 'evidence_80']
+   +110m activity_2366 DELETE_RECORD search_service search_7351 FAILED | in: ['evidence_21', 'evidence_81']
+   +130m activity_2367 REDACT_RECORD support_platform support_1146 FAILED | in: ['evidence_21', 'evidence_81']

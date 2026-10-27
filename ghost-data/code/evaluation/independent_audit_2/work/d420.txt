@@ -1,0 +1,25 @@
+#################### case_420 storres487178@fastmail.com req 2026-02-25T09:00:00Z rep NOT_STARTED 2026-02-27T09:00:00Z AUDIT 2026-03-25T09:00:00Z {'user_418'}
+RIDS ['account_7606', 'audit_record_9687', 'export_389', 'search_8472']
+evidence_39 2026-03-25T08:59:44Z L110: 2026-03-25T08:59:34Z <15>1 node-7 search_service tr-0441096 - - level=DEBUG instance="search-7" pod="search-d518" region="ap-south-1" event="index_query_started" match_key="storres487178@fastmail.com" attempt="1"
+evidence_39 2026-03-25T08:59:44Z L111: 2026-03-25T08:59:40Z <15>1 node-7 search_service tr-0441096 - - level=DEBUG instance="search-7" pod="search-d518" region="ap-south-1" event="connection_acquired" pool="search_service_replica" wait_ms="66"
+evidence_39 2026-03-25T08:59:44Z L112: 2026-03-25T08:59:42Z <12>1 node-7 search_service tr-0441096 - - level=WARN instance="search-7" pod="search-d518" region="ap-south-1" event="dependency_retry" dependency="search_service_store" attempt="1" retry_in_ms="232" reason="read_timeout"
+evidence_39 2026-03-25T08:59:44Z L113: 2026-03-25T08:59:43Z <14>1 node-7 search_service tr-0441096 - - level=INFO instance="search-7" pod="search-d518" region="ap-south-1" event="dependency_recovered" attempt="2" route="primary"
+evidence_39 2026-03-25T08:59:44Z L114: 2026-03-25T08:59:44Z <14>1 node-7 search_service tr-0441096 - - level=INFO instance="search-7" pod="search-d518" region="ap-south-1" resource_id="search_8472" event="index_query_completed" index="customer_directory_v3" result="hit" shard="0" took_ms="12"
+evidence_39 2026-03-25T08:59:44Z L62: 2026-03-25T08:57:00Z <15>1 node-6 security_service tr-9853223 - - level=DEBUG instance="security-2" pod="security-83e9" region="eu-west-1" event="audit_record_query_started" subject_ref="user_418" attempt="1"
+evidence_39 2026-03-25T08:59:44Z L64: 2026-03-25T08:57:05Z <15>1 node-6 security_service tr-9853223 - - level=DEBUG instance="security-2" pod="security-83e9" region="eu-west-1" event="cache_lookup" result="miss" cache="security_service_lookup_v2"
+evidence_39 2026-03-25T08:59:44Z L66: 2026-03-25T08:57:06Z <15>1 node-6 security_service tr-9853223 - - level=DEBUG instance="security-2" pod="security-83e9" region="eu-west-1" resource_id="audit_record_9687" event="audit_record_read_completed" integrity_check="passed" rows="1"
+evidence_39 2026-03-25T08:59:44Z L6: 2026-03-25T08:51:54Z <14>1 node-4 account_service tr-3269055 - - level=INFO instance="account-6" pod="account-56bf" region="eu-central-1" resource_id="account_7606" event="profile_lookup_completed" rows="0" http_status="404" duration_ms="61" correlation_key="storres487178@fastmail.com"
+evidence_39 2026-03-25T08:59:44Z L74: 2026-03-25T08:57:36Z <14>1 node-1 export_service tr-6327090 - - level=INFO instance="export-1" pod="export-4474" region="ap-south-1" resource_id="export_389" event="export_download_check_completed" file="customer_export_389.zip" available="true" correlation_key="storres487178@fastmail.com"
+--- activities
+activity_749 2026-02-27T08:05:51Z DELETE_RECORD deletion_worker account_service account_7606 FAILED Deletion worker submitted primary profile account_7606 to account_service.
+activity_753 2026-02-27T09:43:43Z DELETE_RECORD deletion_worker export_service export_389 PARTIAL Deletion worker received the final result for export_389 from export_service.
+activity_756 2026-02-27T10:02:13Z DELETE_RECORD deletion_worker search_service search_8472 PARTIAL Deletion worker received the final result for search_8472 from search_service.
+=== WINDOW case_420 same reported_at: ['case_419', 'case_420', 'case_421']
+    -75m activity_747 DELETE_RECORD account_service account_1966 SUCCESS | in: ['evidence_39']
+    -65m activity_748 DELETE_RECORD account_service account_8482 FAILED | in: ['evidence_39']
+    -54m activity_749 DELETE_RECORD account_service account_7606 FAILED | in: ['evidence_39']
+    +44m activity_753 DELETE_RECORD export_service export_389 PARTIAL | in: ['evidence_39']
+    +60m activity_755 DELETE_RECORD support_platform support_2944 FAILED | in: ['evidence_39']
+    +62m activity_756 DELETE_RECORD search_service search_8472 PARTIAL | in: ['evidence_39']
+    +70m activity_757 DELETE_RECORD search_service search_3251 FAILED | in: ['evidence_39']
+    +78m activity_758 DELETE_RECORD search_service search_5797 FAILED | in: ['evidence_39']

@@ -1,0 +1,51 @@
+
+case_33 [multi_request_user] auditor INCOMPLETE / pipeline INCOMPLETE   steps auditor 7 pipeline 3 shared 3
+   auditor only : ('FINDING', 'REPORT_REMAINING_RECORD', 'export_service', 'export_1260') ev=evidence_23 conf=medium :: evidence_23 export_1260 Ready for ingrid.dahl; no deletion before audit (activity_3328 is 08-19); listed expiry is only a claim
+   auditor only : ('REMEDIATION', 'DELETE_RECORD', 'export_service', 'export_1260') ev=- conf=medium :: Remediation for finding: evidence_23 export_1260 Ready for ingrid.dahl; no deletion before audit (activity_3328 is 08-19); listed expiry is only a cla
+   auditor only : ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_2373') ev=- conf=low :: account_2373 from post-audit evidence_01 / activity_3324
+   auditor only : ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'export_service', 'export_1260') ev=- conf=medium :: Post-remediation check: evidence_23 export_1260 Ready for ingrid.dahl; no deletion before audit (activity_3328 is 08-19); listed expiry is only a clai
+
+case_52 [multi_request_user] auditor INCOMPLETE / pipeline INCOMPLETE   steps auditor 4 pipeline 3 shared 3
+   auditor only : ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_2373') ev=- conf=low :: account_2373 linked to ingrid.dahl only by post-audit evidence_01 / activity_3324 (08-19); no deletion workflow ran before this audit
+
+case_67 [random] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 4 pipeline 4 shared 4
+
+case_162 [evidence_at_audit] auditor COMPLETE / pipeline COMPLETE   steps auditor 2 pipeline 2 shared 2
+   evidence diff: ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_5983') auditor=evidence_15 pipeline=evidence_17
+
+case_206 [historical_email] auditor COMPLETE / pipeline COMPLETE   steps auditor 3 pipeline 3 shared 3
+   evidence diff: ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_4522') auditor=evidence_20 pipeline=evidence_22
+
+case_211 [replica_drift] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 7 pipeline 7 shared 7
+
+case_227 [support_attachment] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 8 pipeline 8 shared 8
+
+case_291 [random] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 4 pipeline 4 shared 4
+
+case_326 [historical_email] auditor COMPLETE / pipeline COMPLETE EXACT  steps auditor 6 pipeline 6 shared 6
+
+case_355 [replica_drift] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 4 pipeline 4 shared 4
+
+case_420 [export] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 8 pipeline 8 shared 8
+
+case_432 [legal_hold] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 9 pipeline 9 shared 9
+
+case_443 [support_message] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 7 pipeline 7 shared 7
+
+case_491 [random] auditor COMPLETE / pipeline COMPLETE EXACT  steps auditor 2 pipeline 2 shared 2
+
+case_492 [export] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 14 pipeline 14 shared 14
+
+case_505 [evidence_at_audit] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 9 pipeline 9 shared 9
+
+case_511 [legal_hold] auditor INCOMPLETE / pipeline INCOMPLETE EXACT  steps auditor 5 pipeline 5 shared 5
+
+case_532 [restore] auditor COMPLETE / pipeline COMPLETE EXACT  steps auditor 6 pipeline 6 shared 6
+
+case_543 [tombstone] auditor COMPLETE / pipeline COMPLETE   steps auditor 3 pipeline 3 shared 3
+   evidence diff: ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_8931') auditor=evidence_52 pipeline=evidence_02
+
+case_545 [tombstone] auditor COMPLETE / pipeline COMPLETE   steps auditor 3 pipeline 3 shared 3
+   evidence diff: ('VERIFICATION', 'VERIFY_RECORD_ABSENT', 'account_service', 'account_2577') auditor=evidence_52 pipeline=evidence_02
+
+status agreement 20/20; exact rows 14/20; shared steps 110 (auditor 115, pipeline 110); evidence agreement on shared 106/110

@@ -1,0 +1,30 @@
+#################### case_211 kavya.n9800@outlook.com req 2026-06-19T09:00:00Z rep NOT_STARTED 2026-06-22T09:00:00Z AUDIT 2026-07-08T09:00:00Z {'user_209'}
+RIDS ['account_4348', 'audit_record_7804', 'search_9955']
+evidence_20 2026-07-08T09:00:00Z L25: INSERT INTO "customer_data_primary" VALUES('audit_record_7804','security_service','security_audit_events','{"resource_id":"audit_record_7804","subject_reference":"user_209","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:0000000000000000000000000000000000000000000000000000000000001e7c"}','2026-07-08T09:00:00Z');
+evidence_20 2026-07-08T09:00:00Z L40: INSERT INTO "customer_data_primary" VALUES('search_9955','search_service','customer_search_documents','{"resource_id":"search_9955","index_name":"customer_directory_v3","document":{"display_name":"Kavya Nair","email":"kavya.n9800@outlook.com","customer_reference":"user_209"}}','2026-07-08T09:00:00Z');
+evidence_20 2026-07-08T09:00:00Z L53: INSERT INTO "customer_data_read_replica" VALUES('account_4348','account_service','customer_profiles','{"resource_id":"account_4348","customer_reference":"user_209","full_name":"Kavya Nair","email":"kavya.n9800@outlook.com","phone":"+91 92545 55079","account_status":"ACTIVE","signup_channel":"organic_search"}','2026-07-08T09:00:00Z');
+evidence_20 2026-07-08T09:00:00Z L64: INSERT INTO "customer_data_read_replica" VALUES('audit_record_7804','security_service','security_audit_events','{"resource_id":"audit_record_7804","subject_reference":"user_209","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:0000000000000000000000000000000000000000000000000000000000001e7c"}','2026-07-08T09:00:00Z');
+evidence_20 2026-07-08T09:00:00Z L79: INSERT INTO "customer_data_read_replica" VALUES('search_9955','search_service','customer_search_documents','{"resource_id":"search_9955","index_name":"customer_directory_v3","document":{"display_name":"Kavya Nair","email":"kavya.n9800@outlook.com","customer_reference":"user_209"}}','2026-07-08T09:00:00Z');
+--- activities
+activity_2471 2026-06-22T08:10:52Z DELETE_RECORD deletion_worker account_service account_4348 FAILED Deletion worker submitted primary profile account_4348 to account_service.
+activity_2479 2026-06-22T09:52:44Z SYNC_RECORD account_service account_replication_cluster account_4348 SUCCESS Replication worker reported its final checkpoint for account_4348.
+activity_2482 2026-06-22T10:11:14Z DELETE_RECORD deletion_worker search_service search_9955 SUCCESS Deletion worker received the final result for search_9955 from search_service.
+=== WINDOW case_211 same reported_at: ['case_209', 'case_210', 'case_211']
+    -70m activity_2469 DELETE_RECORD account_service account_4362 SUCCESS | in: []
+    -59m activity_2470 DELETE_RECORD account_service account_6934 FAILED | in: []
+    -49m activity_2471 DELETE_RECORD account_service account_4348 FAILED | in: ['evidence_20']
+    -11m activity_2472 DELETE_RECORD account_service account_5599 SUCCESS | in: ['evidence_82']
+     +0m activity_2473 DELETE_RECORD account_service account_4320 SUCCESS | in: ['evidence_82']
+    +11m activity_2474 DELETE_RECORD account_service account_660 SUCCESS | in: []
+    +31m activity_2475 ANONYMIZE_RECORD analytics_platform analytics_5166 SUCCESS | in: ['evidence_82']
+    +32m activity_2476 ANONYMIZE_RECORD analytics_platform analytics_3454 SUCCESS | in: ['evidence_82']
+    +38m activity_2477 ANONYMIZE_RECORD analytics_platform analytics_3156 FAILED | in: ['evidence_20']
+    +46m activity_2478 REDACT_RECORD support_platform support_4491 FAILED | in: ['evidence_20']
+    +53m activity_2479 SYNC_RECORD account_replication_cluster account_4348 SUCCESS | in: ['evidence_20']
+    +58m activity_2480 DELETE_RECORD search_service search_7288 FAILED | in: ['evidence_20']
+    +64m activity_2481 DELETE_RECORD search_service search_045 FAILED | in: ['evidence_20']
+    +71m activity_2482 DELETE_RECORD search_service search_9955 SUCCESS | in: ['evidence_20']
+    +76m activity_2483 REDACT_RECORD support_platform support_8999 FAILED | in: ['evidence_20']
+    +96m activity_2484 CHECK_DATA_FLOW integration_service data_flow_5196 SUCCESS | in: ['evidence_20']
+   +108m activity_2485 CHECK_DATA_FLOW integration_service data_flow_3195 SUCCESS | in: ['evidence_82']
+   +128m activity_2486 DELETE_RECORD search_service search_8302 FAILED | in: ['evidence_82']

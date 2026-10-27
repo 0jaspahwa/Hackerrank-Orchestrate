@@ -1,0 +1,25 @@
+#################### case_491 chioma-oladipo@proton.me req 2026-01-30T09:00:00Z rep COMPLETE 2026-01-31T09:00:00Z AUDIT 2026-02-18T09:00:00Z {'user_489'}
+RIDS ['account_7455', 'audit_record_7073', 'search_8910']
+evidence_64 2026-02-18T08:39:11Z L32: 2026-02-18T07:28:11Z level=DEBUG service=account_service trace_id=rb-072811-016 event=profile_lookup_started resource_id=account_7455 lookup_key=chioma-oladipo@proton.me
+evidence_64 2026-02-18T08:39:11Z L33: 2026-02-18T07:28:11Z level=INFO service=account_service trace_id=rb-072811-016 event=profile_lookup_completed resource_id=account_7455 rows=0 http_status=404
+evidence_64 2026-02-18T08:39:11Z L38: 2026-02-18T07:57:31Z level=DEBUG service=security_service trace_id=rb-075731-019 event=audit_record_read_started resource_id=audit_record_7073 lookup_key=user_489
+evidence_64 2026-02-18T08:39:11Z L39: 2026-02-18T07:57:31Z level=INFO service=security_service trace_id=rb-075731-019 event=audit_record_read_completed resource_id=audit_record_7073 rows=1 subject_reference=user_489 event_code=SUBJECT_REQUEST_AUDITED retention_until=2033-12-31T23:59:59Z
+LATE evidence_45 2026-02-23T10:00:00Z {"exported_at": "2026-02-23T10:00:00Z", "captured_at": "2026-02-23T10:00:00Z", "data_store": "backup_restore_service", "collection": "operational_record_history"} {"recorded_at": "2026-02-18T09:00:00Z", "system": "account_service", "resource_id": "account_7455", "record_type": "USER_PROFILE", "result": "NOT_FOUND", "lookup_value": "chioma-oladipo@proton.me"}
+LATE evidence_45 2026-02-23T10:00:00Z {"exported_at": "2026-02-23T10:00:00Z", "captured_at": "2026-02-23T10:00:00Z", "data_store": "backup_restore_service", "collection": "operational_record_history"} {"recorded_at": "2026-02-18T09:00:00Z", "system": "security_service", "resource_id": "audit_record_7073", "record_type": "SECURITY_AUDIT_LOG", "result": "FOUND", "lookup_value": "user_489"}
+LATE evidence_45 2026-02-23T10:00:00Z {"exported_at": "2026-02-23T10:00:00Z", "captured_at": "2026-02-23T10:00:00Z", "data_store": "backup_restore_service", "collection": "operational_record_history"} {"recorded_at": "2026-02-20T12:00:00Z", "system": "search_service", "resource_id": "search_8910", "record_type": "SEARCH_INDEX_ENTRY", "result": "FOUND", "lookup_value": "chioma-oladipo@proton.me"}
+--- activities
+activity_369 2026-01-31T07:59:32Z DELETE_RECORD deletion_worker account_service account_7455 SUCCESS Deletion worker submitted primary profile account_7455 to account_service.
+=== WINDOW case_491 same reported_at: ['case_491', 'case_492']
+    -72m activity_368 DELETE_RECORD account_service account_3589 SUCCESS | in: ['evidence_45']
+    -60m activity_369 DELETE_RECORD account_service account_7455 SUCCESS | in: ['evidence_45', 'evidence_64']
+    -13m activity_370 DELETE_RECORD account_service account_5934 FAILED | in: []
+     -2m activity_371 DELETE_RECORD account_service account_3119 PARTIAL | in: ['evidence_45']
+    +10m activity_372 DELETE_RECORD account_service account_3510 SUCCESS | in: []
+    +41m activity_374 DELETE_RECORD export_service export_6406 PARTIAL | in: ['evidence_45', 'evidence_64']
+    +61m activity_375 DELETE_RECORD search_service search_9733 PARTIAL | in: ['evidence_45', 'evidence_64']
+    +79m activity_376 REDACT_RECORD support_platform support_6737 PARTIAL | in: ['evidence_45', 'evidence_64']
+    +99m activity_377 ANONYMIZE_RECORD analytics_platform analytics_1575 PARTIAL | in: ['evidence_45', 'evidence_64']
+   +104m activity_378 CHECK_DATA_FLOW integration_service data_flow_8899 SUCCESS | in: ['evidence_45']
+   +111m activity_379 SYNC_RECORD account_replication_cluster account_3119 PARTIAL | in: ['evidence_45']
+   +118m activity_380 DELETE_RECORD search_service search_5412 FAILED | in: ['evidence_45']
+   +124m activity_381 DELETE_RECORD search_service search_3759 FAILED | in: ['evidence_45']

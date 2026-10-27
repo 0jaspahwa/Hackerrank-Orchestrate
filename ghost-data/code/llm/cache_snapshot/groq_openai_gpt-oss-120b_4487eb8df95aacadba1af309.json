@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"propose\",\"args\":{\"resource_id\":\"audit_record_001\",\"identifier\":\"user_03\",\"file_id\":\"evidence_37\"},\"why\":\"record contains identifier and is not linked\"}", "input_tokens": 723, "output_tokens": 103, "latency_s": 0.781, "provider": "groq", "model": "openai/gpt-oss-120b"}

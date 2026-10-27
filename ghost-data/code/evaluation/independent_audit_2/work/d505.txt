@@ -1,0 +1,22 @@
+#################### case_505 nana.a7986@zoho.com req 2026-01-26T07:00:00Z rep PARTIALLY_COMPLETE 2026-01-29T07:00:00Z AUDIT 2026-02-08T07:00:00Z {'user_503'}
+RIDS ['audit_record_3441', 'data_flow_5281', 'legal_hold_2227', 'search_2591']
+evidence_47 2026-02-08T07:00:00Z L19: INSERT INTO "customer_data_primary" VALUES('audit_record_3441','security_service','security_audit_events','{"resource_id":"audit_record_3441","subject_reference":"user_503","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:0000000000000000000000000000000000000000000000000000000000000d71"}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L28: INSERT INTO "customer_data_primary" VALUES('data_flow_5281','integration_service','connector_configurations','{"resource_id":"data_flow_5281","connector_name":"customer-events-to-warehouse-2","destination":"customer_analytics_warehouse","subject_selector":"nana.a7986@zoho.com","enabled":true,"mode":"continuous_sync"}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L30: INSERT INTO "customer_data_primary" VALUES('legal_hold_2227','legal_service','retained_order_records','{"resource_id":"legal_hold_2227","subject_reference":"user_503","order_reference":"ORD-20262227","retention_reason":"payment_dispute_and_tax_record","retained_until":"2033-12-31T23:59:59Z"}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L32: INSERT INTO "customer_data_primary" VALUES('search_2591','search_service','customer_search_documents','{"resource_id":"search_2591","index_name":"customer_directory_v3","document":{"display_name":"Nana Addo","email":"nana.a7986@zoho.com","customer_reference":"user_503"}}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L51: INSERT INTO "customer_data_reporting_replica" VALUES('audit_record_3441','security_service','security_audit_events','{"resource_id":"audit_record_3441","subject_reference":"user_503","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:0000000000000000000000000000000000000000000000000000000000000d71"}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L60: INSERT INTO "customer_data_reporting_replica" VALUES('data_flow_5281','integration_service','connector_configurations','{"resource_id":"data_flow_5281","connector_name":"customer-events-to-warehouse-2","destination":"customer_analytics_warehouse","subject_selector":"nana.a7986@zoho.com","enabled":true,"mode":"continuous_sync"}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L62: INSERT INTO "customer_data_reporting_replica" VALUES('legal_hold_2227','legal_service','retained_order_records','{"resource_id":"legal_hold_2227","subject_reference":"user_503","order_reference":"ORD-20262227","retention_reason":"payment_dispute_and_tax_record","retained_until":"2033-12-31T23:59:59Z"}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L64: INSERT INTO "customer_data_reporting_replica" VALUES('search_2591','search_service','customer_search_documents','{"resource_id":"search_2591","index_name":"customer_directory_v3","document":{"display_name":"Nana Addo","email":"nana.a7986@zoho.com","customer_reference":"user_503"}}','2026-02-08T07:00:00Z');
+--- activities
+activity_336 2026-01-29T06:31:28Z RETAIN_RECORD deletion_worker legal_service legal_hold_2227 SUCCESS Policy action completed for legal_hold_2227.
+activity_338 2026-01-29T07:40:09Z SYNC_RECORD integration_service search_service data_flow_5281 SUCCESS Active connector repopulated downstream resource search_2591.
+activity_341 2026-01-29T07:59:38Z DELETE_RECORD deletion_worker search_service search_2591 FAILED Deletion worker received the final result for search_2591 from search_service.
+=== WINDOW case_505 same reported_at: ['case_503', 'case_504', 'case_505']
+    -69m activity_333 DELETE_RECORD account_service account_5394 SUCCESS | in: []
+    -59m activity_334 DELETE_RECORD account_service account_8136 PARTIAL | in: []
+    -48m activity_335 DELETE_RECORD account_service account_7244 PARTIAL | in: []
+    -29m activity_336 RETAIN_RECORD legal_service legal_hold_2227 SUCCESS | in: ['evidence_47']
+    +49m activity_339 DELETE_RECORD support_platform support_2295 FAILED | in: ['evidence_47']
+    +56m activity_340 DELETE_RECORD export_service export_3120 PARTIAL | in: ['evidence_47']
+    +60m activity_341 DELETE_RECORD search_service search_2591 FAILED | in: ['evidence_47']

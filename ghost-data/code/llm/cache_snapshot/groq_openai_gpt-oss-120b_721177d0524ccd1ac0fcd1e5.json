@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"kenta.ito@outlook.com\"},\"why\":\"find unlinked record with email\"}", "input_tokens": 534, "output_tokens": 71, "latency_s": 0.624, "provider": "groq", "model": "openai/gpt-oss-120b"}

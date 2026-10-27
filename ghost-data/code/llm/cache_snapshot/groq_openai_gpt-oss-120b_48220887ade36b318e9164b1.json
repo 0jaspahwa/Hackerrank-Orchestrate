@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"stop\",\"args\":{},\"why\":\"no evidence of new identifier in remaining candidate\"}", "input_tokens": 568, "output_tokens": 110, "latency_s": 0.846, "provider": "groq", "model": "openai/gpt-oss-120b"}

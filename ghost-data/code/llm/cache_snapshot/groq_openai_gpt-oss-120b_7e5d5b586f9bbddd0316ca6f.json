@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"list_candidates\",\"args\":{\"slot\":\"account\"},\"why\":\"find other resources possibly containing requester's identifiers\"}", "input_tokens": 496, "output_tokens": 117, "latency_s": 0.925, "provider": "groq", "model": "openai/gpt-oss-120b"}

@@ -1,0 +1,27 @@
+#################### case_67 rafael.r9464@outlook.com req 2026-09-01T09:00:00Z rep COMPLETE 2026-09-04T09:00:00Z AUDIT 2026-09-16T09:00:00Z {'user_65'}
+RIDS ['account_9079', 'audit_record_2877', 'search_9837']
+evidence_93 2026-09-16T08:37:39Z L20: INSERT INTO customer_profiles VALUES ('account_9079', NULL, NULL, 'rafael.r9464@outlook.com', NULL, NULL, 'DELETION_PENDING', '2026-09-16T08:22:10Z');
+LATE evidence_06 2026-09-18T11:55:24Z L105: 2026-09-18T11:51:34Z {"severity":"DEBUG","logger":"search_service","service":"search_service","instance":"search-1","pod":"search-9540","region":"ap-south-1","trace_id":"tr-9889054","event":"index_query_started","match_key":"rafael.r9464@outlook.com","attempt":"1"}
+LATE evidence_06 2026-09-18T11:55:24Z L106: 2026-09-18T11:51:37Z {"severity":"INFO","logger":"search_service","service":"search_service","instance":"search-1","pod":"search-9540","region":"ap-south-1","trace_id":"tr-9889054","resource_id":"search_9837","event":"index_query_completed","index":"customer_directory_v3","result":"hit","shard":"9","took_ms":"13"}
+LATE evidence_06 2026-09-18T11:55:24Z L43: 2026-09-16T08:54:32Z {"severity":"DEBUG","logger":"security_service","service":"security_service","instance":"security-7","pod":"security-a7b5","region":"eu-west-1","trace_id":"tr-4877543","event":"audit_record_query_started","subject_ref":"user_65","attempt":"1"}
+LATE evidence_06 2026-09-18T11:55:24Z L45: 2026-09-16T08:54:40Z {"severity":"DEBUG","logger":"security_service","service":"security_service","instance":"security-7","pod":"security-a7b5","region":"eu-west-1","trace_id":"tr-4877543","event":"cache_lookup","result":"miss","cache":"security_service_lookup_v2"}
+LATE evidence_06 2026-09-18T11:55:24Z L46: 2026-09-16T08:54:41Z {"severity":"DEBUG","logger":"security_service","service":"security_service","instance":"security-7","pod":"security-a7b5","region":"eu-west-1","trace_id":"tr-4877543","resource_id":"audit_record_2877","event":"audit_record_read_completed","integrity_check":"passed","rows":"1"}
+LATE evidence_06 2026-09-18T11:55:24Z L59: 2026-09-16T08:56:24Z {"severity":"DEBUG","logger":"account_service","service":"account_service","instance":"account-5","pod":"account-274d","region":"eu-west-1","trace_id":"tr-3781723","event":"profile_lookup_started","lookup_key":"rafael.r9464@outlook.com","attempt":"1"}
+LATE evidence_06 2026-09-18T11:55:24Z L65: 2026-09-16T08:56:33Z {"severity":"DEBUG","logger":"account_service","service":"account_service","instance":"account-5","pod":"account-274d","region":"eu-west-1","trace_id":"tr-3781723","event":"cache_lookup","result":"miss","cache":"account_service_lookup_v2"}
+LATE evidence_06 2026-09-18T11:55:24Z L66: 2026-09-16T08:56:34Z {"severity":"DEBUG","logger":"account_service","service":"account_service","instance":"account-5","pod":"account-274d","region":"eu-west-1","trace_id":"tr-3781723","resource_id":"account_9079","event":"profile_lookup_completed","rows":"1","http_status":"200","duration_ms":"40"}
+--- activities
+activity_3641 2026-09-04T08:13:21Z DELETE_RECORD deletion_worker account_service account_9079 SUCCESS Deletion worker submitted primary profile account_9079 to account_service.
+activity_3646 2026-09-04T09:56:13Z SYNC_RECORD account_service account_replication_cluster account_9079 SUCCESS Replication worker reported its final checkpoint for account_9079.
+=== WINDOW case_67 same reported_at: ['case_65', 'case_66', 'case_67']
+    -88m activity_3634 ANONYMIZE_RECORD analytics_platform analytics_2176 SUCCESS | in: ['evidence_07', 'evidence_91']
+    -82m activity_3635 REDACT_RECORD support_platform support_9166 SUCCESS | in: ['evidence_07', 'evidence_91']
+    -74m activity_3636 DISABLE_DATA_FLOW integration_service data_flow_9666 SUCCESS | in: ['evidence_07', 'evidence_91']
+    -68m activity_3637 BLOCK_RESTORE backup_service backup_317 SUCCESS | in: ['evidence_07', 'evidence_91']
+    -67m activity_3638 DELETE_RECORD account_service account_1602 FAILED | in: ['evidence_06']
+    -56m activity_3640 DELETE_RECORD account_service account_5488 PARTIAL | in: ['evidence_06']
+    -47m activity_3641 DELETE_RECORD account_service account_9079 SUCCESS | in: ['evidence_06', 'evidence_93']
+    +42m activity_3644 ANONYMIZE_RECORD analytics_platform analytics_9246 FAILED | in: ['evidence_06', 'evidence_93']
+    +50m activity_3645 REDACT_RECORD support_platform support_4249 FAILED | in: ['evidence_06', 'evidence_93']
+    +56m activity_3646 SYNC_RECORD account_replication_cluster account_9079 SUCCESS | in: ['evidence_06', 'evidence_93']
+    +62m activity_3647 DELETE_RECORD search_service search_689 FAILED | in: ['evidence_06', 'evidence_93']
+   +109m activity_3648 CLASSIFY_REQUEST privacy_case_management account_7452 SUCCESS | in: ['evidence_50']

@@ -1,0 +1,19 @@
+#################### case_33 ingrid.dahl@outlook.com req 2026-07-16T08:00:00Z rep COMPLETE 2026-07-18T02:00:00Z AUDIT 2026-07-19T13:00:00Z {'user_18'}
+RIDS ['account_2373', 'audit_record_8486', 'export_1260', 'export_1842', 'search_2352']
+LATE evidence_01 2026-09-15T11:59:39Z L31: 2026-09-15T11:53:13Z level=INFO service=search_service instance=search-1 pod=search-5efc region=ap-south-1 trace_id=tr-1557900 resource_id=search_2352 event=index_query_completed index=customer_directory_v3 result=hit shard=0 took_ms=30 correlation_key="ingrid.dahl@outlook.com"
+LATE evidence_01 2026-09-15T11:59:39Z L64: 2026-09-15T11:56:25Z level=DEBUG service=account_service instance=account-5 pod=account-60d6 region=us-east-2 trace_id=tr-1410012 event=profile_lookup_started lookup_key="ingrid.dahl@outlook.com" attempt=1
+LATE evidence_01 2026-09-15T11:59:39Z L65: 2026-09-15T11:56:30Z level=DEBUG service=export_service instance=export-7 pod=export-c0c3 region=eu-central-1 trace_id=tr-2805623 event=export_download_check_started owner_key="ingrid.dahl@outlook.com" attempt=1
+LATE evidence_01 2026-09-15T11:59:39Z L66: 2026-09-15T11:56:32Z level=DEBUG service=account_service instance=account-5 pod=account-60d6 region=us-east-2 trace_id=tr-1410012 event=connection_acquired pool=account_service_primary wait_ms=22
+LATE evidence_01 2026-09-15T11:59:39Z L67: 2026-09-15T11:56:32Z level=DEBUG service=export_service instance=export-7 pod=export-c0c3 region=eu-central-1 trace_id=tr-2805623 event=cache_lookup result=miss cache=export_service_lookup_v2
+LATE evidence_01 2026-09-15T11:59:39Z L68: 2026-09-15T11:56:33Z level=INFO service=export_service instance=export-7 pod=export-c0c3 region=eu-central-1 trace_id=tr-2805623 resource_id=export_1260 event=export_download_check_completed file=customer_export_1260.zip available=true
+LATE evidence_01 2026-09-15T11:59:39Z L69: 2026-09-15T11:56:34Z level=INFO service=account_service instance=account-5 pod=account-60d6 region=us-east-2 trace_id=tr-1410012 resource_id=account_2373 event=profile_lookup_completed rows=0 http_status=404 duration_ms=57
+LATE evidence_01 2026-09-15T11:59:39Z L71: 2026-09-15T11:56:41Z level=DEBUG service=security_service instance=security-1 pod=security-d4c0 region=ap-south-1 trace_id=tr-9923588 event=audit_record_query_started subject_ref="user_18" attempt=1
+LATE evidence_01 2026-09-15T11:59:39Z L74: 2026-09-15T11:56:51Z level=DEBUG service=security_service instance=security-1 pod=security-d4c0 region=ap-south-1 trace_id=tr-9923588 event=cache_lookup result=miss cache=security_service_lookup_v2
+LATE evidence_01 2026-09-15T11:59:39Z L75: 2026-09-15T11:56:52Z level=DEBUG service=security_service instance=security-1 pod=security-d4c0 region=ap-south-1 trace_id=tr-9923588 resource_id=audit_record_8486 event=audit_record_read_completed integrity_check=passed rows=1
+--- activities
+LATE activity_3324 2026-08-19T11:03:36Z DELETE_RECORD deletion_worker account_service account_2373 SUCCESS Deletion worker submitted primary profile account_2373 to account_service.
+LATE activity_3328 2026-08-19T12:49:28Z DELETE_RECORD deletion_worker export_service export_1260 PARTIAL Deletion worker received the final result for export_1260 from export_service.
+LATE activity_3331 2026-08-19T13:08:57Z DELETE_RECORD deletion_worker search_service search_2352 PARTIAL Deletion worker received the final result for search_2352 from search_service.
+activity_4004 2026-06-18T12:07:01Z LINK_RESOURCE_IDENTITY data_catalog export_service export_1260 SUCCESS Data catalog linked export_1260 (export_1260) to ingrid.dahl@outlook.com and user_18.
+activity_4009 2026-07-18T11:07:01Z LINK_RESOURCE_IDENTITY data_catalog export_service export_1842 SUCCESS Data catalog linked export_1842 (NST-2026-0718-1842) to ingrid.dahl@outlook.com and user_18.
+=== WINDOW case_33 same reported_at: ['case_33']

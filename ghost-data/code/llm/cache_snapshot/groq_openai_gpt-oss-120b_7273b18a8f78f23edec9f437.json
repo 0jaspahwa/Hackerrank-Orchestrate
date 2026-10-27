@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"+233244561267\"},\"why\":\"Find unlinked record with this identifier\"}", "input_tokens": 386, "output_tokens": 57, "latency_s": 0.612, "provider": "groq", "model": "openai/gpt-oss-120b"}

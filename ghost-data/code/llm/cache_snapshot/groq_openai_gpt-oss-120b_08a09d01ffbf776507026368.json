@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"user_14\"},\"why\":\"Check for unlinked record with user_14\"}", "input_tokens": 496, "output_tokens": 84, "latency_s": 0.555, "provider": "groq", "model": "openai/gpt-oss-120b"}

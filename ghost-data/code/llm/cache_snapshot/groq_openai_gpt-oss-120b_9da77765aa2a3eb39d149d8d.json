@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"+5511969542024\"},\"why\":\"Find records with requester's phone\"}", "input_tokens": 392, "output_tokens": 51, "latency_s": 0.49, "provider": "groq", "model": "openai/gpt-oss-120b"}

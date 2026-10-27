@@ -1,0 +1,114 @@
+[
+ {
+  "case_id": "custom_01",
+  "replaces": "case_536",
+  "targets": "non-English (French) NON-deletion request that still contains the word 'suppression'",
+  "request": {
+   "case_id": "custom_01",
+   "email": "aditi.mehta@outlook.com",
+   "requested_at": "2026-09-04T12:00:00Z",
+   "reported_status": "NOT_STARTED",
+   "reported_at": "2026-09-05T12:00:00Z",
+   "audit_at": "2026-09-28T12:00:00Z",
+   "request_text": "Je ne demande pas la suppression de mon compte. Je souhaite seulement recevoir une copie de mes factures de l'an dernier."
+  }
+ },
+ {
+  "case_id": "custom_02",
+  "replaces": "case_539",
+  "targets": "non-English (Japanese) NON-deletion request that still contains 削除 (deletion)",
+  "request": {
+   "case_id": "custom_02",
+   "email": "leonie-rousseau@proton.me",
+   "requested_at": "2026-08-29T12:00:00Z",
+   "reported_status": "NOT_STARTED",
+   "reported_at": "2026-08-30T12:00:00Z",
+   "audit_at": "2026-09-25T12:00:00Z",
+   "request_text": "アカウントの削除は希望しません。登録している電話番号を新しい番号に更新してください。"
+  }
+ },
+ {
+  "case_id": "custom_03",
+  "replaces": "case_12",
+  "targets": "historical-email-only request, with odd casing and surrounding spaces (old email minjun.kim90)",
+  "request": {
+   "case_id": "custom_03",
+   "email": "  MinJun.Kim90@Gmail.com ",
+   "requested_at": "2026-08-24T12:00:00Z",
+   "reported_status": "COMPLETE",
+   "reported_at": "2026-08-25T12:00:00Z",
+   "audit_at": "2026-09-15T12:00:00Z",
+   "request_text": "I changed the email on this account before deleting it. Please check that nothing tied to the old address was left behind, even in systems that do not display the email."
+  }
+ },
+ {
+  "case_id": "custom_04",
+  "replaces": "case_27",
+  "targets": "evidence captured after audit_at must be ignored: audit moved to 09-16T00:00, evidence_02 (captured 09-17, account ACTIVE 09-17, support PII 09-15T12:00) stays out",
+  "request": {
+   "case_id": "custom_04",
+   "email": "ananya-nair@gmail.com",
+   "requested_at": "2026-08-29T12:00:00Z",
+   "reported_status": "COMPLETE",
+   "reported_at": "2026-08-30T12:00:00Z",
+   "audit_at": "2026-09-16T00:00:00Z",
+   "request_text": "Please audit the deletion as it stood when my request was reviewed. I want confirmation that the account was fully removed at that point."
+  }
+ },
+ {
+  "case_id": "custom_05",
+  "replaces": "case_27",
+  "targets": "mirror of custom_04: audit moved to 09-17T12:00, so evidence_02 is now admissible and its later observations win (expected row corrected 2026-10-25: evidence_02 shows support_4707 with message_text [REDACTED] and no identity fields, so it is REDACTED, not exposed)",
+  "request": {
+   "case_id": "custom_05",
+   "email": "ananya-nair@gmail.com",
+   "requested_at": "2026-08-29T12:00:00Z",
+   "reported_status": "COMPLETE",
+   "reported_at": "2026-08-30T12:00:00Z",
+   "audit_at": "2026-09-17T12:00:00Z",
+   "request_text": "Please audit the deletion as it stood when my request was reviewed. I want confirmation that the account was fully removed at that point."
+  }
+ },
+ {
+  "case_id": "custom_06",
+  "replaces": "case_35",
+  "targets": "decoy with a similar email: search_1874 (g.silva76.jr@gmail.com) on the same screenshot must not be attributed; request email in mixed case, Portuguese text",
+  "request": {
+   "case_id": "custom_06",
+   "email": "G.Silva76@gmail.com",
+   "requested_at": "2026-08-30T03:00:00Z",
+   "reported_status": "NOT_STARTED",
+   "reported_at": "2026-08-31T21:00:00Z",
+   "audit_at": "2026-09-02T08:00:00Z",
+   "request_text": "Solicito a exclusão permanente da conta associada a este e-mail. Por favor, confirmem o resultado quando a análise terminar."
+  }
+ },
+ {
+  "case_id": "custom_07",
+  "replaces": "case_511",
+  "targets": "legal-hold record: legal_hold_4887 (retained_until 2033) must be kept and verified PRESENT while the drifted replica account is deleted; Korean text",
+  "request": {
+   "case_id": "custom_07",
+   "email": "nicolas.f550081@outlook.com",
+   "requested_at": "2026-01-20T07:00:00Z",
+   "reported_status": "PARTIALLY_COMPLETE",
+   "reported_at": "2026-01-23T07:00:00Z",
+   "audit_at": "2026-02-08T07:00:00Z",
+   "request_text": "이 이메일 주소에 연결된 계정의 영구 삭제를 요청합니다. 검토가 완료되면 결과를 확인해 주세요."
+  }
+ },
+ {
+  "case_id": "custom_08",
+  "replaces": "case_55",
+  "targets": "restore that recreated data BEFORE audit_at: audit moved to 08-25, after RESTORE_BACKUP activity_3387 (08-22) repopulated search_4882 from backup_9287",
+  "request": {
+   "case_id": "custom_08",
+   "email": "areed1433@gmail.com",
+   "requested_at": "2026-04-27T06:00:00Z",
+   "reported_status": "NOT_STARTED",
+   "reported_at": "2026-04-29T00:00:00Z",
+   "audit_at": "2026-08-25T09:00:00Z",
+   "request_text": "Please treat this message as a request for permanent account deletion. Please include information linked through current or earlier account identifiers. A short confirmation when the process is complete is sufficient."
+  }
+ }
+]

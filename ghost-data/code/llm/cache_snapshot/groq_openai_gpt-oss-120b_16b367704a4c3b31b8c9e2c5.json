@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"89eb9b9b6ad47329\"},\"why\":\"Check for missing identifier\"}", "input_tokens": 449, "output_tokens": 78, "latency_s": 0.851, "provider": "groq", "model": "openai/gpt-oss-120b"}

@@ -1,0 +1,1448 @@
+{
+ "case_432": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "export_service",
+    "resource_id": "export_9343",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_68",
+    "confidence": "high",
+    "justification": "evidence_68 (service_resource_export 2026-03-20T07:23:49Z) export_9343 owner_email=anair9899@fastmail.com still listed; activity_807 PARTIAL is only a claim"
+   },
+   {
+    "step_no": 2,
+    "phase": "FINDING",
+    "system_id": "search_service",
+    "resource_id": "search_3844",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_68",
+    "confidence": "high",
+    "justification": "evidence_68 index query for anair9899@fastmail.com returns hit search_3844 at 2026-03-20T04:53:49Z"
+   },
+   {
+    "step_no": 3,
+    "phase": "REMEDIATION",
+    "system_id": "export_service",
+    "resource_id": "export_9343",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_68 (service_resource_export 2026-03-20T07:23:49Z) export_9343 owner_email=anair9899@fastmail.com still listed; activity_807 PARTIAL is only a claim"
+   },
+   {
+    "step_no": 4,
+    "phase": "REMEDIATION",
+    "system_id": "search_service",
+    "resource_id": "search_3844",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_68 index query for anair9899@fastmail.com returns hit search_3844 at 2026-03-20T04:53:49Z"
+   },
+   {
+    "step_no": 5,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_6489",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "account_6489 (activity_798, -62m, PARTIAL): legal-hold pre-action activity_801 falls +41s mod 60 after it (per-case timing signature) and PARTIAL matches PARTIALLY_COMPLETE; batch-mate case_431 (NOT_STARTED) gets FAILED account_6101"
+   },
+   {
+    "step_no": 6,
+    "phase": "VERIFICATION",
+    "system_id": "export_service",
+    "resource_id": "export_9343",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_68 (service_resource_export 2026-03-20T07:23:49Z) export_9343 owner_email=anair9899@fastmail.com still listed; activity_807 PARTIAL is only a claim"
+   },
+   {
+    "step_no": 7,
+    "phase": "VERIFICATION",
+    "system_id": "search_service",
+    "resource_id": "search_3844",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_68 index query for anair9899@fastmail.com returns hit search_3844 at 2026-03-20T04:53:49Z"
+   },
+   {
+    "step_no": 8,
+    "phase": "VERIFICATION",
+    "system_id": "legal_service",
+    "resource_id": "legal_hold_438",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "legal_hold_438 subject_reference=user_430 (evidence_40 inner capture 03-20T08:00, bundle exported 03-22 = after audit) + activity_801 RETAIN_RECORD; rule_13 RETAIN"
+   },
+   {
+    "step_no": 9,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_3548",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "audit_record_3548 subject_reference=user_430 only visible in evidence_40 (exported after audit_at); rule_12 RETAIN"
+   }
+  ],
+  "notes": "Subject user_430. Export and search entry still present at 2026-03-20T07:23 (evidence_68). Legal hold must be retained.",
+  "uncertain_points": [
+   "Account resource not observed in any evidence; chosen from deletion-workflow timing.",
+   "legal_hold_438 and audit_record_3548 only appear in evidence_40 whose manifest captured_at (03-22) is after audit_at; included as required retained records with empty evidence."
+  ]
+ },
+ "case_511": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "account_service",
+    "resource_id": "account_1035",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_47",
+    "confidence": "high",
+    "justification": "evidence_47 (reporting replica captured 2026-02-08T07:00 = audit_at): account_1035 customer_reference user_509, historical email nicolas.f550081@outlook.com, ACTIVE only in customer_data_reporting_replica (absent from primary) = replication drift; activity_271 replication checkpoint"
+   },
+   {
+    "step_no": 2,
+    "phase": "REMEDIATION",
+    "system_id": "account_service",
+    "resource_id": "account_1035",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_47 (reporting replica captured 2026-02-08T07:00 = audit_at): account_1035 customer_reference user_509, historical email nicolas.f550081@outlook.com, ACTIVE only in customer_data_reporting_replica (absent from primary) = replication drift; activity_271 replication checkpoint"
+   },
+   {
+    "step_no": 3,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_1035",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_47 (reporting replica captured 2026-02-08T07:00 = audit_at): account_1035 customer_reference user_509, historical email nicolas.f550081@outlook.com, ACTIVE only in customer_data_reporting_replica (absent from primary) = replication drift; activity_271 replication checkpoint"
+   },
+   {
+    "step_no": 4,
+    "phase": "VERIFICATION",
+    "system_id": "legal_service",
+    "resource_id": "legal_hold_4887",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "evidence_47 legal_hold_4887 subject_reference user_509 in primary+replica; rule_13 RETAIN"
+   },
+   {
+    "step_no": 5,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_4883",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "evidence_47 audit_record_4883 subject_reference user_509; rule_12 RETAIN"
+   }
+  ],
+  "notes": "Request email is the historical address of user_509. Account deleted from primary but remains in reporting replica.",
+  "uncertain_points": []
+ },
+ "case_545": {
+  "deletion_status": "COMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_2577",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "evidence_52",
+    "confidence": "medium",
+    "justification": "account_2577 (activity_3718 PARTIAL matches PARTIALLY_COMPLETE; tombstone_946 redaction is +40s mod 60 after it = same-case timing signature); absent from evidence_52 primary and failover tables"
+   },
+   {
+    "step_no": 2,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_5041",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "evidence_52",
+    "confidence": "high",
+    "justification": "evidence_52 audit_record_5041 subject_reference user_545 in primary+failover"
+   },
+   {
+    "step_no": 3,
+    "phase": "VERIFICATION",
+    "system_id": "identity_service",
+    "resource_id": "tombstone_946",
+    "operation": "VERIFY_RECORD_REDACTED",
+    "state": "REDACTED",
+    "evidence_id": "evidence_52",
+    "confidence": "high",
+    "justification": "evidence_52 tombstone_946 subject_reference user_545, name/email/phone/email_hash all null, DELETED, in primary and failover"
+   }
+  ],
+  "notes": "Despite PARTIALLY_COMPLETE claim, evidence_52 (captured at audit_at) shows tombstone properly redacted in both primary and failover; no other copies.",
+  "uncertain_points": [
+   "Account id inferred from workflow timing only."
+  ]
+ },
+ "case_543": {
+  "deletion_status": "COMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_8931",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "evidence_52",
+    "confidence": "medium",
+    "justification": "account_8931 (activity_3717 SUCCESS) chosen over account_7320 (also SUCCESS, batch-mate case_544 COMPLETE) because tombstone_205 redaction (activity_3721) falls +41s mod 60 after it; absent from evidence_52"
+   },
+   {
+    "step_no": 2,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_6244",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "evidence_52",
+    "confidence": "high",
+    "justification": "evidence_52 audit_record_6244 subject_reference user_543"
+   },
+   {
+    "step_no": 3,
+    "phase": "VERIFICATION",
+    "system_id": "identity_service",
+    "resource_id": "tombstone_205",
+    "operation": "VERIFY_RECORD_REDACTED",
+    "state": "REDACTED",
+    "evidence_id": "evidence_52",
+    "confidence": "high",
+    "justification": "evidence_52 tombstone_205 subject_reference user_543 with all direct identifiers null in primary and failover"
+   }
+  ],
+  "notes": "Tombstone correctly redacted (contrast batch-mate tombstone_8648 of case_544, which still carries name/email/hash).",
+  "uncertain_points": [
+   "Account choice between account_8931 and account_7320 rests on timing signature."
+  ]
+ },
+ "case_492": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "export_service",
+    "resource_id": "export_6406",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_64",
+    "confidence": "high",
+    "justification": "evidence_64 L6-7 (readback 2026-02-18T06:02) export_6406 available=true owner_email=eamponsah5039@fastmail.com"
+   },
+   {
+    "step_no": 2,
+    "phase": "FINDING",
+    "system_id": "search_service",
+    "resource_id": "search_9733",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_64",
+    "confidence": "high",
+    "justification": "evidence_64 L18-19 search_9733 hit email=eamponsah5039@fastmail.com"
+   },
+   {
+    "step_no": 3,
+    "phase": "FINDING",
+    "system_id": "analytics_platform",
+    "resource_id": "analytics_1575",
+    "operation": "REPORT_EXPOSED_PII",
+    "state": "PRESENT",
+    "evidence_id": "evidence_64",
+    "confidence": "high",
+    "justification": "evidence_64 L4-5 analytics_1575 email=eamponsah5039@fastmail.com still attributable; rule_07 ANONYMIZE"
+   },
+   {
+    "step_no": 4,
+    "phase": "FINDING",
+    "system_id": "support_platform",
+    "resource_id": "support_6737",
+    "operation": "REPORT_EXPOSED_PII",
+    "state": "PRESENT",
+    "evidence_id": "evidence_64",
+    "confidence": "high",
+    "justification": "evidence_64 L24-25 support_6737 requester_email exposed; worker used REDACT_RECORD (activity_376) and record_type SUPPORT_MESSAGE -> rule_05 REDACT"
+   },
+   {
+    "step_no": 5,
+    "phase": "REMEDIATION",
+    "system_id": "export_service",
+    "resource_id": "export_6406",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_64 L6-7 (readback 2026-02-18T06:02) export_6406 available=true owner_email=eamponsah5039@fastmail.com"
+   },
+   {
+    "step_no": 6,
+    "phase": "REMEDIATION",
+    "system_id": "search_service",
+    "resource_id": "search_9733",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_64 L18-19 search_9733 hit email=eamponsah5039@fastmail.com"
+   },
+   {
+    "step_no": 7,
+    "phase": "REMEDIATION",
+    "system_id": "support_platform",
+    "resource_id": "support_6737",
+    "operation": "REDACT_RECORD",
+    "state": "REDACTED",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_64 L24-25 support_6737 requester_email exposed; worker used REDACT_RECORD (activity_376) and record_type SUPPORT_MESSAGE -> rule_05 REDACT"
+   },
+   {
+    "step_no": 8,
+    "phase": "REMEDIATION",
+    "system_id": "analytics_platform",
+    "resource_id": "analytics_1575",
+    "operation": "ANONYMIZE_RECORD",
+    "state": "ANONYMIZED",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_64 L4-5 analytics_1575 email=eamponsah5039@fastmail.com still attributable; rule_07 ANONYMIZE"
+   },
+   {
+    "step_no": 9,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_3589",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "account_3589 linked to eamponsah5039 (evidence_45 lookup, activity_368); timing signature +52s mod 60 to first post-action"
+   },
+   {
+    "step_no": 10,
+    "phase": "VERIFICATION",
+    "system_id": "export_service",
+    "resource_id": "export_6406",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_64 L6-7 (readback 2026-02-18T06:02) export_6406 available=true owner_email=eamponsah5039@fastmail.com"
+   },
+   {
+    "step_no": 11,
+    "phase": "VERIFICATION",
+    "system_id": "search_service",
+    "resource_id": "search_9733",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_64 L18-19 search_9733 hit email=eamponsah5039@fastmail.com"
+   },
+   {
+    "step_no": 12,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_9341",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "audit_record_9341 lookup_value user_490 only in evidence_45 (captured after audit); retained per rule_12"
+   },
+   {
+    "step_no": 13,
+    "phase": "VERIFICATION",
+    "system_id": "support_platform",
+    "resource_id": "support_6737",
+    "operation": "VERIFY_RECORD_REDACTED",
+    "state": "REDACTED",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_64 L24-25 support_6737 requester_email exposed; worker used REDACT_RECORD (activity_376) and record_type SUPPORT_MESSAGE -> rule_05 REDACT"
+   },
+   {
+    "step_no": 14,
+    "phase": "VERIFICATION",
+    "system_id": "analytics_platform",
+    "resource_id": "analytics_1575",
+    "operation": "VERIFY_RECORD_ANONYMIZED",
+    "state": "ANONYMIZED",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_64 L4-5 analytics_1575 email=eamponsah5039@fastmail.com still attributable; rule_07 ANONYMIZE"
+   }
+  ],
+  "notes": "All workflow actions PARTIAL; readback at 08:39 before audit shows remaining copies.",
+  "uncertain_points": [
+   "audit_record_9341 only seen in post-audit evidence_45."
+  ]
+ },
+ "case_420": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "export_service",
+    "resource_id": "export_389",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_39",
+    "confidence": "high",
+    "justification": "evidence_39 (syslog captured 2026-03-25T08:59:44, before audit 09:00) export_389 available=true correlation_key=storres487178@fastmail.com (historical email)"
+   },
+   {
+    "step_no": 2,
+    "phase": "FINDING",
+    "system_id": "search_service",
+    "resource_id": "search_8472",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_39",
+    "confidence": "high",
+    "justification": "evidence_39 trace tr-0441096 match_key storres487178@fastmail.com -> search_8472 result=hit"
+   },
+   {
+    "step_no": 3,
+    "phase": "REMEDIATION",
+    "system_id": "export_service",
+    "resource_id": "export_389",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_39 (syslog captured 2026-03-25T08:59:44, before audit 09:00) export_389 available=true correlation_key=storres487178@fastmail.com (historical email)"
+   },
+   {
+    "step_no": 4,
+    "phase": "REMEDIATION",
+    "system_id": "search_service",
+    "resource_id": "search_8472",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_39 trace tr-0441096 match_key storres487178@fastmail.com -> search_8472 result=hit"
+   },
+   {
+    "step_no": 5,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_7606",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "evidence_39 trace tr-3269055 account_7606 404 for storres487178; activity_749"
+   },
+   {
+    "step_no": 6,
+    "phase": "VERIFICATION",
+    "system_id": "export_service",
+    "resource_id": "export_389",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_39 (syslog captured 2026-03-25T08:59:44, before audit 09:00) export_389 available=true correlation_key=storres487178@fastmail.com (historical email)"
+   },
+   {
+    "step_no": 7,
+    "phase": "VERIFICATION",
+    "system_id": "search_service",
+    "resource_id": "search_8472",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_39 trace tr-0441096 match_key storres487178@fastmail.com -> search_8472 result=hit"
+   },
+   {
+    "step_no": 8,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_9687",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "evidence_39 trace tr-9853223 subject_ref user_418 -> audit_record_9687 rows=1"
+   }
+  ],
+  "notes": "Spanish deletion request; request email is historical address of user_418.",
+  "uncertain_points": []
+ },
+ "case_227": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "search_service",
+    "resource_id": "search_8181",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_80",
+    "confidence": "high",
+    "justification": "evidence_80 (2026-06-28T06:25:56) search query arthur-fontaine83@proton.me hit search_8181"
+   },
+   {
+    "step_no": 2,
+    "phase": "FINDING",
+    "system_id": "support_platform",
+    "resource_id": "support_5830",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_80",
+    "confidence": "high",
+    "justification": "evidence_80 support_5830 requester_email=arthur-fontaine83@proton.me; ticket attachment (evidence_22 ticket_attachments, worker DELETE_RECORD activity_2360) -> rule_06 DELETE"
+   },
+   {
+    "step_no": 3,
+    "phase": "REMEDIATION",
+    "system_id": "search_service",
+    "resource_id": "search_8181",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_80 (2026-06-28T06:25:56) search query arthur-fontaine83@proton.me hit search_8181"
+   },
+   {
+    "step_no": 4,
+    "phase": "REMEDIATION",
+    "system_id": "support_platform",
+    "resource_id": "support_5830",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_80 support_5830 requester_email=arthur-fontaine83@proton.me; ticket attachment (evidence_22 ticket_attachments, worker DELETE_RECORD activity_2360) -> rule_06 DELETE"
+   },
+   {
+    "step_no": 5,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_5549",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "account_5549 (activity_2349 SUCCESS); all three batch accounts SUCCESS, chosen by timing signature (support_5830 delete +52s, search +21s mod 60)"
+   },
+   {
+    "step_no": 6,
+    "phase": "VERIFICATION",
+    "system_id": "search_service",
+    "resource_id": "search_8181",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_80 (2026-06-28T06:25:56) search query arthur-fontaine83@proton.me hit search_8181"
+   },
+   {
+    "step_no": 7,
+    "phase": "VERIFICATION",
+    "system_id": "support_platform",
+    "resource_id": "support_5830",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_80 support_5830 requester_email=arthur-fontaine83@proton.me; ticket attachment (evidence_22 ticket_attachments, worker DELETE_RECORD activity_2360) -> rule_06 DELETE"
+   },
+   {
+    "step_no": 8,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_9043",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "audit_record_9043 subject user_225 only in evidence_22 (exported after audit)"
+   }
+  ],
+  "notes": "Historical email arthur-fontaine83 used.",
+  "uncertain_points": [
+   "Account choice by timing signature only.",
+   "support_5830 category taken from post-audit bundle + worker action type."
+  ]
+ },
+ "case_443": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "search_service",
+    "resource_id": "search_4925",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_66",
+    "confidence": "high",
+    "justification": "evidence_66 (inventory 2026-03-10T05:38:48) customer_search_documents search_4925 email seoyeon-choi@proton.me"
+   },
+   {
+    "step_no": 2,
+    "phase": "FINDING",
+    "system_id": "support_platform",
+    "resource_id": "support_8341",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_66",
+    "confidence": "medium",
+    "justification": "evidence_66 support_records support_8341 requester_email seoyeon-choi@proton.me, excerpt about account access (attachment-type pattern), worker attempted DELETE_RECORD (activity_771) -> treated as subject-only attachment (rule_06 DELETE)"
+   },
+   {
+    "step_no": 3,
+    "phase": "REMEDIATION",
+    "system_id": "search_service",
+    "resource_id": "search_4925",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_66 (inventory 2026-03-10T05:38:48) customer_search_documents search_4925 email seoyeon-choi@proton.me"
+   },
+   {
+    "step_no": 4,
+    "phase": "REMEDIATION",
+    "system_id": "support_platform",
+    "resource_id": "support_8341",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "Remediation for finding: evidence_66 support_records support_8341 requester_email seoyeon-choi@proton.me, excerpt about account access (attachment-type pattern), worker attempted DELETE_RECORD (activity_771) -> treated as subject-only attachment (rule_06 DELETE)"
+   },
+   {
+    "step_no": 5,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_1776",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "account_1776 (activity_769 SUCCESS) chosen over account_4042 (SUCCESS, batch-mate case_444) by timing signature (+52s/+22s mod 60 to support_8341/search_4925 actions)"
+   },
+   {
+    "step_no": 6,
+    "phase": "VERIFICATION",
+    "system_id": "search_service",
+    "resource_id": "search_4925",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_66 (inventory 2026-03-10T05:38:48) customer_search_documents search_4925 email seoyeon-choi@proton.me"
+   },
+   {
+    "step_no": 7,
+    "phase": "VERIFICATION",
+    "system_id": "support_platform",
+    "resource_id": "support_8341",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "Post-remediation check: evidence_66 support_records support_8341 requester_email seoyeon-choi@proton.me, excerpt about account access (attachment-type pattern), worker attempted DELETE_RECORD (activity_771) -> treated as subject-only attachment (rule_06 DELETE)"
+   }
+  ],
+  "notes": "No security audit record for user_441 in any evidence, so none verified.",
+  "uncertain_points": [
+   "Support record could be a SUPPORT_MESSAGE (REDACT/EXPOSED_PII) rather than attachment; chose DELETE from worker action + excerpt pattern.",
+   "No audit record found.",
+   "Account choice by timing."
+  ]
+ },
+ "case_211": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "account_service",
+    "resource_id": "account_4348",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_20",
+    "confidence": "high",
+    "justification": "evidence_20 (read replica captured 2026-07-08T09:00 = audit) customer_data_read_replica has account_4348 user_209 ACTIVE with name/email/phone; missing from primary"
+   },
+   {
+    "step_no": 2,
+    "phase": "FINDING",
+    "system_id": "search_service",
+    "resource_id": "search_9955",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_20",
+    "confidence": "high",
+    "justification": "evidence_20 search_9955 (Kavya Nair, kavya.n9800@outlook.com, user_209) in primary and replica despite activity_2482 SUCCESS claim"
+   },
+   {
+    "step_no": 3,
+    "phase": "REMEDIATION",
+    "system_id": "account_service",
+    "resource_id": "account_4348",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_20 (read replica captured 2026-07-08T09:00 = audit) customer_data_read_replica has account_4348 user_209 ACTIVE with name/email/phone; missing from primary"
+   },
+   {
+    "step_no": 4,
+    "phase": "REMEDIATION",
+    "system_id": "search_service",
+    "resource_id": "search_9955",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_20 search_9955 (Kavya Nair, kavya.n9800@outlook.com, user_209) in primary and replica despite activity_2482 SUCCESS claim"
+   },
+   {
+    "step_no": 5,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_4348",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_20 (read replica captured 2026-07-08T09:00 = audit) customer_data_read_replica has account_4348 user_209 ACTIVE with name/email/phone; missing from primary"
+   },
+   {
+    "step_no": 6,
+    "phase": "VERIFICATION",
+    "system_id": "search_service",
+    "resource_id": "search_9955",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_20 search_9955 (Kavya Nair, kavya.n9800@outlook.com, user_209) in primary and replica despite activity_2482 SUCCESS claim"
+   },
+   {
+    "step_no": 7,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_7804",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "evidence_20 audit_record_7804 subject user_209"
+   }
+  ],
+  "notes": "Account remains in read replica; search entry remains despite SUCCESS claim.",
+  "uncertain_points": []
+ },
+ "case_355": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "account_service",
+    "resource_id": "account_6539",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_33",
+    "confidence": "high",
+    "justification": "evidence_33 (regional replicas captured 2026-04-24T08:00 = audit) customer_data_replica_eu_west has account_6539 user_353 ACTIVE with PII; absent from primary and ap_south"
+   },
+   {
+    "step_no": 2,
+    "phase": "REMEDIATION",
+    "system_id": "account_service",
+    "resource_id": "account_6539",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_33 (regional replicas captured 2026-04-24T08:00 = audit) customer_data_replica_eu_west has account_6539 user_353 ACTIVE with PII; absent from primary and ap_south"
+   },
+   {
+    "step_no": 3,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_6539",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_33 (regional replicas captured 2026-04-24T08:00 = audit) customer_data_replica_eu_west has account_6539 user_353 ACTIVE with PII; absent from primary and ap_south"
+   },
+   {
+    "step_no": 4,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_1151",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "evidence_33 audit_record_1151 subject user_353"
+   }
+  ],
+  "notes": "Regional replica drift (eu_west).",
+  "uncertain_points": []
+ },
+ "case_532": {
+  "deletion_status": "COMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_470",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "evidence_62",
+    "confidence": "high",
+    "justification": "evidence_62 (2026-01-29T11:44:59) account_470 status 404; activity_91 SUCCESS; timing signature matches analytics_3744/support_7724 chain"
+   },
+   {
+    "step_no": 2,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_4828",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "evidence_62",
+    "confidence": "high",
+    "justification": "evidence_62 audit_record_4828 subject user_530"
+   },
+   {
+    "step_no": 3,
+    "phase": "VERIFICATION",
+    "system_id": "support_platform",
+    "resource_id": "support_7724",
+    "operation": "VERIFY_RECORD_REDACTED",
+    "state": "REDACTED",
+    "evidence_id": "evidence_62",
+    "confidence": "high",
+    "justification": "evidence_62 support_7724 customer_reference user_530, requester name/email/phone null"
+   },
+   {
+    "step_no": 4,
+    "phase": "VERIFICATION",
+    "system_id": "analytics_platform",
+    "resource_id": "analytics_3744",
+    "operation": "VERIFY_RECORD_ANONYMIZED",
+    "state": "ANONYMIZED",
+    "evidence_id": "evidence_62",
+    "confidence": "medium",
+    "justification": "evidence_62 analytics_3744 all identifiers null; linked via activity_92 anonymization +41s mod 60 after account_470 (analytics_893 belongs to batch-mate)"
+   },
+   {
+    "step_no": 5,
+    "phase": "VERIFICATION",
+    "system_id": "integration_service",
+    "resource_id": "data_flow_6987",
+    "operation": "VERIFY_DATA_FLOW_DISABLED",
+    "state": "DISABLED",
+    "evidence_id": "evidence_62",
+    "confidence": "high",
+    "justification": "evidence_62 data_flow_6987 customer_reference user_530 enabled=false stopped"
+   },
+   {
+    "step_no": 6,
+    "phase": "VERIFICATION",
+    "system_id": "backup_service",
+    "resource_id": "backup_6344",
+    "operation": "VERIFY_RESTORE_BLOCKED",
+    "state": "BLOCKED",
+    "evidence_id": "evidence_62",
+    "confidence": "high",
+    "justification": "evidence_62 backup_6344 customer_reference user_530 restore_allowed=false"
+   }
+  ],
+  "notes": "Historical email mahlangu.thabo80 used; backup restore blocked, flow disabled.",
+  "uncertain_points": [
+   "analytics_3744 vs analytics_893 chosen by timing."
+  ]
+ },
+ "case_52": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "export_service",
+    "resource_id": "export_1260",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_23",
+    "confidence": "high",
+    "justification": "evidence_23 (export console screenshot 2026-06-18T12:00) export_1260 owner ingrid.dahl@outlook.com status Ready; activity_4004 catalog link"
+   },
+   {
+    "step_no": 2,
+    "phase": "REMEDIATION",
+    "system_id": "export_service",
+    "resource_id": "export_1260",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_23 (export console screenshot 2026-06-18T12:00) export_1260 owner ingrid.dahl@outlook.com status Ready; activity_4004 catalog link"
+   },
+   {
+    "step_no": 3,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_2373",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "low",
+    "justification": "account_2373 linked to ingrid.dahl only by post-audit evidence_01 / activity_3324 (08-19); no deletion workflow ran before this audit"
+   },
+   {
+    "step_no": 4,
+    "phase": "VERIFICATION",
+    "system_id": "export_service",
+    "resource_id": "export_1260",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_23 (export console screenshot 2026-06-18T12:00) export_1260 owner ingrid.dahl@outlook.com status Ready; activity_4004 catalog link"
+   }
+  ],
+  "notes": "Reported COMPLETE at 06-18 but no deletion activity exists before audit 06-19; only pre-audit evidence is the export screenshot.",
+  "uncertain_points": [
+   "Account id only from post-audit evidence.",
+   "Account itself was likely still present at audit (deleted 08-19) but no pre-audit evidence proves it, so no account finding emitted.",
+   "audit_record_8486/search_2352 only visible 09-15; excluded."
+  ]
+ },
+ "case_33": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "export_service",
+    "resource_id": "export_1260",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_23",
+    "confidence": "medium",
+    "justification": "evidence_23 export_1260 Ready for ingrid.dahl; no deletion before audit (activity_3328 is 08-19); listed expiry is only a claim"
+   },
+   {
+    "step_no": 2,
+    "phase": "FINDING",
+    "system_id": "export_service",
+    "resource_id": "export_1842",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_18",
+    "confidence": "high",
+    "justification": "evidence_18 (account history PDF 2026-07-18T11:00) statement NST-2026-0718-1842 for Ingrid Dahl user_18; activity_4009 links export_1842"
+   },
+   {
+    "step_no": 3,
+    "phase": "REMEDIATION",
+    "system_id": "export_service",
+    "resource_id": "export_1260",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "Remediation for finding: evidence_23 export_1260 Ready for ingrid.dahl; no deletion before audit (activity_3328 is 08-19); listed expiry is only a claim"
+   },
+   {
+    "step_no": 4,
+    "phase": "REMEDIATION",
+    "system_id": "export_service",
+    "resource_id": "export_1842",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_18 (account history PDF 2026-07-18T11:00) statement NST-2026-0718-1842 for Ingrid Dahl user_18; activity_4009 links export_1842"
+   },
+   {
+    "step_no": 5,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_2373",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "low",
+    "justification": "account_2373 from post-audit evidence_01 / activity_3324"
+   },
+   {
+    "step_no": 6,
+    "phase": "VERIFICATION",
+    "system_id": "export_service",
+    "resource_id": "export_1260",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "Post-remediation check: evidence_23 export_1260 Ready for ingrid.dahl; no deletion before audit (activity_3328 is 08-19); listed expiry is only a claim"
+   },
+   {
+    "step_no": 7,
+    "phase": "VERIFICATION",
+    "system_id": "export_service",
+    "resource_id": "export_1842",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_18 (account history PDF 2026-07-18T11:00) statement NST-2026-0718-1842 for Ingrid Dahl user_18; activity_4009 links export_1842"
+   }
+  ],
+  "notes": "Second request of user_18; still no workflow before audit 07-19.",
+  "uncertain_points": [
+   "Whether export_1260 should still be reported (screenshot lists expiry 25 Jun).",
+   "Account id only from post-audit evidence; no account finding emitted."
+  ]
+ },
+ "case_162": {
+  "deletion_status": "COMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_5983",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "evidence_15",
+    "confidence": "medium",
+    "justification": "account_5983 is the only account deletion at -45..-75 min before reported_at (activity_2944 FAILED = NOT_STARTED pattern); absent from evidence_15 primary and read replica (captured 2026-08-02T07:00 = audit)"
+   },
+   {
+    "step_no": 2,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_6362",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "evidence_15",
+    "confidence": "high",
+    "justification": "evidence_15 audit_record_6362 subject user_160"
+   }
+  ],
+  "notes": "Despite NOT_STARTED claim, snapshot at audit_at shows no remaining data.",
+  "uncertain_points": [
+   "Account id from timing window only."
+  ]
+ },
+ "case_505": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "search_service",
+    "resource_id": "search_2591",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_47",
+    "confidence": "high",
+    "justification": "evidence_47 (captured 2026-02-08T07:00 = audit) search_2591 Nana Addo nana.a7986@zoho.com user_503 in primary and replica"
+   },
+   {
+    "step_no": 2,
+    "phase": "FINDING",
+    "system_id": "integration_service",
+    "resource_id": "data_flow_5281",
+    "operation": "REPORT_ACTIVE_DATA_FLOW",
+    "state": "ACTIVE",
+    "evidence_id": "evidence_47",
+    "confidence": "high",
+    "justification": "evidence_47 data_flow_5281 subject_selector nana.a7986@zoho.com enabled=true continuous_sync; activity_338 shows it repopulated search_2591"
+   },
+   {
+    "step_no": 3,
+    "phase": "REMEDIATION",
+    "system_id": "integration_service",
+    "resource_id": "data_flow_5281",
+    "operation": "DISABLE_DATA_FLOW",
+    "state": "DISABLED",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_47 data_flow_5281 subject_selector nana.a7986@zoho.com enabled=true continuous_sync; activity_338 shows it repopulated search_2591"
+   },
+   {
+    "step_no": 4,
+    "phase": "REMEDIATION",
+    "system_id": "search_service",
+    "resource_id": "search_2591",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_47 (captured 2026-02-08T07:00 = audit) search_2591 Nana Addo nana.a7986@zoho.com user_503 in primary and replica"
+   },
+   {
+    "step_no": 5,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_8136",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "account_8136 (activity_334 PARTIAL) chosen over account_7244 (PARTIAL, batch-mate case_504) by timing signature (legal hold +41s, sync +22s, search +51s mod 60)"
+   },
+   {
+    "step_no": 6,
+    "phase": "VERIFICATION",
+    "system_id": "search_service",
+    "resource_id": "search_2591",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_47 (captured 2026-02-08T07:00 = audit) search_2591 Nana Addo nana.a7986@zoho.com user_503 in primary and replica"
+   },
+   {
+    "step_no": 7,
+    "phase": "VERIFICATION",
+    "system_id": "legal_service",
+    "resource_id": "legal_hold_2227",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "evidence_47 legal_hold_2227 subject user_503; rule_13"
+   },
+   {
+    "step_no": 8,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_3441",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "evidence_47 audit_record_3441 subject user_503"
+   },
+   {
+    "step_no": 9,
+    "phase": "VERIFICATION",
+    "system_id": "integration_service",
+    "resource_id": "data_flow_5281",
+    "operation": "VERIFY_DATA_FLOW_DISABLED",
+    "state": "DISABLED",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_47 data_flow_5281 subject_selector nana.a7986@zoho.com enabled=true continuous_sync; activity_338 shows it repopulated search_2591"
+   }
+  ],
+  "notes": "Active connector recreated search entry after deletion attempt.",
+  "uncertain_points": [
+   "Account id by timing."
+  ]
+ },
+ "case_206": {
+  "deletion_status": "COMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_4522",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "evidence_20",
+    "confidence": "medium",
+    "justification": "account_4522 only SUCCESS candidate in batch (case_207/208 PARTIALLY_COMPLETE -> PARTIAL accounts); analytics_9580 anonymization +40s mod 60 after it; absent from evidence_20"
+   },
+   {
+    "step_no": 2,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_9878",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "evidence_20",
+    "confidence": "high",
+    "justification": "evidence_20 audit_record_9878 subject user_204"
+   },
+   {
+    "step_no": 3,
+    "phase": "VERIFICATION",
+    "system_id": "analytics_platform",
+    "resource_id": "analytics_9580",
+    "operation": "VERIFY_RECORD_ANONYMIZED",
+    "state": "ANONYMIZED",
+    "evidence_id": "evidence_20",
+    "confidence": "medium",
+    "justification": "evidence_20 analytics_9580 all identifiers null; activity_2512 anonymization tied to this case by timing"
+   }
+  ],
+  "notes": "Request uses historical email ama.agyeman84; nothing found under either email or hash at audit.",
+  "uncertain_points": [
+   "Account/analytics linked by timing only."
+  ]
+ },
+ "case_326": {
+  "deletion_status": "COMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_3785",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "evidence_73",
+    "confidence": "high",
+    "justification": "evidence_73 trace rb-093204-020 lookup HYUNWOO.KANG94@GMAIL.COM -> account_3785 404 (2026-05-09T09:32)"
+   },
+   {
+    "step_no": 2,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_1219",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "evidence_73",
+    "confidence": "high",
+    "justification": "evidence_73 audit_record_1219 subject user_324 rows=1"
+   },
+   {
+    "step_no": 3,
+    "phase": "VERIFICATION",
+    "system_id": "support_platform",
+    "resource_id": "support_305",
+    "operation": "VERIFY_RECORD_REDACTED",
+    "state": "REDACTED",
+    "evidence_id": "evidence_73",
+    "confidence": "high",
+    "justification": "evidence_73 support_305 customer_reference user_324 requester fields null"
+   },
+   {
+    "step_no": 4,
+    "phase": "VERIFICATION",
+    "system_id": "analytics_platform",
+    "resource_id": "analytics_2072",
+    "operation": "VERIFY_RECORD_ANONYMIZED",
+    "state": "ANONYMIZED",
+    "evidence_id": "evidence_73",
+    "confidence": "medium",
+    "justification": "evidence_73 analytics_2072 all identifiers null; activity_1597 is +40s mod 60 after account_3785 (analytics_9681 is +25s -> other case)"
+   },
+   {
+    "step_no": 5,
+    "phase": "VERIFICATION",
+    "system_id": "integration_service",
+    "resource_id": "data_flow_2468",
+    "operation": "VERIFY_DATA_FLOW_DISABLED",
+    "state": "DISABLED",
+    "evidence_id": "evidence_73",
+    "confidence": "high",
+    "justification": "evidence_73 data_flow_2468 customer_reference user_324 enabled=false stopped"
+   },
+   {
+    "step_no": 6,
+    "phase": "VERIFICATION",
+    "system_id": "backup_service",
+    "resource_id": "backup_2894",
+    "operation": "VERIFY_RESTORE_BLOCKED",
+    "state": "BLOCKED",
+    "evidence_id": "evidence_73",
+    "confidence": "high",
+    "justification": "evidence_73 backup_2894 customer_reference user_324 restore_allowed=false"
+   }
+  ],
+  "notes": "NOT_STARTED claim but readback before audit shows all treatments applied. Uppercase historical email.",
+  "uncertain_points": [
+   "analytics_2072 vs analytics_9681 by timing."
+  ]
+ },
+ "case_491": {
+  "deletion_status": "COMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_7455",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "evidence_64",
+    "confidence": "high",
+    "justification": "evidence_64 L32-33 lookup chioma-oladipo@proton.me -> account_7455 404"
+   },
+   {
+    "step_no": 2,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_7073",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "evidence_64",
+    "confidence": "high",
+    "justification": "evidence_64 L38-39 audit_record_7073 subject user_489 rows=1"
+   }
+  ],
+  "notes": "search_8910 hit appears only 2026-02-20 (after audit) in evidence_45 and is ignored.",
+  "uncertain_points": [
+   "search_8910 post-audit recreation ignored per time rule."
+  ]
+ },
+ "case_291": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "backup_service",
+    "resource_id": "backup_7079",
+    "operation": "REPORT_RESTORE_RISK",
+    "state": "ACTIVE",
+    "evidence_id": "evidence_76",
+    "confidence": "high",
+    "justification": "evidence_76 L22-23 backup_7079 archive_present=true restore_allowed=true customer_email n.collins20@gmail.com; activity_1858 confirms restorable"
+   },
+   {
+    "step_no": 2,
+    "phase": "REMEDIATION",
+    "system_id": "backup_service",
+    "resource_id": "backup_7079",
+    "operation": "BLOCK_RESTORE",
+    "state": "BLOCKED",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_76 L22-23 backup_7079 archive_present=true restore_allowed=true customer_email n.collins20@gmail.com; activity_1858 confirms restorable"
+   },
+   {
+    "step_no": 3,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_8914",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "account_8914 (activity_1842 PARTIAL matches PARTIALLY_COMPLETE); CHECK_RESTORE_ACCESS is +52s mod 60 after it"
+   },
+   {
+    "step_no": 4,
+    "phase": "VERIFICATION",
+    "system_id": "backup_service",
+    "resource_id": "backup_7079",
+    "operation": "VERIFY_RESTORE_BLOCKED",
+    "state": "BLOCKED",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_76 L22-23 backup_7079 archive_present=true restore_allowed=true customer_email n.collins20@gmail.com; activity_1858 confirms restorable"
+   }
+  ],
+  "notes": "No security audit record for user_289 found in any evidence.",
+  "uncertain_points": [
+   "Account id by timing.",
+   "No audit record verified."
+  ]
+ },
+ "case_67": {
+  "deletion_status": "INCOMPLETE",
+  "steps": [
+   {
+    "step_no": 1,
+    "phase": "FINDING",
+    "system_id": "account_service",
+    "resource_id": "account_9079",
+    "operation": "REPORT_REMAINING_RECORD",
+    "state": "PRESENT",
+    "evidence_id": "evidence_93",
+    "confidence": "high",
+    "justification": "evidence_93 (inventory 2026-09-16T08:37:39) customer_profiles account_9079 rafael.r9464@outlook.com DELETION_PENDING; activity_3641 SUCCESS + activity_3646 replication are claims"
+   },
+   {
+    "step_no": 2,
+    "phase": "REMEDIATION",
+    "system_id": "account_service",
+    "resource_id": "account_9079",
+    "operation": "DELETE_RECORD",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Remediation for finding: evidence_93 (inventory 2026-09-16T08:37:39) customer_profiles account_9079 rafael.r9464@outlook.com DELETION_PENDING; activity_3641 SUCCESS + activity_3646 replication are claims"
+   },
+   {
+    "step_no": 3,
+    "phase": "VERIFICATION",
+    "system_id": "account_service",
+    "resource_id": "account_9079",
+    "operation": "VERIFY_RECORD_ABSENT",
+    "state": "ABSENT",
+    "evidence_id": "",
+    "confidence": "high",
+    "justification": "Post-remediation check: evidence_93 (inventory 2026-09-16T08:37:39) customer_profiles account_9079 rafael.r9464@outlook.com DELETION_PENDING; activity_3641 SUCCESS + activity_3646 replication are claims"
+   },
+   {
+    "step_no": 4,
+    "phase": "VERIFICATION",
+    "system_id": "security_service",
+    "resource_id": "audit_record_2877",
+    "operation": "VERIFY_RECORD_PRESENT",
+    "state": "PRESENT",
+    "evidence_id": "",
+    "confidence": "medium",
+    "justification": "audit_record_2877 subject user_65 read at 2026-09-16T08:54 in evidence_06 (file captured after audit)"
+   }
+  ],
+  "notes": "search_9837 hit only seen 2026-09-18 (after audit) and excluded.",
+  "uncertain_points": [
+   "search_9837 excluded by time rule.",
+   "audit_record_2877 only in post-audit file."
+  ]
+ }
+}

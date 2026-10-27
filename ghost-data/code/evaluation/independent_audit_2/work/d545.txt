@@ -1,0 +1,18 @@
+#################### case_545 soojin.k584@outlook.com req 2026-09-05T12:00:00Z rep PARTIALLY_COMPLETE 2026-09-08T12:00:00Z AUDIT 2026-09-20T12:00:00Z {'user_545'}
+RIDS ['audit_record_5041', 'tombstone_946']
+evidence_52 2026-09-20T12:00:00Z L18: INSERT INTO "customer_data_failover_replica" VALUES('audit_record_5041','security_service','security_audit_events','{"resource_id":"audit_record_5041","subject_reference":"user_545","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:00000000000000000000000000000000000000000000000000000000000013b1"}','2026-09-20T12:00:00Z');
+evidence_52 2026-09-20T12:00:00Z L30: INSERT INTO "customer_data_failover_replica" VALUES('tombstone_946','identity_service','deleted_customer_references','{"resource_id":"tombstone_946","subject_reference":"user_545","name":null,"email":null,"phone":null,"email_hash":null,"account_status":"DELETED"}','2026-09-20T12:00:00Z');
+evidence_52 2026-09-20T12:00:00Z L41: INSERT INTO "customer_data_primary" VALUES('audit_record_5041','security_service','security_audit_events','{"resource_id":"audit_record_5041","subject_reference":"user_545","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:00000000000000000000000000000000000000000000000000000000000013b1"}','2026-09-20T12:00:00Z');
+evidence_52 2026-09-20T12:00:00Z L53: INSERT INTO "customer_data_primary" VALUES('tombstone_946','identity_service','deleted_customer_references','{"resource_id":"tombstone_946","subject_reference":"user_545","name":null,"email":null,"phone":null,"email_hash":null,"account_status":"DELETED"}','2026-09-20T12:00:00Z');
+--- activities
+activity_3722 2026-09-08T11:31:44Z REDACT_RECORD deletion_worker identity_service tombstone_946 SUCCESS Policy action completed for tombstone_946.
+=== WINDOW case_545 same reported_at: ['case_543', 'case_544', 'case_545']
+    -65m activity_3717 DELETE_RECORD account_service account_8931 SUCCESS | in: []
+    -57m activity_3718 DELETE_RECORD account_service account_2577 PARTIAL | in: []
+    -48m activity_3719 DELETE_RECORD account_service account_3270 FAILED | in: ['evidence_01']
+    -45m activity_3720 DELETE_RECORD account_service account_7320 SUCCESS | in: []
+    -29m activity_3721 REDACT_RECORD identity_service tombstone_205 SUCCESS | in: ['evidence_52']
+    -28m activity_3722 REDACT_RECORD identity_service tombstone_946 SUCCESS | in: ['evidence_52']
+    +41m activity_3723 ANONYMIZE_RECORD analytics_platform analytics_7438 FAILED | in: ['evidence_01']
+    +52m activity_3724 REDACT_RECORD identity_service tombstone_8648 FAILED | in: ['evidence_52']
+    +59m activity_3725 DELETE_RECORD search_service search_4639 FAILED | in: ['evidence_01']

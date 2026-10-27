@@ -1,0 +1,36 @@
+#################### case_492 eamponsah5039@fastmail.com req 2026-01-29T09:00:00Z rep COMPLETE 2026-01-31T09:00:00Z AUDIT 2026-02-18T09:00:00Z {'user_490'}
+RIDS ['account_3589', 'analytics_1575', 'audit_record_9341', 'export_6406', 'search_9733', 'support_6737']
+evidence_64 2026-02-18T08:39:11Z L18: 2026-02-18T06:54:06Z level=DEBUG service=search_service trace_id=rb-065406-009 event=index_query_started resource_id=search_9733 lookup_key=eamponsah5039@fastmail.com
+evidence_64 2026-02-18T08:39:11Z L19: 2026-02-18T06:54:06Z level=INFO service=search_service trace_id=rb-065406-009 event=index_query_completed resource_id=search_9733 result=hit total_hits=1 index=customer_directory_v3 email=eamponsah5039@fastmail.com customer_reference=null
+evidence_64 2026-02-18T08:39:11Z L24: 2026-02-18T07:08:59Z level=DEBUG service=support_platform trace_id=rb-070859-012 event=support_ticket_read_started resource_id=support_6737 lookup_key=eamponsah5039@fastmail.com
+evidence_64 2026-02-18T08:39:11Z L25: 2026-02-18T07:08:59Z level=INFO service=support_platform trace_id=rb-070859-012 event=support_ticket_read_completed resource_id=support_6737 customer_reference=null requester_name=null requester_email=eamponsah5039@fastmail.com requester_phone=null
+evidence_64 2026-02-18T08:39:11Z L4: 2026-02-18T05:47:23Z level=DEBUG service=analytics_platform trace_id=rb-054723-002 event=analytics_profile_read_started resource_id=analytics_1575 lookup_key=eamponsah5039@fastmail.com
+evidence_64 2026-02-18T08:39:11Z L5: 2026-02-18T05:47:23Z level=INFO service=analytics_platform trace_id=rb-054723-002 event=analytics_profile_read_completed resource_id=analytics_1575 customer_reference=null email=eamponsah5039@fastmail.com phone=null email_hash=null audience_cohort=returning_customer
+evidence_64 2026-02-18T08:39:11Z L6: 2026-02-18T06:02:13Z level=DEBUG service=export_service trace_id=rb-060213-003 event=export_metadata_read_started resource_id=export_6406 lookup_key=eamponsah5039@fastmail.com
+evidence_64 2026-02-18T08:39:11Z L7: 2026-02-18T06:02:13Z level=INFO service=export_service trace_id=rb-060213-003 event=export_metadata_read_completed resource_id=export_6406 available=true owner_email=eamponsah5039@fastmail.com object_key=exports/export_6406/customer_data.zip
+LATE evidence_45 2026-02-23T10:00:00Z {"exported_at": "2026-02-23T10:00:00Z", "captured_at": "2026-02-23T10:00:00Z", "data_store": "backup_restore_service", "collection": "operational_record_history"} {"recorded_at": "2026-02-18T09:00:00Z", "system": "account_service", "resource_id": "account_3589", "record_type": "USER_PROFILE", "result": "NOT_FOUND", "lookup_value": "eamponsah5039@fastmail.com"}
+LATE evidence_45 2026-02-23T10:00:00Z {"exported_at": "2026-02-23T10:00:00Z", "captured_at": "2026-02-23T10:00:00Z", "data_store": "backup_restore_service", "collection": "operational_record_history"} {"recorded_at": "2026-02-18T09:00:00Z", "system": "analytics_platform", "resource_id": "analytics_1575", "record_type": "ANALYTICS_PROFILE", "result": "IDENTIFIABLE", "lookup_value": "eamponsah5039@fastmail.com"}
+LATE evidence_45 2026-02-23T10:00:00Z {"exported_at": "2026-02-23T10:00:00Z", "captured_at": "2026-02-23T10:00:00Z", "data_store": "backup_restore_service", "collection": "operational_record_history"} {"recorded_at": "2026-02-18T09:00:00Z", "system": "export_service", "resource_id": "export_6406", "record_type": "USER_EXPORT", "result": "FOUND", "lookup_value": "eamponsah5039@fastmail.com"}
+LATE evidence_45 2026-02-23T10:00:00Z {"exported_at": "2026-02-23T10:00:00Z", "captured_at": "2026-02-23T10:00:00Z", "data_store": "backup_restore_service", "collection": "operational_record_history"} {"recorded_at": "2026-02-18T09:00:00Z", "system": "search_service", "resource_id": "search_9733", "record_type": "SEARCH_INDEX_ENTRY", "result": "FOUND", "lookup_value": "eamponsah5039@fastmail.com"}
+LATE evidence_45 2026-02-23T10:00:00Z {"exported_at": "2026-02-23T10:00:00Z", "captured_at": "2026-02-23T10:00:00Z", "data_store": "backup_restore_service", "collection": "operational_record_history"} {"recorded_at": "2026-02-18T09:00:00Z", "system": "security_service", "resource_id": "audit_record_9341", "record_type": "SECURITY_AUDIT_LOG", "result": "FOUND", "lookup_value": "user_490"}
+LATE evidence_45 2026-02-23T10:00:00Z {"exported_at": "2026-02-23T10:00:00Z", "captured_at": "2026-02-23T10:00:00Z", "data_store": "backup_restore_service", "collection": "operational_record_history"} {"recorded_at": "2026-02-18T09:00:00Z", "system": "support_platform", "resource_id": "support_6737", "record_type": "SUPPORT_MESSAGE", "result": "IDENTIFIABLE", "lookup_value": "eamponsah5039@fastmail.com"}
+--- activities
+activity_368 2026-01-31T07:48:19Z DELETE_RECORD deletion_worker account_service account_3589 SUCCESS Deletion worker submitted primary profile account_3589 to account_service.
+activity_374 2026-01-31T09:41:11Z DELETE_RECORD deletion_worker export_service export_6406 PARTIAL Deletion worker received the final result for export_6406 from export_service.
+activity_375 2026-01-31T10:00:40Z DELETE_RECORD deletion_worker search_service search_9733 PARTIAL Deletion worker received the final result for search_9733 from search_service.
+activity_376 2026-01-31T10:19:10Z REDACT_RECORD deletion_worker support_platform support_6737 PARTIAL Deletion worker received the final result for support_6737 from support_platform.
+activity_377 2026-01-31T10:38:39Z ANONYMIZE_RECORD deletion_worker analytics_platform analytics_1575 PARTIAL Deletion worker received the final result for analytics_1575 from analytics_platform.
+=== WINDOW case_492 same reported_at: ['case_491', 'case_492']
+    -72m activity_368 DELETE_RECORD account_service account_3589 SUCCESS | in: ['evidence_45']
+    -60m activity_369 DELETE_RECORD account_service account_7455 SUCCESS | in: ['evidence_45', 'evidence_64']
+    -13m activity_370 DELETE_RECORD account_service account_5934 FAILED | in: []
+     -2m activity_371 DELETE_RECORD account_service account_3119 PARTIAL | in: ['evidence_45']
+    +10m activity_372 DELETE_RECORD account_service account_3510 SUCCESS | in: []
+    +41m activity_374 DELETE_RECORD export_service export_6406 PARTIAL | in: ['evidence_45', 'evidence_64']
+    +61m activity_375 DELETE_RECORD search_service search_9733 PARTIAL | in: ['evidence_45', 'evidence_64']
+    +79m activity_376 REDACT_RECORD support_platform support_6737 PARTIAL | in: ['evidence_45', 'evidence_64']
+    +99m activity_377 ANONYMIZE_RECORD analytics_platform analytics_1575 PARTIAL | in: ['evidence_45', 'evidence_64']
+   +104m activity_378 CHECK_DATA_FLOW integration_service data_flow_8899 SUCCESS | in: ['evidence_45']
+   +111m activity_379 SYNC_RECORD account_replication_cluster account_3119 PARTIAL | in: ['evidence_45']
+   +118m activity_380 DELETE_RECORD search_service search_5412 FAILED | in: ['evidence_45']
+   +124m activity_381 DELETE_RECORD search_service search_3759 FAILED | in: ['evidence_45']

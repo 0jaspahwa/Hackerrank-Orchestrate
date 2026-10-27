@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"list_candidates\",\"args\":{\"slot\":\"account\"},\"why\":\"search for unlinked accounts with requester's identifiers\"}", "input_tokens": 480, "output_tokens": 55, "latency_s": 0.503, "provider": "groq", "model": "openai/gpt-oss-120b"}

@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"propose\",\"args\":{\"resource_id\":\"export_1260\",\"identifier\":\"ingrid.dahl@outlook.com\",\"file_id\":\"evidence_23\"},\"why\":\"found matching record not yet linked\"}", "input_tokens": 500, "output_tokens": 97, "latency_s": 0.764, "provider": "groq", "model": "openai/gpt-oss-120b"}

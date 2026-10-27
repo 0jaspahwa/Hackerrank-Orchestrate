@@ -5,9 +5,13 @@ project has its own folder with its own code, data and README.
 
 | folder | challenge | month | rank |
 |---|---|---|---|
+| [`ghost-data/`](./ghost-data) | Ghost Data Still Exists | October 2026 | pending |
 | [`buy-or-wait/`](./buy-or-wait) | Buy or Wait? | September 2026 | **63 of 3,062** |
 | [`whatsapp-notification-router/`](./whatsapp-notification-router) | WhatsApp Message Notification Router | August 2026 | **384 of 1,983** |
 
+- **Ghost Data Still Exists** audits whether a user's personal data was really
+  deleted across databases, logs, exports, screenshots and backups, and writes
+  the ordered findings, fixes and checks needed to finish the deletion.
 - **Buy or Wait?** looks at a user's money over the next 90 days and decides
   if they should pay in full, pay in parts, use installments, wait, or not buy.
 - **WhatsApp Notification Router** reads each message (text, voice note or

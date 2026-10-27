@@ -1,0 +1,6 @@
+#################### case_32 addo.kofi@gmail.com req 2026-09-03T12:00:00Z rep PARTIALLY_COMPLETE 2026-09-06T12:00:00Z AUDIT 2026-09-15T12:00:00Z {'user_542'}
+RIDS ['audit_record_7068', 'tombstone_9178']
+evidence_51 2026-09-15T12:00:00Z {"exported_at": "2026-09-15T12:00:00Z", "captured_at": "2026-09-15T12:00:00Z", "data_store": "identity_service", "collection": "deleted_customer_references"} {"resource_id": "tombstone_9178", "subject_reference": "user_542", "name": "Kofi Addo", "email": "addo.kofi@gmail.com", "phone": "+233 24 991 1328", "email_hash": "4f4b9c98a05a2dad20e52313cce7809d18c3da544754dcd46d728b0173174b26", "account_status": "DELETED"}
+evidence_51 2026-09-15T12:00:00Z {"exported_at": "2026-09-15T12:00:00Z", "captured_at": "2026-09-15T12:00:00Z", "data_store": "security_service", "collection": "security_audit_events"} {"resource_id": "audit_record_7068", "subject_reference": "user_542", "event_name": "account_deletion_reviewed", "actor_type": "automated_privacy_workflow", "integrity_seal": "sha256:0000000000000000000000000000000000000000000000000000000000001b9c"}
+--- activities
+activity_3692 2026-09-06T13:00:07Z REDACT_RECORD deletion_worker identity_service tombstone_9178 FAILED Deletion worker received the final result for tombstone_9178 from identity_service.

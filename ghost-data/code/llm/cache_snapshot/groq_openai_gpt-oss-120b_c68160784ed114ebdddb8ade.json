@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"0c3d36a5053b0182\"},\"why\":\"find unlinked record for this identifier\"}", "input_tokens": 436, "output_tokens": 90, "latency_s": 0.697, "provider": "groq", "model": "openai/gpt-oss-120b"}

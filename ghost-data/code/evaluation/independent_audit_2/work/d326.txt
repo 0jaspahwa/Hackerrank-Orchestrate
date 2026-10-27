@@ -1,0 +1,36 @@
+#################### case_326 HYUNWOO.KANG94@GMAIL.COM req 2026-04-25T11:00:00Z rep NOT_STARTED 2026-04-26T11:00:00Z AUDIT 2026-05-09T11:00:00Z {'user_324'}
+RIDS ['account_3785', 'audit_record_1219', 'backup_2894', 'data_flow_2468', 'support_305']
+evidence_73 2026-05-09T10:43:53Z L32: 2026-05-09T09:15:52Z level=DEBUG service=security_service trace_id=rb-091552-016 event=audit_record_read_started resource_id=audit_record_1219 lookup_key=user_324
+evidence_73 2026-05-09T10:43:53Z L33: 2026-05-09T09:15:52Z level=INFO service=security_service trace_id=rb-091552-016 event=audit_record_read_completed resource_id=audit_record_1219 rows=1 subject_reference=user_324 event_code=SUBJECT_REQUEST_AUDITED retention_until=2033-12-31T23:59:59Z
+evidence_73 2026-05-09T10:43:53Z L40: 2026-05-09T09:32:04Z level=DEBUG service=account_service trace_id=rb-093204-020 event=profile_lookup_started resource_id=account_3785 lookup_key=HYUNWOO.KANG94@GMAIL.COM
+evidence_73 2026-05-09T10:43:53Z L41: 2026-05-09T09:32:04Z level=INFO service=account_service trace_id=rb-093204-020 event=profile_lookup_completed resource_id=account_3785 rows=0 http_status=404
+evidence_73 2026-05-09T10:43:53Z L42: 2026-05-09T09:33:04Z level=DEBUG service=backup_service trace_id=rb-093304-021 event=restore_policy_read_started resource_id=backup_2894 lookup_key=user_324
+evidence_73 2026-05-09T10:43:53Z L43: 2026-05-09T09:33:04Z level=INFO service=backup_service trace_id=rb-093304-021 event=restore_policy_read_completed resource_id=backup_2894 archive_present=true restore_allowed=false archive_key=archive/customer-data/backup_2894.tar.zst customer_email=null customer_reference=user_324
+evidence_73 2026-05-09T10:43:53Z L4: 2026-05-09T07:47:14Z level=DEBUG service=integration_service trace_id=rb-074714-002 event=connector_config_read_started resource_id=data_flow_2468 lookup_key=user_324
+evidence_73 2026-05-09T10:43:53Z L52: 2026-05-09T10:09:26Z level=DEBUG service=support_platform trace_id=rb-100926-026 event=support_ticket_read_started resource_id=support_305 lookup_key=user_324
+evidence_73 2026-05-09T10:43:53Z L53: 2026-05-09T10:09:26Z level=INFO service=support_platform trace_id=rb-100926-026 event=support_ticket_read_completed resource_id=support_305 customer_reference=user_324 requester_name=null requester_email=null requester_phone=null
+evidence_73 2026-05-09T10:43:53Z L5: 2026-05-09T07:47:14Z level=INFO service=integration_service trace_id=rb-074714-002 event=connector_config_read_completed resource_id=data_flow_2468 enabled=false last_delivery_status=stopped connector_name=search_profile_indexer customer_email=null customer_reference=user_324
+LATE evidence_31 2026-05-11T11:00:00Z {"exported_at": "2026-05-11T11:00:00Z", "captured_at": "2026-05-03T11:00:00Z", "data_store": "account_service", "collection": "customer_profiles"} {"resource_id": "account_3785", "customer_reference": "user_324", "full_name": "Hyun-woo Kang", "email": "HYUNWOO.KANG94@GMAIL.COM", "phone": "+82 10 2411 4559", "account_status": "ACTIVE", "signup_channel": "mobile_app"}
+LATE evidence_31 2026-05-11T11:00:00Z {"exported_at": "2026-05-11T11:00:00Z", "captured_at": "2026-05-09T11:00:00Z", "data_store": "backup_service", "collection": "backup_catalog"} {"resource_id": "backup_2894", "archive_path": "s3://customer-backups/weekly/segment-14.tar.zst", "subject_reference": "user_324", "restore_allowed": false, "encryption": "AES-256"}
+LATE evidence_31 2026-05-11T11:00:00Z {"exported_at": "2026-05-11T11:00:00Z", "captured_at": "2026-05-09T11:00:00Z", "data_store": "integration_service", "collection": "connector_configurations"} {"resource_id": "data_flow_2468", "connector_name": "customer-events-to-warehouse-5", "destination": "customer_analytics_warehouse", "subject_selector": "user_324", "enabled": false, "mode": "continuous_sync"}
+LATE evidence_31 2026-05-11T11:00:00Z {"exported_at": "2026-05-11T11:00:00Z", "captured_at": "2026-05-09T11:00:00Z", "data_store": "security_service", "collection": "security_audit_events"} {"resource_id": "audit_record_1219", "subject_reference": "user_324", "event_name": "account_deletion_reviewed", "actor_type": "automated_privacy_workflow", "integrity_seal": "sha256:00000000000000000000000000000000000000000000000000000000000004c3"}
+LATE evidence_31 2026-05-11T11:00:00Z {"exported_at": "2026-05-11T11:00:00Z", "captured_at": "2026-05-09T11:00:00Z", "data_store": "support_platform", "collection": "support_conversations"} {"resource_id": "support_305", "ticket_id": "CS-4305", "subject_reference": "user_324", "channel": "email", "message_text": "[REDACTED]"}
+--- activities
+activity_1593 2026-04-26T09:45:11Z DELETE_RECORD deletion_worker account_service account_3785 FAILED Deletion worker submitted primary profile account_3785 to account_service.
+activity_1598 2026-04-26T10:38:21Z REDACT_RECORD deletion_worker support_platform support_305 SUCCESS Policy action completed for support_305.
+activity_1599 2026-04-26T10:45:50Z DISABLE_DATA_FLOW deletion_worker integration_service data_flow_2468 SUCCESS Policy action completed for data_flow_2468.
+activity_1601 2026-04-26T10:52:20Z BLOCK_RESTORE deletion_worker backup_service backup_2894 SUCCESS Policy action completed for backup_2894.
+=== WINDOW case_326 same reported_at: ['case_326', 'case_327', 'case_328']
+    -75m activity_1593 DELETE_RECORD account_service account_3785 FAILED | in: ['evidence_31', 'evidence_73']
+    -66m activity_1594 DELETE_RECORD account_service account_206 PARTIAL | in: []
+    -54m activity_1595 DELETE_RECORD account_service account_4606 SUCCESS | in: ['evidence_31', 'evidence_73']
+    -28m activity_1596 ANONYMIZE_RECORD analytics_platform analytics_9681 SUCCESS | in: ['evidence_31', 'evidence_73']
+    -28m activity_1597 ANONYMIZE_RECORD analytics_platform analytics_2072 SUCCESS | in: ['evidence_31', 'evidence_73']
+    -22m activity_1598 REDACT_RECORD support_platform support_305 SUCCESS | in: ['evidence_31', 'evidence_73']
+    -14m activity_1599 DISABLE_DATA_FLOW integration_service data_flow_2468 SUCCESS | in: ['evidence_31', 'evidence_73']
+    -11m activity_1600 REDACT_RECORD support_platform support_3399 FAILED | in: ['evidence_31', 'evidence_72']
+     -8m activity_1601 BLOCK_RESTORE backup_service backup_2894 SUCCESS | in: ['evidence_31', 'evidence_73']
+     +5m activity_1602 DELETE_RECORD account_service account_8264 FAILED | in: ['evidence_30', 'evidence_74']
+    +31m activity_1603 ANONYMIZE_RECORD analytics_platform analytics_6099 SUCCESS | in: ['evidence_30', 'evidence_74']
+    +43m activity_1604 REDACT_RECORD support_platform support_7926 FAILED | in: ['evidence_31', 'evidence_73']
+    +63m activity_1606 DELETE_RECORD search_service search_9107 FAILED | in: ['evidence_31', 'evidence_73']

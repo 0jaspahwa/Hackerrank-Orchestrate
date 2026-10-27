@@ -1,0 +1,24 @@
+#################### case_532 mahlangu.thabo80@gmail.com req 2026-01-09T12:00:00Z rep COMPLETE 2026-01-12T12:00:00Z AUDIT 2026-01-29T12:00:00Z {'user_530'}
+RIDS ['audit_record_4828', 'backup_6344', 'data_flow_6987', 'support_7724']
+evidence_62 2026-01-29T11:44:59Z {"exported_at": "2026-01-29T11:44:59Z"} {"archive_key": "archive/customer-data/backup_6344.tar.zst", "customer_email": null, "customer_reference": "user_530", "observed_at": "2026-01-29T11:44:59Z", "resource_id": "backup_6344", "restore_allowed": false}
+evidence_62 2026-01-29T11:44:59Z {"exported_at": "2026-01-29T11:44:59Z"} {"connector_name": "search_profile_indexer", "customer_email": null, "customer_reference": "user_530", "enabled": false, "last_delivery_status": "stopped", "observed_at": "2026-01-29T11:28:13Z", "resource_id": "data_flow_6987"}
+evidence_62 2026-01-29T11:44:59Z {"exported_at": "2026-01-29T11:44:59Z"} {"customer_reference": "user_530", "message_excerpt": "Customer supplied contact details for a delivery query.", "observed_at": "2026-01-29T10:42:12Z", "requester_email": null, "requester_name": null, "requester_phone": null, "resource_id": "support_7724"}
+evidence_62 2026-01-29T11:44:59Z {"exported_at": "2026-01-29T11:44:59Z"} {"event_code": "PRIVACY_REQUEST_ACCEPTED", "observed_at": "2026-01-29T10:21:46Z", "resource_id": "audit_record_4828", "retention_until": "2032-06-30T23:59:59Z", "subject_reference": "user_530"}
+LATE evidence_49 2026-01-31T15:00:00Z {"exported_at": "2026-01-31T15:00:00Z", "captured_at": "2026-01-29T12:00:00Z", "data_store": "backup_service", "collection": "backup_catalog"} {"resource_id": "backup_6344", "archive_path": "s3://customer-backups/weekly/segment-08.tar.zst", "subject_reference": "user_530", "restore_allowed": false, "encryption": "AES-256"}
+LATE evidence_49 2026-01-31T15:00:00Z {"exported_at": "2026-01-31T15:00:00Z", "captured_at": "2026-01-29T12:00:00Z", "data_store": "integration_service", "collection": "connector_configurations"} {"resource_id": "data_flow_6987", "connector_name": "customer-events-to-warehouse-4", "destination": "customer_analytics_warehouse", "subject_selector": "user_530", "enabled": false, "mode": "continuous_sync"}
+LATE evidence_49 2026-01-31T15:00:00Z {"exported_at": "2026-01-31T15:00:00Z", "captured_at": "2026-01-29T12:00:00Z", "data_store": "security_service", "collection": "security_audit_events"} {"resource_id": "audit_record_4828", "subject_reference": "user_530", "event_name": "account_deletion_reviewed", "actor_type": "automated_privacy_workflow", "integrity_seal": "sha256:00000000000000000000000000000000000000000000000000000000000012dc"}
+LATE evidence_49 2026-01-31T15:00:00Z {"exported_at": "2026-01-31T15:00:00Z", "captured_at": "2026-01-29T12:00:00Z", "data_store": "support_platform", "collection": "support_conversations"} {"resource_id": "support_7724", "ticket_id": "CS-6724", "subject_reference": "user_530", "channel": "email", "message_text": "[REDACTED]"}
+--- activities
+activity_94 2026-01-12T11:38:36Z REDACT_RECORD deletion_worker support_platform support_7724 SUCCESS Policy action completed for support_7724.
+activity_95 2026-01-12T11:45:06Z DISABLE_DATA_FLOW deletion_worker integration_service data_flow_6987 SUCCESS Policy action completed for data_flow_6987.
+activity_96 2026-01-12T11:52:35Z BLOCK_RESTORE deletion_worker backup_service backup_6344 SUCCESS Policy action completed for backup_6344.
+=== WINDOW case_532 same reported_at: ['case_530', 'case_531', 'case_532']
+    -67m activity_89 DELETE_RECORD account_service account_3146 FAILED | in: []
+    -55m activity_90 DELETE_RECORD account_service account_6169 PARTIAL | in: ['evidence_62']
+    -47m activity_91 DELETE_RECORD account_service account_470 SUCCESS | in: ['evidence_62']
+    -29m activity_92 ANONYMIZE_RECORD analytics_platform analytics_3744 SUCCESS | in: ['evidence_49', 'evidence_62']
+    -28m activity_93 ANONYMIZE_RECORD analytics_platform analytics_893 SUCCESS | in: ['evidence_49', 'evidence_62']
+    -21m activity_94 REDACT_RECORD support_platform support_7724 SUCCESS | in: ['evidence_49', 'evidence_62']
+    -15m activity_95 DISABLE_DATA_FLOW integration_service data_flow_6987 SUCCESS | in: ['evidence_49', 'evidence_62']
+     -7m activity_96 BLOCK_RESTORE backup_service backup_6344 SUCCESS | in: ['evidence_49', 'evidence_62']
+    +38m activity_97 CHECK_RESTORE_ACCESS backup_service backup_3382 SUCCESS | in: ['evidence_49', 'evidence_62']

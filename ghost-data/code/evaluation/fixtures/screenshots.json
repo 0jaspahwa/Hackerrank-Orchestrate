@@ -1,0 +1,91 @@
+{
+  "_note": "Hand-written expected extraction for the 11 PNGs (viewed by the agent on 2026-10-25). TEST USE ONLY - never read by the pipeline. 'linked' is the resource tied to the image by its catalog LINK row (D27) and the state the image shows for it.",
+  "evidence_04": {
+    "resource_ids": ["account_5762", "support_9538"],
+    "emails": ["haruka.s1838@zoho.com"],
+    "user_ids": ["user_11"],
+    "phones": ["+819076102507"],
+    "linked": {"resource_id": "account_5762", "ref": "account_5762", "state": "PRESENT",
+               "why": "live customer profile with name, email and phone"}
+  },
+  "evidence_09": {
+    "resource_ids": ["search_428", "search_1874"],
+    "emails": ["g.silva76@gmail.com", "g.silva76.jr@gmail.com"],
+    "user_ids": ["user_13", "user_9842"],
+    "phones": [],
+    "linked": {"resource_id": "search_428", "ref": "search_428", "state": "PRESENT",
+               "why": "search hit with display name, email and customer_reference user_13"}
+  },
+  "evidence_14": {
+    "resource_ids": ["data_flow_1121", "data_flow_9846"],
+    "emails": ["jain.aditi@gmail.com", "lucia-torres@gmail.com"],
+    "user_ids": [],
+    "phones": [],
+    "linked": {"resource_id": "data_flow_1121", "ref": "data_flow_1121", "state": "ENABLED",
+               "why": "Status Healthy, Continuous sync, delivering events"}
+  },
+  "evidence_19": {
+    "resource_ids": ["analytics_7438"],
+    "emails": ["darwish.omar@icloud.com"],
+    "user_ids": ["user_20"],
+    "phones": [],
+    "linked": {"resource_id": "analytics_7438", "ref": "analytics_7438", "state": "PRESENT",
+               "why": "analytics profile still shows name, user_20 and email"}
+  },
+  "evidence_23": {
+    "resource_ids": ["export_1261", "export_1260", "export_1259", "export_1258"],
+    "emails": ["marcus.lee@northstar.shop", "ingrid.dahl@outlook.com", "sara.kim@northstar.shop", "daniel.park@northstar.shop"],
+    "user_ids": [],
+    "phones": [],
+    "linked": {"resource_id": "export_1260", "ref": "export_1260", "state": "PRESENT",
+               "why": "Ready for download, expires 25 Jun 2026 06:42 UTC"}
+  },
+  "evidence_28": {
+    "resource_ids": ["support_1034"],
+    "emails": ["kagyeman8947@fastmail.com"],
+    "user_ids": [],
+    "phones": [],
+    "linked": {"resource_id": "support_1034", "ref": "support_1034", "state": "PRESENT",
+               "why": "conversation shows customer name Kofi Agyeman and email"}
+  },
+  "evidence_32": {
+    "resource_ids": ["backup_9291", "backup_9288", "backup_9287", "backup_9286", "backup_9281"],
+    "emails": ["bluepeakco@outlook.com", "miller.logistics@company.com", "areed1433@gmail.com", "summit-retail@company.com"],
+    "user_ids": [],
+    "phones": [],
+    "linked": {"resource_id": "backup_9287", "ref": "backup_9287", "state": "RESTORABLE",
+               "why": "archive healthy, checksum verified, retention end 26 Jul 2026, no restore block shown"}
+  },
+  "evidence_37": {
+    "resource_ids": ["audit_record_001", "audit_record_002", "audit_record_003", "audit_record_004", "audit_record_005", "audit_record_006"],
+    "emails": [],
+    "user_ids": ["user_03"],
+    "phones": [],
+    "linked": {"resource_id": "audit_record_003", "ref": "audit_record_003", "state": "PRESENT",
+               "why": "signed account_closure_recorded event, integrity valid"}
+  },
+  "evidence_42": {
+    "resource_ids": [],
+    "emails": [],
+    "user_ids": ["user_17"],
+    "phones": [],
+    "linked": {"resource_id": "tombstone_17", "ref": "user_17", "state": "CLEAN",
+               "why": "Retained reference: only the user_17 key and linked record refs, no name/email/phone"}
+  },
+  "evidence_46": {
+    "resource_ids": [],
+    "emails": [],
+    "user_ids": [],
+    "phones": [],
+    "linked": {"resource_id": "object_19", "ref": "delivery_confirmation_19.pdf", "state": "PRESENT",
+               "why": "object listed in northstar-customer-data/support-attachments, v3 modified 12 Feb 18:42"}
+  },
+  "evidence_60": {
+    "resource_ids": ["marketing_001"],
+    "emails": ["sj.park@naver.com"],
+    "user_ids": [],
+    "phones": ["+821058379451"],
+    "linked": {"resource_id": "marketing_001", "ref": "marketing_001", "state": "PRESENT",
+               "why": "Live marketing profile with email opt-in Yes"}
+  }
+}

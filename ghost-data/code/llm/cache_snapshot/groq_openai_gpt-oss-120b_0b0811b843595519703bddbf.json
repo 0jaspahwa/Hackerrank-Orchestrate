@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"+48641631758\"},\"why\":\"find unlinked record with phone\"}", "input_tokens": 388, "output_tokens": 56, "latency_s": 0.673, "provider": "groq", "model": "openai/gpt-oss-120b"}

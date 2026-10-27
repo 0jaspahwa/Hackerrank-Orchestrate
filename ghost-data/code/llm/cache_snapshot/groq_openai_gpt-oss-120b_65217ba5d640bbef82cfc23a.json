@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"+46708087405\"},\"why\":\"Check other phone number for unlinked records\"}", "input_tokens": 441, "output_tokens": 52, "latency_s": 0.465, "provider": "groq", "model": "openai/gpt-oss-120b"}

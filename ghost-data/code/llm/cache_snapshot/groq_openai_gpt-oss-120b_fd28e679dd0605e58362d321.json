@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"kagyeman8947@fastmail.com\"},\"why\":\"search missing email\"}", "input_tokens": 445, "output_tokens": 48, "latency_s": 0.744, "provider": "groq", "model": "openai/gpt-oss-120b"}

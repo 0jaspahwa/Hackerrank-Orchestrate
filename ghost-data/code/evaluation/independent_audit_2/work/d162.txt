@@ -1,0 +1,15 @@
+#################### case_162 cmercier1769@gmail.com req 2026-07-23T07:00:00Z rep NOT_STARTED 2026-07-25T07:00:00Z AUDIT 2026-08-02T07:00:00Z {'user_160'}
+RIDS ['audit_record_6362']
+evidence_15 2026-08-02T07:00:00Z L22: INSERT INTO "customer_data_primary" VALUES('audit_record_6362','security_service','security_audit_events','{"resource_id":"audit_record_6362","subject_reference":"user_160","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:00000000000000000000000000000000000000000000000000000000000018da"}','2026-08-02T07:00:00Z');
+evidence_15 2026-08-02T07:00:00Z L54: INSERT INTO "customer_data_read_replica" VALUES('audit_record_6362','security_service','security_audit_events','{"resource_id":"audit_record_6362","subject_reference":"user_160","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:00000000000000000000000000000000000000000000000000000000000018da"}','2026-08-02T07:00:00Z');
+--- activities
+=== WINDOW case_162 same reported_at: ['case_162']
+    -69m activity_2944 DELETE_RECORD account_service account_5983 FAILED | in: []
+    -10m activity_2946 DELETE_RECORD account_service account_5023 PARTIAL | in: []
+     +1m activity_2947 DELETE_RECORD account_service account_8632 PARTIAL | in: []
+    +12m activity_2948 DELETE_RECORD account_service account_7864 PARTIAL | in: []
+    +61m activity_2949 DELETE_RECORD account_service account_9191 SUCCESS | in: ['evidence_13']
+   +102m activity_2951 CHECK_RESTORE_ACCESS backup_service backup_4244 SUCCESS | in: ['evidence_86']
+   +108m activity_2952 REDACT_RECORD support_platform support_5716 FAILED | in: ['evidence_86']
+   +117m activity_2953 CHECK_DATA_FLOW integration_service data_flow_4889 SUCCESS | in: ['evidence_86']
+   +128m activity_2954 DELETE_RECORD search_service search_7239 FAILED | in: ['evidence_86']

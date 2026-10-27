@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"stop\",\"args\":{\"reason\":\"All identifiers already linked\"},\"why\":\"No new resource found\"}", "input_tokens": 691, "output_tokens": 94, "latency_s": 0.842, "provider": "groq", "model": "openai/gpt-oss-120b"}

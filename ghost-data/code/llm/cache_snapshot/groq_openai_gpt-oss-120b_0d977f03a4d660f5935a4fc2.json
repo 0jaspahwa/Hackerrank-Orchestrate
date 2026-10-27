@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"lars-nielsen@proton.me\"},\"why\":\"Check for missing record with email\"}", "input_tokens": 449, "output_tokens": 50, "latency_s": 0.479, "provider": "groq", "model": "openai/gpt-oss-120b"}

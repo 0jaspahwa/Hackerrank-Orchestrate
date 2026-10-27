@@ -1,0 +1,17 @@
+#################### case_206 ama.agyeman84@gmail.com req 2026-06-24T09:00:00Z rep COMPLETE 2026-06-25T09:00:00Z AUDIT 2026-07-08T09:00:00Z {'user_204'}
+RIDS ['audit_record_9878']
+evidence_20 2026-07-08T09:00:00Z L27: INSERT INTO "customer_data_primary" VALUES('audit_record_9878','security_service','security_audit_events','{"resource_id":"audit_record_9878","subject_reference":"user_204","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:0000000000000000000000000000000000000000000000000000000000002696"}','2026-07-08T09:00:00Z');
+evidence_20 2026-07-08T09:00:00Z L66: INSERT INTO "customer_data_read_replica" VALUES('audit_record_9878','security_service','security_audit_events','{"resource_id":"audit_record_9878","subject_reference":"user_204","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:0000000000000000000000000000000000000000000000000000000000002696"}','2026-07-08T09:00:00Z');
+--- activities
+=== WINDOW case_206 same reported_at: ['case_206', 'case_207', 'case_208']
+    -68m activity_2508 DELETE_RECORD account_service account_5678 PARTIAL | in: []
+    -57m activity_2510 DELETE_RECORD account_service account_4522 SUCCESS | in: []
+    -47m activity_2511 DELETE_RECORD account_service account_3685 PARTIAL | in: []
+    -28m activity_2512 ANONYMIZE_RECORD analytics_platform analytics_9580 SUCCESS | in: ['evidence_20']
+     -9m activity_2513 DELETE_RECORD account_service account_1065 PARTIAL | in: ['evidence_82']
+     +0m activity_2514 REDACT_RECORD support_platform support_111 FAILED | in: ['evidence_21', 'evidence_81']
+    +20m activity_2515 DELETE_RECORD search_service search_6405 FAILED | in: ['evidence_21', 'evidence_81']
+    +32m activity_2516 ANONYMIZE_RECORD analytics_platform analytics_8037 SUCCESS | in: ['evidence_82']
+    +47m activity_2517 CHECK_RESTORE_ACCESS backup_service backup_6407 SUCCESS | in: ['evidence_20']
+    +54m activity_2518 REDACT_RECORD support_platform support_2134 FAILED | in: ['evidence_20']
+    +74m activity_2519 DELETE_RECORD search_service search_1118 FAILED | in: ['evidence_20']

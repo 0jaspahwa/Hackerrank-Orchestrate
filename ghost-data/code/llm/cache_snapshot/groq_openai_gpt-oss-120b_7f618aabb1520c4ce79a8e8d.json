@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"minjun.jung@outlook.com\"},\"why\":\"Check if email linked elsewhere\"}", "input_tokens": 469, "output_tokens": 58, "latency_s": 0.564, "provider": "groq", "model": "openai/gpt-oss-120b"}

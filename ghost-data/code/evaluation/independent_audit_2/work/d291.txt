@@ -1,0 +1,27 @@
+#################### case_291 n.collins20@gmail.com req 2026-05-10T08:00:00Z rep PARTIALLY_COMPLETE 2026-05-12T08:00:00Z AUDIT 2026-05-29T08:00:00Z {'user_289'}
+RIDS ['backup_7079']
+evidence_76 2026-05-29T07:43:13Z L22: 2026-05-29T06:06:44Z level=DEBUG service=backup_service trace_id=rb-060644-011 event=restore_policy_read_started resource_id=backup_7079 lookup_key=n.collins20@gmail.com
+evidence_76 2026-05-29T07:43:13Z L23: 2026-05-29T06:06:44Z level=INFO service=backup_service trace_id=rb-060644-011 event=restore_policy_read_completed resource_id=backup_7079 archive_present=true restore_allowed=true archive_key=archive/customer-data/backup_7079.tar.zst customer_email=n.collins20@gmail.com customer_reference=null
+--- activities
+activity_1858 2026-05-12T09:00:19Z CHECK_RESTORE_ACCESS deletion_worker backup_service backup_7079 SUCCESS Restore-access check confirmed that archive backup_7079 can still be restored.
+=== WINDOW case_291 same reported_at: ['case_290', 'case_291', 'case_292']
+    -72m activity_1841 DELETE_RECORD account_service account_1125 SUCCESS | in: ['evidence_76']
+    -62m activity_1842 DELETE_RECORD account_service account_8914 PARTIAL | in: []
+    -50m activity_1843 DELETE_RECORD account_service account_7177 SUCCESS | in: []
+    -29m activity_1844 ANONYMIZE_RECORD analytics_platform analytics_2322 SUCCESS | in: ['evidence_76']
+    -21m activity_1845 REDACT_RECORD support_platform support_1526 SUCCESS | in: ['evidence_76']
+    -15m activity_1846 DISABLE_DATA_FLOW integration_service data_flow_5598 SUCCESS | in: ['evidence_76']
+    -11m activity_1847 DELETE_RECORD account_service account_2352 SUCCESS | in: []
+     -7m activity_1848 BLOCK_RESTORE backup_service backup_1825 SUCCESS | in: ['evidence_76']
+     -2m activity_1850 DELETE_RECORD account_service account_731 SUCCESS | in: ['evidence_77']
+     +8m activity_1851 DELETE_RECORD account_service account_4853 FAILED | in: ['evidence_77']
+    +31m activity_1852 ANONYMIZE_RECORD analytics_platform analytics_5923 SUCCESS | in: ['evidence_26', 'evidence_77']
+    +31m activity_1853 ANONYMIZE_RECORD analytics_platform analytics_6191 SUCCESS | in: ['evidence_26', 'evidence_77']
+    +39m activity_1854 REDACT_RECORD support_platform support_2036 SUCCESS | in: ['evidence_26', 'evidence_77']
+    +45m activity_1855 DISABLE_DATA_FLOW integration_service data_flow_2439 SUCCESS | in: ['evidence_26', 'evidence_77']
+    +53m activity_1856 BLOCK_RESTORE backup_service backup_9728 SUCCESS | in: ['evidence_26', 'evidence_77']
+    +54m activity_1857 CHECK_DATA_FLOW integration_service data_flow_179 SUCCESS | in: ['evidence_76']
+    +60m activity_1858 CHECK_RESTORE_ACCESS backup_service backup_7079 SUCCESS | in: ['evidence_76']
+    +72m activity_1859 DELETE_RECORD search_service search_3144 FAILED | in: ['evidence_76']
+   +101m activity_1860 DELETE_RECORD support_platform support_3684 FAILED | in: ['evidence_26', 'evidence_77']
+   +119m activity_1862 DELETE_RECORD search_service search_5264 FAILED | in: ['evidence_26', 'evidence_77']

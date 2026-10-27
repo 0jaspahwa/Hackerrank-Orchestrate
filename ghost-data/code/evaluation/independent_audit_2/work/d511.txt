@@ -1,0 +1,27 @@
+#################### case_511 nicolas.f550081@outlook.com req 2026-01-20T07:00:00Z rep PARTIALLY_COMPLETE 2026-01-23T07:00:00Z AUDIT 2026-02-08T07:00:00Z {'user_509'}
+RIDS ['account_1035', 'audit_record_4883', 'legal_hold_4887']
+evidence_47 2026-02-08T07:00:00Z L23: INSERT INTO "customer_data_primary" VALUES('audit_record_4883','security_service','security_audit_events','{"resource_id":"audit_record_4883","subject_reference":"user_509","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:0000000000000000000000000000000000000000000000000000000000001313"}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L31: INSERT INTO "customer_data_primary" VALUES('legal_hold_4887','legal_service','retained_order_records','{"resource_id":"legal_hold_4887","subject_reference":"user_509","order_reference":"ORD-20264887","retention_reason":"payment_dispute_and_tax_record","retained_until":"2033-12-31T23:59:59Z"}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L46: INSERT INTO "customer_data_reporting_replica" VALUES('account_1035','account_service','customer_profiles','{"resource_id":"account_1035","customer_reference":"user_509","full_name":"Nicolás Fernández","email":"nicolas.f550081@outlook.com","phone":"+34 733 038 927","account_status":"ACTIVE","signup_channel":"paid_social"}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L55: INSERT INTO "customer_data_reporting_replica" VALUES('audit_record_4883','security_service','security_audit_events','{"resource_id":"audit_record_4883","subject_reference":"user_509","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:0000000000000000000000000000000000000000000000000000000000001313"}','2026-02-08T07:00:00Z');
+evidence_47 2026-02-08T07:00:00Z L63: INSERT INTO "customer_data_reporting_replica" VALUES('legal_hold_4887','legal_service','retained_order_records','{"resource_id":"legal_hold_4887","subject_reference":"user_509","order_reference":"ORD-20264887","retention_reason":"payment_dispute_and_tax_record","retained_until":"2033-12-31T23:59:59Z"}','2026-02-08T07:00:00Z');
+--- activities
+activity_262 2026-01-23T05:56:53Z DELETE_RECORD deletion_worker account_service account_1035 PARTIAL Deletion worker submitted primary profile account_1035 to account_service.
+activity_264 2026-01-23T06:31:34Z RETAIN_RECORD deletion_worker legal_service legal_hold_4887 SUCCESS Policy action completed for legal_hold_4887.
+activity_271 2026-01-23T07:59:15Z SYNC_RECORD account_service account_replication_cluster account_1035 SUCCESS Replication worker reported its final checkpoint for account_1035.
+=== WINDOW case_511 same reported_at: ['case_509', 'case_510', 'case_511']
+    -73m activity_261 DELETE_RECORD account_service account_6623 SUCCESS | in: []
+    -63m activity_262 DELETE_RECORD account_service account_1035 PARTIAL | in: ['evidence_47']
+    -53m activity_263 DELETE_RECORD account_service account_6049 PARTIAL | in: []
+    -28m activity_264 RETAIN_RECORD legal_service legal_hold_4887 SUCCESS | in: ['evidence_47']
+    -13m activity_265 DELETE_RECORD account_service account_9784 FAILED | in: []
+     -3m activity_266 DELETE_RECORD account_service account_3479 SUCCESS | in: []
+     +7m activity_267 DELETE_RECORD account_service account_2512 PARTIAL | in: []
+    +31m activity_268 ANONYMIZE_RECORD analytics_platform analytics_5443 SUCCESS | in: ['evidence_63']
+    +45m activity_269 ANONYMIZE_RECORD analytics_platform analytics_784 FAILED | in: ['evidence_47']
+    +53m activity_270 REDACT_RECORD support_platform support_9648 FAILED | in: ['evidence_47']
+    +59m activity_271 SYNC_RECORD account_replication_cluster account_1035 SUCCESS | in: ['evidence_47']
+    +65m activity_272 DELETE_RECORD search_service search_6246 FAILED | in: ['evidence_47']
+    +71m activity_273 DELETE_RECORD search_service search_6147 FAILED | in: ['evidence_47']
+    +99m activity_274 CHECK_RESTORE_ACCESS backup_service backup_5061 SUCCESS | in: ['evidence_63']
+   +126m activity_275 REDACT_RECORD support_platform support_6391 FAILED | in: ['evidence_63']

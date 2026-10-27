@@ -1,0 +1,28 @@
+#################### case_432 anair9899@fastmail.com req 2026-02-28T08:00:00Z rep PARTIALLY_COMPLETE 2026-03-02T08:00:00Z AUDIT 2026-03-20T08:00:00Z {'user_430'}
+RIDS ['audit_record_3548', 'export_9343', 'legal_hold_438', 'search_3844']
+evidence_68 2026-03-20T07:23:49Z {"exported_at": "2026-03-20T07:23:49Z"} {"customer_reference": null, "object_key": "exports/export_9343/customer_data.zip", "observed_at": "2026-03-20T07:07:10Z", "owner_email": "anair9899@fastmail.com", "owner_phone": null, "resource_id": "export_9343"}
+evidence_68 2026-03-20T07:23:49Z {"exported_at": "2026-03-20T07:23:49Z"} {"hits": {"documents": [{"customer_reference": null, "display_name": null, "email": "anair9899@fastmail.com", "email_hash": null, "phone": null, "resource_id": "search_3844"}], "total": 1}, "observed_at": "2026-03-20T04:53:49Z", "query": "anair9899@fastmail.com", "resource_id": "search_3844"}
+LATE evidence_40 2026-03-22T08:00:00Z {"exported_at": "2026-03-22T08:00:00Z", "captured_at": "2026-03-20T08:00:00Z", "data_store": "export_service", "collection": "customer_export_jobs"} {"resource_id": "export_9343", "owner_email": "anair9899@fastmail.com", "file_name": "customer_export_9343.zip", "created_at": "2026-02-27T08:00:00Z", "expires_at": "2026-04-19T08:00:00Z", "download_available": true, "included_sections": ["profile", "orders", "saved_addresses"]}
+LATE evidence_40 2026-03-22T08:00:00Z {"exported_at": "2026-03-22T08:00:00Z", "captured_at": "2026-03-20T08:00:00Z", "data_store": "legal_service", "collection": "retained_order_records"} {"resource_id": "legal_hold_438", "subject_reference": "user_430", "order_reference": "ORD-20260438", "retention_reason": "payment_dispute_and_tax_record", "retained_until": "2033-12-31T23:59:59Z"}
+LATE evidence_40 2026-03-22T08:00:00Z {"exported_at": "2026-03-22T08:00:00Z", "captured_at": "2026-03-20T08:00:00Z", "data_store": "search_service", "collection": "customer_search_documents"} {"resource_id": "search_3844", "index_name": "customer_directory_v3", "document": {"display_name": "Arjun Nair", "email": "anair9899@fastmail.com", "customer_reference": "user_430"}}
+LATE evidence_40 2026-03-22T08:00:00Z {"exported_at": "2026-03-22T08:00:00Z", "captured_at": "2026-03-20T08:00:00Z", "data_store": "security_service", "collection": "security_audit_events"} {"resource_id": "audit_record_3548", "subject_reference": "user_430", "event_name": "account_deletion_reviewed", "actor_type": "automated_privacy_workflow", "integrity_seal": "sha256:0000000000000000000000000000000000000000000000000000000000000ddc"}
+--- activities
+activity_801 2026-03-02T07:31:13Z RETAIN_RECORD deletion_worker legal_service legal_hold_438 SUCCESS Policy action completed for legal_hold_438.
+activity_807 2026-03-02T08:58:53Z DELETE_RECORD deletion_worker export_service export_9343 PARTIAL Deletion worker received the final result for export_9343 from export_service.
+activity_809 2026-03-02T09:17:23Z DELETE_RECORD deletion_worker search_service search_3844 PARTIAL Deletion worker received the final result for search_3844 from search_service.
+=== WINDOW case_432 same reported_at: ['case_431', 'case_432']
+    -62m activity_798 DELETE_RECORD account_service account_6489 PARTIAL | in: []
+    -51m activity_799 DELETE_RECORD account_service account_6101 FAILED | in: []
+    -29m activity_801 RETAIN_RECORD legal_service legal_hold_438 SUCCESS | in: ['evidence_40']
+    -12m activity_803 DELETE_RECORD account_service account_3075 SUCCESS | in: ['evidence_39']
+     -4m activity_804 DELETE_RECORD account_service account_9120 SUCCESS | in: ['evidence_39']
+     +8m activity_805 DELETE_RECORD account_service account_4921 FAILED | in: ['evidence_39']
+    +52m activity_806 DELETE_RECORD support_platform support_3615 FAILED | in: ['evidence_40', 'evidence_68']
+    +59m activity_807 DELETE_RECORD export_service export_9343 PARTIAL | in: ['evidence_40', 'evidence_68']
+    +70m activity_808 DELETE_RECORD search_service search_7427 FAILED | in: ['evidence_40', 'evidence_68']
+    +77m activity_809 DELETE_RECORD search_service search_3844 PARTIAL | in: ['evidence_40', 'evidence_68']
+    +99m activity_810 CHECK_DATA_FLOW integration_service data_flow_1412 SUCCESS | in: ['evidence_39']
+   +105m activity_811 SYNC_RECORD account_replication_cluster account_4921 PARTIAL | in: ['evidence_39']
+   +112m activity_812 DELETE_RECORD search_service search_8686 FAILED | in: ['evidence_39']
+   +117m activity_813 DELETE_RECORD search_service search_6600 FAILED | in: ['evidence_39']
+   +125m activity_814 DELETE_RECORD search_service search_5479 FAILED | in: ['evidence_39']

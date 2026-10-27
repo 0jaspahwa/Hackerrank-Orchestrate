@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"+971528588894\"},\"why\":\"Check other phone number\"}", "input_tokens": 413, "output_tokens": 44, "latency_s": 0.469, "provider": "groq", "model": "openai/gpt-oss-120b"}

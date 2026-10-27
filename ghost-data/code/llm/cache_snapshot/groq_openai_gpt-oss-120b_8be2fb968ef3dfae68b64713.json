@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"abennett9843@fastmail.com\"},\"why\":\"find unlinked record with email\"}", "input_tokens": 421, "output_tokens": 81, "latency_s": 0.625, "provider": "groq", "model": "openai/gpt-oss-120b"}

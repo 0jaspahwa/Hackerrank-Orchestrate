@@ -1,0 +1,26 @@
+#################### case_355 andres.r136@outlook.com req 2026-04-01T08:00:00Z rep PARTIALLY_COMPLETE 2026-04-04T08:00:00Z AUDIT 2026-04-24T08:00:00Z {'user_353'}
+RIDS ['account_6539', 'audit_record_1151']
+evidence_33 2026-04-24T08:00:00Z L19: INSERT INTO "customer_data_primary" VALUES('audit_record_1151','security_service','security_audit_events','{"resource_id":"audit_record_1151","subject_reference":"user_353","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:000000000000000000000000000000000000000000000000000000000000047f"}','2026-04-24T08:00:00Z');
+evidence_33 2026-04-24T08:00:00Z L55: INSERT INTO "customer_data_replica_ap_south" VALUES('audit_record_1151','security_service','security_audit_events','{"resource_id":"audit_record_1151","subject_reference":"user_353","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:000000000000000000000000000000000000000000000000000000000000047f"}','2026-04-24T08:00:00Z');
+evidence_33 2026-04-24T08:00:00Z L87: INSERT INTO "customer_data_replica_eu_west" VALUES('account_6539','account_service','customer_profiles','{"resource_id":"account_6539","customer_reference":"user_353","full_name":"Andrés Rodríguez","email":"andres.r136@outlook.com","phone":"+34 610 074 260","account_status":"ACTIVE","signup_channel":"paid_social"}','2026-04-24T08:00:00Z');
+evidence_33 2026-04-24T08:00:00Z L93: INSERT INTO "customer_data_replica_eu_west" VALUES('audit_record_1151','security_service','security_audit_events','{"resource_id":"audit_record_1151","subject_reference":"user_353","event_name":"account_deletion_reviewed","actor_type":"automated_privacy_workflow","integrity_seal":"sha256:000000000000000000000000000000000000000000000000000000000000047f"}','2026-04-24T08:00:00Z');
+--- activities
+activity_1275 2026-04-04T07:07:17Z DELETE_RECORD deletion_worker account_service account_6539 PARTIAL Deletion worker submitted primary profile account_6539 to account_service.
+activity_1283 2026-04-04T08:48:09Z SYNC_RECORD account_service account_replication_cluster account_6539 SUCCESS Replication worker reported its final checkpoint for account_6539.
+=== WINDOW case_355 same reported_at: ['case_353', 'case_354', 'case_355']
+    -89m activity_1272 ANONYMIZE_RECORD analytics_platform analytics_2807 SUCCESS | in: ['evidence_34']
+    -73m activity_1273 DELETE_RECORD account_service account_3918 SUCCESS | in: []
+    -62m activity_1274 DELETE_RECORD account_service account_9056 FAILED | in: []
+    -53m activity_1275 DELETE_RECORD account_service account_6539 PARTIAL | in: ['evidence_33']
+    -28m activity_1276 ANONYMIZE_RECORD analytics_platform analytics_439 SUCCESS | in: ['evidence_33']
+    -21m activity_1277 DELETE_RECORD search_service search_9365 FAILED | in: ['evidence_34']
+    -12m activity_1278 CHECK_DATA_FLOW integration_service data_flow_8293 SUCCESS | in: ['evidence_34']
+     -3m activity_1279 REDACT_RECORD support_platform support_6949 FAILED | in: ['evidence_34']
+     +6m activity_1280 DELETE_RECORD search_service search_4359 FAILED | in: ['evidence_34']
+    +17m activity_1281 ANONYMIZE_RECORD analytics_platform analytics_7215 FAILED | in: ['evidence_34']
+    +35m activity_1282 CHECK_DATA_FLOW integration_service data_flow_5608 SUCCESS | in: ['evidence_34']
+    +48m activity_1283 SYNC_RECORD account_replication_cluster account_6539 SUCCESS | in: ['evidence_33']
+    +57m activity_1284 ANONYMIZE_RECORD analytics_platform analytics_8011 FAILED | in: ['evidence_33']
+    +77m activity_1285 DELETE_RECORD search_service search_495 FAILED | in: ['evidence_33']
+    +95m activity_1286 REDACT_RECORD support_platform support_2406 FAILED | in: ['evidence_33']
+   +115m activity_1287 CHECK_DATA_FLOW integration_service data_flow_3180 SUCCESS | in: ['evidence_33']

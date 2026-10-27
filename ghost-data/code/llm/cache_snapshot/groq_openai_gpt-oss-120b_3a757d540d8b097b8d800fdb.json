@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"search_identifier\",\"args\":{\"value\":\"ea61073600454d4c\"},\"why\":\"Check for other linked records\"}", "input_tokens": 406, "output_tokens": 52, "latency_s": 0.881, "provider": "groq", "model": "openai/gpt-oss-120b"}

@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"list_candidates\",\"args\":{\"slot\":\"account\"},\"why\":\"Check for accounts with requester's identifiers not linked\"}", "input_tokens": 442, "output_tokens": 46, "latency_s": 0.767, "provider": "groq", "model": "openai/gpt-oss-120b"}

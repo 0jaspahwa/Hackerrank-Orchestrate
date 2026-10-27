@@ -1,0 +1,5 @@
+#################### case_21 amara-okeke@proton.me req 2026-09-04T12:00:00Z rep COMPLETE 2026-09-05T12:00:00Z AUDIT 2026-09-15T12:00:00Z {'user_21'}
+RIDS ['audit_record_3737']
+evidence_92 2026-09-15T11:44:55Z {"exported_at": "2026-09-15T11:44:55Z"} {"event_code": "IDENTITY_CHANGE_RECORDED", "observed_at": "2026-09-15T09:59:10Z", "resource_id": "audit_record_3737", "retention_until": "2034-09-30T23:59:59Z", "subject_reference": "user_21"}
+LATE evidence_02 2026-09-17T12:00:00Z {"exported_at": "2026-09-17T12:00:00Z", "captured_at": "2026-09-15T12:00:00Z", "data_store": "security_service", "collection": "security_audit_events"} {"resource_id": "audit_record_3737", "subject_reference": "user_21", "event_name": "account_deletion_reviewed", "actor_type": "automated_privacy_workflow", "integrity_seal": "sha256:0000000000000000000000000000000000000000000000000000000000000e99"}
+--- activities

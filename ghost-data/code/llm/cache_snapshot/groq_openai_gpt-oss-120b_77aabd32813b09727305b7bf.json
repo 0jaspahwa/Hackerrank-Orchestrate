@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"stop\",\"args\":{},\"why\":\"No new identifier-resource record found\"}", "input_tokens": 556, "output_tokens": 99, "latency_s": 0.996, "provider": "groq", "model": "openai/gpt-oss-120b"}

@@ -1,0 +1,16 @@
+#################### case_443 seoyeon-choi@proton.me req 2026-02-27T06:00:00Z rep COMPLETE 2026-02-28T06:00:00Z AUDIT 2026-03-10T06:00:00Z {'user_441'}
+RIDS ['search_4925', 'support_8341']
+evidence_66 2026-03-10T05:38:48Z L37: INSERT INTO customer_search_documents VALUES ('search_4925', NULL, NULL, 'seoyeon-choi@proton.me', NULL, NULL, 'customer_directory_v3', '2026-03-10T03:36:24Z');
+evidence_66 2026-03-10T05:38:48Z L41: INSERT INTO support_records VALUES ('support_8341', NULL, NULL, 'seoyeon-choi@proton.me', NULL, 'Customer contacted support about account access.', '2026-03-10T03:49:20Z');
+--- activities
+activity_771 2026-02-28T06:43:46Z DELETE_RECORD deletion_worker support_platform support_8341 FAILED Deletion worker received the final result for support_8341 from support_platform.
+activity_774 2026-02-28T07:02:16Z DELETE_RECORD deletion_worker search_service search_4925 FAILED Deletion worker received the final result for search_4925 from search_service.
+=== WINDOW case_443 same reported_at: ['case_443', 'case_444', 'case_445']
+    -70m activity_768 DELETE_RECORD account_service account_4042 SUCCESS | in: []
+    -59m activity_769 DELETE_RECORD account_service account_1776 SUCCESS | in: []
+    -51m activity_770 DELETE_RECORD account_service account_1736 PARTIAL | in: []
+    +44m activity_771 DELETE_RECORD support_platform support_8341 FAILED | in: ['evidence_66']
+    +51m activity_772 DELETE_RECORD export_service export_4293 PARTIAL | in: ['evidence_66']
+    +62m activity_774 DELETE_RECORD search_service search_4925 FAILED | in: ['evidence_66']
+    +69m activity_775 DELETE_RECORD search_service search_3250 PARTIAL | in: ['evidence_66']
+    +77m activity_776 DELETE_RECORD search_service search_2886 FAILED | in: ['evidence_66']

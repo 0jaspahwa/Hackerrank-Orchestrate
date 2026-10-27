@@ -1,0 +1,1 @@
+{"text": "{\"action\":\"stop\",\"args\":{},\"why\":\"no evidence linking missing identifiers to unlinked resources\"}", "input_tokens": 586, "output_tokens": 183, "latency_s": 1.052, "provider": "groq", "model": "openai/gpt-oss-120b"}
