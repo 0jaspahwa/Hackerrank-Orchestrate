@@ -5,7 +5,7 @@ project has its own folder with its own code, data and README.
 
 | folder | challenge | month | rank |
 |---|---|---|---|
-| [`ghost-data/`](./ghost-data) | Ghost Data Still Exists | October 2026 | **11 of 4,646** |
+| [`ghost-data/`](./ghost-data) | Ghost Data Still Exists | October 2026 | **5 of 4,646** |
 | [`buy-or-wait/`](./buy-or-wait) | Buy or Wait? | September 2026 | **63 of 3,062** |
 | [`whatsapp-notification-router/`](./whatsapp-notification-router) | WhatsApp Message Notification Router | August 2026 | **384 of 1,983** |
 
